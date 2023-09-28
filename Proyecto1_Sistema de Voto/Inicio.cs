@@ -14,6 +14,8 @@ namespace Proyecto1_Sistema_de_Voto {
         public formInicio () {
             InitializeComponent();
         }
+        private void formInicio_Load (object sender, EventArgs e) {
+        }
 
         private void Formulario(object formulario) {
             if (this.panelContenedor.Controls.Count > 0)
@@ -27,17 +29,14 @@ namespace Proyecto1_Sistema_de_Voto {
         }
 
         private void btnIniciarVoto_Click (object sender, EventArgs e) {
-            InicioSesion votar = new InicioSesion();
-            votar.ShowDialog();
+            this.Hide();
+            InicioSesion inicio = new InicioSesion();
+            inicio.ShowDialog();
             this.Close();
         }
 
-        private void btnAdministrador_Click (object sender, EventArgs e) {
-            InicioSesion iniciar = new InicioSesion();
-            iniciar.ShowDialog();
-        }
-
-        private void formInicio_Load (object sender, EventArgs e) {
+        private void btnSalir_Click (object sender, EventArgs e) {
+            this.Dispose();
         }
     }
 }

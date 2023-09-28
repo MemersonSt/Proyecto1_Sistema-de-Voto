@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto1_Sistema_de_Voto.Clases;
+using Proyecto1_Sistema_de_Voto.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,8 +35,26 @@ namespace Proyecto1_Sistema_de_Voto {
         }
 
         private void btnRegistrar_Click (object sender, EventArgs e) {
+            this.Hide();
             DatosDelVotante registrar = new DatosDelVotante();
             registrar.ShowDialog();
+            this.Close();
+        }
+
+        private void btnIngresar_Click (object sender, EventArgs e) {
+            var user = ArchivosUsuarios.ReadFile(txtCedula.Text);
+            if (user != null) {
+                if (user._sCedula == txtCedula.Text && user._sContraseña == textPasword.Text) {
+                    MessageBox.Show("Formulario PAPELETA DE VOTACIÓN");
+                } else {
+                    MessageBox.Show("Datos incorrectos.");
+                }
+            } else if (txtCedula.Text == Admin._sUserName && textPasword.Text == Admin._sPassword) {
+                this.Hide();
+                MenuAdministrador menu = new MenuAdministrador();
+                menu.ShowDialog();
+                this.Close();
+            }
         }
     }
 }
