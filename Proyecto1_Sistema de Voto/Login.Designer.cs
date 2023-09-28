@@ -108,9 +108,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
             this.label1.Location = new System.Drawing.Point(33, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 26);
+            this.label1.Size = new System.Drawing.Size(137, 26);
             this.label1.TabIndex = 1;
-            this.label1.Text = "N° de cédula:";
+            this.label1.Text = "N° de cédula";
             // 
             // btnIngresar
             // 
@@ -134,7 +134,6 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

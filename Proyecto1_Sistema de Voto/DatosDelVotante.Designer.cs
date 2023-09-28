@@ -27,16 +27,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCedula = new System.Windows.Forms.TextBox();
-            this.txtNombres = new System.Windows.Forms.TextBox();
-            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.textCedula = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.textApellido = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.cboxProvincia = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,21 +54,21 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // txtCedula
+            // textCedula
             // 
-            resources.ApplyResources(this.txtCedula, "txtCedula");
-            this.txtCedula.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtCedula.Name = "txtCedula";
+            resources.ApplyResources(this.textCedula, "textCedula");
+            this.textCedula.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.textCedula.Name = "textCedula";
             // 
-            // txtNombres
+            // textNombre
             // 
-            resources.ApplyResources(this.txtNombres, "txtNombres");
-            this.txtNombres.Name = "txtNombres";
+            resources.ApplyResources(this.textNombre, "textNombre");
+            this.textNombre.Name = "textNombre";
             // 
-            // txtApellidos
+            // textApellido
             // 
-            resources.ApplyResources(this.txtApellidos, "txtApellidos");
-            this.txtApellidos.Name = "txtApellidos";
+            resources.ApplyResources(this.textApellido, "textApellido");
+            this.textApellido.Name = "textApellido";
             // 
             // label4
             // 
@@ -96,39 +96,8 @@
             this.cboxProvincia.Items.AddRange(new object[] {
             resources.GetString("cboxProvincia.Items"),
             resources.GetString("cboxProvincia.Items1"),
-            resources.GetString("cboxProvincia.Items2"),
-            resources.GetString("cboxProvincia.Items3"),
-            resources.GetString("cboxProvincia.Items4"),
-            resources.GetString("cboxProvincia.Items5"),
-            resources.GetString("cboxProvincia.Items6"),
-            resources.GetString("cboxProvincia.Items7"),
-            resources.GetString("cboxProvincia.Items8"),
-            resources.GetString("cboxProvincia.Items9"),
-            resources.GetString("cboxProvincia.Items10"),
-            resources.GetString("cboxProvincia.Items11"),
-            resources.GetString("cboxProvincia.Items12"),
-            resources.GetString("cboxProvincia.Items13"),
-            resources.GetString("cboxProvincia.Items14"),
-            resources.GetString("cboxProvincia.Items15"),
-            resources.GetString("cboxProvincia.Items16"),
-            resources.GetString("cboxProvincia.Items17"),
-            resources.GetString("cboxProvincia.Items18"),
-            resources.GetString("cboxProvincia.Items19"),
-            resources.GetString("cboxProvincia.Items20"),
-            resources.GetString("cboxProvincia.Items21"),
-            resources.GetString("cboxProvincia.Items22"),
-            resources.GetString("cboxProvincia.Items23")});
+            resources.GetString("cboxProvincia.Items2")});
             this.cboxProvincia.Name = "cboxProvincia";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // txtContraseña
-            // 
-            resources.ApplyResources(this.txtContraseña, "txtContraseña");
-            this.txtContraseña.Name = "txtContraseña";
             // 
             // btnVolver
             // 
@@ -139,21 +108,31 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // textPassword
+            // 
+            resources.ApplyResources(this.textPassword, "textPassword");
+            this.textPassword.Name = "textPassword";
+            // 
             // DatosDelVotante
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.txtContraseña);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.Controls.Add(this.textPassword);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.cboxProvincia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.txtNombres);
-            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.textApellido);
+            this.Controls.Add(this.textNombre);
+            this.Controls.Add(this.textCedula);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -169,15 +148,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.TextBox txtApellidos;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.TextBox textApellido;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboxProvincia;
-        private System.Windows.Forms.TextBox txtCedula;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox textCedula;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textPassword;
     }
 }

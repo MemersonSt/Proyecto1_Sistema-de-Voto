@@ -25,6 +25,7 @@
         private void InitializeComponent () {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnVotosTotal = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnIniciarVoto = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
@@ -34,6 +35,7 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.panelContenedor.Controls.Add(this.label1);
+            this.panelContenedor.Controls.Add(this.btnVotosTotal);
             this.panelContenedor.Controls.Add(this.btnSalir);
             this.panelContenedor.Controls.Add(this.btnIniciarVoto);
             this.panelContenedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
@@ -46,11 +48,23 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 227);
+            this.label1.Location = new System.Drawing.Point(257, 228);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(707, 54);
             this.label1.TabIndex = 11;
             this.label1.Text = "Bienvenido al proceso Electoral";
+            // 
+            // btnVotosTotal
+            // 
+            this.btnVotosTotal.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.grafico_histograma;
+            this.btnVotosTotal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVotosTotal.FlatAppearance.BorderSize = 0;
+            this.btnVotosTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVotosTotal.Location = new System.Drawing.Point(1135, 12);
+            this.btnVotosTotal.Name = "btnVotosTotal";
+            this.btnVotosTotal.Size = new System.Drawing.Size(37, 35);
+            this.btnVotosTotal.TabIndex = 10;
+            this.btnVotosTotal.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
@@ -73,7 +87,7 @@
             this.btnIniciarVoto.Font = new System.Drawing.Font("Palatino Linotype", 30F);
             this.btnIniciarVoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
             this.btnIniciarVoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnIniciarVoto.Location = new System.Drawing.Point(393, 356);
+            this.btnIniciarVoto.Location = new System.Drawing.Point(384, 346);
             this.btnIniciarVoto.Name = "btnIniciarVoto";
             this.btnIniciarVoto.Size = new System.Drawing.Size(413, 70);
             this.btnIniciarVoto.TabIndex = 7;
@@ -101,6 +115,7 @@
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnIniciarVoto;
+        private System.Windows.Forms.Button btnVotosTotal;
         private System.Windows.Forms.Label label1;
     }
 }

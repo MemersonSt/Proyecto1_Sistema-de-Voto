@@ -219,76 +219,76 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="txtCedula.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="textCedula.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="txtCedula.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textCedula.Location" type="System.Drawing.Point, System.Drawing">
     <value>513, 173</value>
   </data>
-  <data name="txtCedula.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textCedula.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 26</value>
   </data>
-  <data name="txtCedula.TabIndex" type="System.Int32, mscorlib">
+  <data name="textCedula.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;txtCedula.Name" xml:space="preserve">
-    <value>txtCedula</value>
+  <data name="&gt;&gt;textCedula.Name" xml:space="preserve">
+    <value>textCedula</value>
   </data>
-  <data name="&gt;&gt;txtCedula.Type" xml:space="preserve">
+  <data name="&gt;&gt;textCedula.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtCedula.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textCedula.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtCedula.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textCedula.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="txtNombres.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="textNombre.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="txtNombres.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textNombre.Location" type="System.Drawing.Point, System.Drawing">
     <value>513, 219</value>
   </data>
-  <data name="txtNombres.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textNombre.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 26</value>
   </data>
-  <data name="txtNombres.TabIndex" type="System.Int32, mscorlib">
+  <data name="textNombre.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;txtNombres.Name" xml:space="preserve">
-    <value>txtNombres</value>
+  <data name="&gt;&gt;textNombre.Name" xml:space="preserve">
+    <value>textNombre</value>
   </data>
-  <data name="&gt;&gt;txtNombres.Type" xml:space="preserve">
+  <data name="&gt;&gt;textNombre.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtNombres.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textNombre.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtNombres.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textNombre.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="txtApellidos.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="textApellido.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="txtApellidos.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textApellido.Location" type="System.Drawing.Point, System.Drawing">
     <value>513, 273</value>
   </data>
-  <data name="txtApellidos.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textApellido.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 26</value>
   </data>
-  <data name="txtApellidos.TabIndex" type="System.Int32, mscorlib">
+  <data name="textApellido.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;txtApellidos.Name" xml:space="preserve">
-    <value>txtApellidos</value>
+  <data name="&gt;&gt;textApellido.Name" xml:space="preserve">
+    <value>textApellido</value>
   </data>
-  <data name="&gt;&gt;txtApellidos.Type" xml:space="preserve">
+  <data name="&gt;&gt;textApellido.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtApellidos.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textApellido.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtApellidos.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textApellido.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -394,67 +394,34 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="cboxProvincia.Items" xml:space="preserve">
-    <value>Azuay</value>
+    <value>Esmeralda</value>
   </data>
   <data name="cboxProvincia.Items1" xml:space="preserve">
-    <value>Bolívar</value>
-  </data>
-  <data name="cboxProvincia.Items2" xml:space="preserve">
-    <value>Cañar</value>
-  </data>
-  <data name="cboxProvincia.Items3" xml:space="preserve">
-    <value>Carchi</value>
-  </data>
-  <data name="cboxProvincia.Items4" xml:space="preserve">
-    <value>Chimborazo</value>
-  </data>
-  <data name="cboxProvincia.Items5" xml:space="preserve">
-    <value>Cotopaxi</value>
-  </data>
-  <data name="cboxProvincia.Items6" xml:space="preserve">
-    <value>El Oro</value>
-  </data>
-  <data name="cboxProvincia.Items7" xml:space="preserve">
-    <value>Esmeraldas</value>
-  </data>
-  <data name="cboxProvincia.Items8" xml:space="preserve">
-    <value>Galápagos</value>
-  </data>
-  <data name="cboxProvincia.Items9" xml:space="preserve">
-    <value>Galápagos</value>
-  </data>
-  <data name="cboxProvincia.Items10" xml:space="preserve">
-    <value>Imbabura</value>
-  </data>
-  <data name="cboxProvincia.Items11" xml:space="preserve">
-    <value>Loja</value>
-  </data>
-  <data name="cboxProvincia.Items12" xml:space="preserve">
-    <value>Los Ríos</value>
-  </data>
-  <data name="cboxProvincia.Items13" xml:space="preserve">
-    <value>Manabí</value>
-  </data>
-  <data name="cboxProvincia.Items14" xml:space="preserve">
-    <value>Morona-Santiago</value>
-  </data>
-  <data name="cboxProvincia.Items15" xml:space="preserve">
-    <value>Napo</value>
-  </data>
-  <data name="cboxProvincia.Items16" xml:space="preserve">
-    <value>Orellana</value>
-  </data>
-  <data name="cboxProvincia.Items17" xml:space="preserve">
-    <value>Pastaza</value>
-  </data>
-  <data name="cboxProvincia.Items18" xml:space="preserve">
     <value>Pichincha</value>
   </data>
-  <data name="cboxProvincia.Items19" xml:space="preserve">
-    <value>Santa Elena</value>
+  <data name="cboxProvincia.Items2" xml:space="preserve">
+    <value>Manabi</value>
   </data>
-  <data name="cboxProvincia.Items20" xml:space="preserve">
-    <value>Santo Domingo de los Tsáchilas</value>
+  <data name="cboxProvincia.Location" type="System.Drawing.Point, System.Drawing">
+    <value>513, 377</value>
+  </data>
+  <data name="cboxProvincia.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 28</value>
+  </data>
+  <data name="cboxProvincia.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cboxProvincia.Name" xml:space="preserve">
+    <value>cboxProvincia</value>
+  </data>
+  <data name="&gt;&gt;cboxProvincia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cboxProvincia.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cboxProvincia.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="cboxProvincia.Items21" xml:space="preserve">
     <value>Sucumbíos</value>
@@ -519,31 +486,28 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="txtContraseña.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="textPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="txtContraseña.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="textPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>513, 321</value>
   </data>
-  <data name="txtContraseña.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>•</value>
-  </data>
-  <data name="txtContraseña.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 26</value>
   </data>
-  <data name="txtContraseña.TabIndex" type="System.Int32, mscorlib">
+  <data name="textPassword.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
   </data>
-  <data name="&gt;&gt;txtContraseña.Name" xml:space="preserve">
-    <value>txtContraseña</value>
+  <data name="&gt;&gt;textPassword.Name" xml:space="preserve">
+    <value>textPassword</value>
   </data>
-  <data name="&gt;&gt;txtContraseña.Type" xml:space="preserve">
+  <data name="&gt;&gt;textPassword.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;txtContraseña.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textPassword.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtContraseña.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textPassword.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="btnVolver.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">

@@ -17,16 +17,19 @@ namespace Proyecto1_Sistema_de_Voto
         {
             InitializeComponent();
         }
+        private void formInicio_Load (object sender, EventArgs e) 
+        {
+        }
 
         private void btnIniciarVoto_Click (object sender, EventArgs e) 
         {
             this.Hide();
-            Login votar = new Login();
-            votar.ShowDialog();
+            Login inicio = new Login();
+            inicio.ShowDialog();
             this.Close();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click (object sender, EventArgs e) 
         {
             this.Dispose();
         }

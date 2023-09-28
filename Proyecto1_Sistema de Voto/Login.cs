@@ -11,12 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto1_Sistema_de_Voto 
-{
-    public partial class Login : Form 
-    {
-        public Login () 
-        {
+namespace Proyecto1_Sistema_de_Voto {
+    public partial class Login : Form {
+        public Login () {
             InitializeComponent();
         }
 
@@ -39,30 +36,22 @@ namespace Proyecto1_Sistema_de_Voto
             panel.Region = new Region(formaPanel);
         }
 
-        private void btnRegistrar_Click (object sender, EventArgs e) 
-        {
+        private void btnRegistrar_Click (object sender, EventArgs e) {
             this.Hide();
             DatosDelVotante registrar = new DatosDelVotante();
             registrar.ShowDialog();
             this.Close();
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
+        private void btnIngresar_Click (object sender, EventArgs e) {
             var user = ArchivosUsuarios.ReadFile(txtCedula.Text);
-            if (user != null)
-            {
-                if (user._sCedula == txtCedula.Text && user._sContraseña == textPasword.Text)
-                {
+            if (user != null) {
+                if (user._sCedula == txtCedula.Text && user._sContraseña == textPasword.Text) {
                     MessageBox.Show("Formulario PAPELETA DE VOTACIÓN");
-                }
-                else
-                {
+                } else {
                     MessageBox.Show("Datos incorrectos.");
                 }
-            }
-            else if (txtCedula.Text == Admin._sUserName && textPasword.Text == Admin._sPassword)
-            {
+            } else if (txtCedula.Text == Admin._sUserName && textPasword.Text == Admin._sPassword) {
                 this.Hide();
                 MenuAdministrador menu = new MenuAdministrador();
                 menu.ShowDialog();
