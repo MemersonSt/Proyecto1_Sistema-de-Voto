@@ -8,34 +8,33 @@ using System.Text;
 using System.Threading.Tasks;
 using Proyecto1_Sistema_de_Voto.Models;
 
-namespace Proyecto1_Sistema_de_Voto.Clases
+namespace Proyecto1_Sistema_de_Voto.Clases 
 {
-    public static class ArchivosUsuarios
+    public static class ArchivosUsuarios 
     {
         private static readonly string directoryPath = "ArchivosUsuarios";
 
         #region Create
-        public static void CreateFile(Usuario usuario)
+        public static void CreateFile (Usuario usuario) 
         {
-            try
+            try 
             {
                 // Asegurarse de que el directorio exista
-                if (!Directory.Exists(directoryPath))
+                if (!Directory.Exists(directoryPath)) 
                 {
                     Directory.CreateDirectory(directoryPath);
                 }
 
                 string filePath = Path.Combine(directoryPath, usuario._sCedula + ".bin");
 
-                using (FileStream fs = new FileStream(filePath, FileMode.Create))
+                using (FileStream fs = new FileStream(filePath, FileMode.Create)) 
                 {
                     IFormatter formatter = new BinaryFormatter();
                     formatter.Serialize(fs, usuario);
                 }
 
                 Console.WriteLine("Archivo creado con el Usuario.");
-            }
-            catch (IOException e)
+            } catch (IOException e) 
             {
                 Console.WriteLine($"Error al crear el archivo: {e.Message}");
             }
@@ -43,29 +42,26 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         #endregion
 
         #region Read
-        public static Usuario ReadFile(string cedula)
+        public static Usuario ReadFile (string cedula) 
         {
             Usuario usuario = null;
 
-            try
+            try 
             {
                 string filePath = Path.Combine(directoryPath, cedula + ".bin");
 
-                using (FileStream fs = new FileStream(filePath, FileMode.Open))
+                using (FileStream fs = new FileStream(filePath, FileMode.Open)) 
                 {
                     IFormatter formatter = new BinaryFormatter();
                     usuario = (Usuario)formatter.Deserialize(fs);
                 }
-            }
-            catch (FileNotFoundException)
+            } catch (FileNotFoundException) 
             {
                 Console.WriteLine("El archivo no existe.");
-            }
-            catch (IOException e)
+            } catch (IOException e) 
             {
                 Console.WriteLine($"Error al leer el archivo: {e.Message}");
-            }
-            catch (SerializationException e)
+            } catch (SerializationException e) 
             {
                 Console.WriteLine($"Error de serialización: {e.Message}");
             }
@@ -75,30 +71,28 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         #endregion
 
         #region Update
-        public static void UpdateFile(Usuario usuario)
+        public static void UpdateFile (Usuario usuario) 
         {
             CreateFile(usuario);
         }
         #endregion
 
         #region Delete
-        public static void DeleteFile(string cedula)
+        public static void DeleteFile (string cedula) 
         {
-            try
+            try 
             {
                 string filePath = Path.Combine(directoryPath, cedula + ".bin");
 
-                if (File.Exists(filePath))
+                if (File.Exists(filePath)) 
                 {
                     File.Delete(filePath);
                     Console.WriteLine("Archivo eliminado con éxito.");
-                }
-                else
+                } else 
                 {
                     Console.WriteLine("El archivo no existe y no se puede eliminar.");
                 }
-            }
-            catch (IOException e)
+            } catch (IOException e) 
             {
                 Console.WriteLine($"Error al eliminar el archivo: {e.Message}");
             }
