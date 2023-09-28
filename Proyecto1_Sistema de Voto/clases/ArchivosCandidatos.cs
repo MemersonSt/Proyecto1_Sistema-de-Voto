@@ -13,7 +13,6 @@ namespace Proyecto1_Sistema_de_Voto.clases
     public static class ArchivosCandidatos
     {
         private static readonly string directoryPath = "ArchivosCandidatos";
-        public static List<Candidato> listaCandidatos = new List<Candidato>();
 
         #region Create
         public static void CreateFile(Candidato candidato)

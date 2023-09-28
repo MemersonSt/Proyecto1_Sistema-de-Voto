@@ -54,7 +54,7 @@ namespace Proyecto1_Sistema_de_Voto
         }
 
 
-        //Usaré este método para mostrar la notificación de candidato registrado
+        //Usaré este método para mostrar la notificación de candidato registrado(Aun no se como hacerlo xd)
         private void Formulario(object formulario)
         {
             if (this.panelNotificación.Controls.Count > 0)
@@ -90,7 +90,6 @@ namespace Proyecto1_Sistema_de_Voto
                 {
                     Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text);
                     ArchivosCandidatos.CreateFile(candidato);
-                    ArchivosCandidatos.listaCandidatos.Add(candidato);
                 }
             }
 
@@ -104,15 +103,6 @@ namespace Proyecto1_Sistema_de_Voto
                 {
                     Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text);
                     ArchivosCandidatos.UpdateFile(candidato);
-                    foreach (var item in ArchivosCandidatos.listaCandidatos)
-                    {
-                        if (txtCedula.Text.Equals(item._sCedula))
-                        {
-                            ArchivosCandidatos.listaCandidatos.Remove(item);
-                            break;
-                        }
-                    }
-                    ArchivosCandidatos.listaCandidatos.Add(candidato);
                 }
                 else
                 {
@@ -128,14 +118,6 @@ namespace Proyecto1_Sistema_de_Voto
                 if (ArchivosCandidatos.ReadFile(txtCedula.Text) != null)
                 {
                     ArchivosCandidatos.DeleteFile(txtCedula.Text);
-                    foreach (var item in ArchivosCandidatos.listaCandidatos)
-                    {
-                        if (txtCedula.Text.Equals(item._sCedula))
-                        {
-                            ArchivosCandidatos.listaCandidatos.Remove(item);
-                            break;
-                        }
-                    }
                 }
                 else
                 {
