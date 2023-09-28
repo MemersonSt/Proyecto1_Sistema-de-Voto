@@ -64,6 +64,12 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaCandidatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaCandidatos.Designer.cs">
+      <DependentUpon>ListaCandidatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaCandidatos.resx">
+      <DependentUpon>ListaCandidatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -145,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clases\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1156840965-612x612.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

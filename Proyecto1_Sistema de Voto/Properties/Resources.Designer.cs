@@ -103,6 +103,16 @@ namespace Proyecto1_Sistema_de_Voto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1156840965_612x612 {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1156840965-612x612", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mejora_continua {
             get {
                 object obj = ResourceManager.GetObject("mejora-continua", resourceCulture);
