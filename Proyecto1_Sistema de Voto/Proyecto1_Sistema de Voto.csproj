@@ -101,6 +101,12 @@
     <Compile Include="RegistrarCandidatos.Designer.cs">
       <DependentUpon>RegistrarCandidatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="VotosUsuarios\RegistrarVotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotosUsuarios\RegistrarVotos.Designer.cs">
+      <DependentUpon>RegistrarVotos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="RegistrarCandidatos.resx">
       <DependentUpon>RegistrarCandidatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotosUsuarios\RegistrarVotos.resx">
+      <DependentUpon>RegistrarVotos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
