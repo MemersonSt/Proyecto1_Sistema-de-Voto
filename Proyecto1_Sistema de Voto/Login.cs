@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto1_Sistema_de_Voto.Clases;
+using Proyecto1_Sistema_de_Voto.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,17 +11,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto1_Sistema_de_Voto {
-    public partial class InicioSesion : Form {
-        public InicioSesion () {
+namespace Proyecto1_Sistema_de_Voto 
+{
+    public partial class Login : Form 
+    {
+        public Login () 
+        {
             InitializeComponent();
         }
 
-        private void InicioSesion_Load (object sender, EventArgs e) {
+        private void InicioSesion_Load (object sender, EventArgs e) 
+        {
             RedondearPanel(panel1, 10);
         }
 
-        private void RedondearPanel (Panel panel, int radio) {
+        private void RedondearPanel (Panel panel, int radio) 
+        {
             // Crear un gráfico de la forma del panel
             GraphicsPath formaPanel = new GraphicsPath();
             formaPanel.AddArc(0, 0, radio, radio, 180, 90); // Esquina superior izquierda
@@ -32,9 +39,35 @@ namespace Proyecto1_Sistema_de_Voto {
             panel.Region = new Region(formaPanel);
         }
 
-        private void btnRegistrar_Click (object sender, EventArgs e) {
+        private void btnRegistrar_Click (object sender, EventArgs e) 
+        {
+            this.Hide();
             DatosDelVotante registrar = new DatosDelVotante();
             registrar.ShowDialog();
+            this.Close();
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            var user = ArchivosUsuarios.ReadFile(txtCedula.Text);
+            if (user != null)
+            {
+                if (user._sCedula == txtCedula.Text && user._sContraseña == textPasword.Text)
+                {
+                    MessageBox.Show("Formulario PAPELETA DE VOTACIÓN");
+                }
+                else
+                {
+                    MessageBox.Show("Datos incorrectos.");
+                }
+            }
+            else if (txtCedula.Text == Admin._sUserName && textPasword.Text == Admin._sPassword)
+            {
+                this.Hide();
+                MenuAdministrador menu = new MenuAdministrador();
+                menu.ShowDialog();
+                this.Close();
+            }
         }
     }
 }
