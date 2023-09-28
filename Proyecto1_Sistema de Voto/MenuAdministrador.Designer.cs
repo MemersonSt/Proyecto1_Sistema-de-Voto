@@ -178,10 +178,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(37, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 46);
+            this.label1.Size = new System.Drawing.Size(291, 47);
             this.label1.TabIndex = 9;
             this.label1.Text = "Administrador";
             // 
