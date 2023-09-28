@@ -1,5 +1,5 @@
 ﻿namespace Proyecto1_Sistema_de_Voto {
-    partial class InicioSesion {
+    partial class Login {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -108,9 +108,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
             this.label1.Location = new System.Drawing.Point(33, 143);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 26);
+            this.label1.Size = new System.Drawing.Size(137, 26);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Usuario:";
+            this.label1.Text = "N° de cédula";
             // 
             // btnIngresar
             // 
@@ -126,7 +126,7 @@
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // InicioSesion
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +134,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "InicioSesion";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.InicioSesion_Load);

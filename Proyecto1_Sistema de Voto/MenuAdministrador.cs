@@ -8,10 +8,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto1_Sistema_de_Voto {
-    public partial class MenuAdministrador : Form {
-        public MenuAdministrador () {
+namespace Proyecto1_Sistema_de_Voto 
+{
+    public partial class MenuAdministrador : Form 
+    {
+        public MenuAdministrador () 
+        {
             InitializeComponent();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+            this.Close();
+        }
+
+        private void btnRegistrarCandidatos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegistrarCandidatos candidatos = new RegistrarCandidatos();
+            candidatos.ShowDialog();
+            this.Close();
         }
     }
 }

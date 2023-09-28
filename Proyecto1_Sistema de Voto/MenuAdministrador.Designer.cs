@@ -57,6 +57,7 @@
             this.btnRegistrarCandidatos.TabIndex = 2;
             this.btnRegistrarCandidatos.Text = "Registrar";
             this.btnRegistrarCandidatos.UseVisualStyleBackColor = false;
+            this.btnRegistrarCandidatos.Click += new System.EventHandler(this.btnRegistrarCandidatos_Click);
             // 
             // btnListaCandidatos
             // 
@@ -224,6 +225,7 @@
             this.btnSalir.Size = new System.Drawing.Size(70, 70);
             this.btnSalir.TabIndex = 8;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // MenuAdministrador
             // 

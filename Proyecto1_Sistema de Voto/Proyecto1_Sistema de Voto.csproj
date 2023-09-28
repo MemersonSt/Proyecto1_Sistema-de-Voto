@@ -52,6 +52,7 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="clases\ArchivosCandidatos.cs" />
     <Compile Include="clases\ArchivosUsuarios.cs" />
     <Compile Include="DatosDelVotante.cs">
       <SubType>Form</SubType>
@@ -84,7 +85,14 @@
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Candidato.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Notificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notificacion.Designer.cs">
+      <DependentUpon>Notificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrarCandidatos.cs">
@@ -110,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAdministrador.resx">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notificacion.resx">
+      <DependentUpon>Notificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

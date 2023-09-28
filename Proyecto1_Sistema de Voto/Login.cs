@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto1_Sistema_de_Voto {
-    public partial class InicioSesion : Form {
-        public InicioSesion () {
+    public partial class Login : Form {
+        public Login () {
             InitializeComponent();
         }
 
