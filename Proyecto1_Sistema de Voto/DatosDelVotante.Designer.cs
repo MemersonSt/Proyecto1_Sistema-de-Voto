@@ -33,9 +33,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.comboxCiudad = new System.Windows.Forms.ComboBox();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textPasword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -87,30 +88,43 @@
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
-            // comboBox1
+            // comboxCiudad
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2")});
-            this.comboBox1.Name = "comboBox1";
+            resources.ApplyResources(this.comboxCiudad, "comboxCiudad");
+            this.comboxCiudad.FormattingEnabled = true;
+            this.comboxCiudad.Items.AddRange(new object[] {
+            resources.GetString("comboxCiudad.Items"),
+            resources.GetString("comboxCiudad.Items1"),
+            resources.GetString("comboxCiudad.Items2")});
+            this.comboxCiudad.Name = "comboxCiudad";
             // 
-            // pictureBox1
+            // btnVolver
             // 
-            this.pictureBox1.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.perfil_del_usuario;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            this.btnVolver.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.cerrar_sesion;
+            resources.ApplyResources(this.btnVolver, "btnVolver");
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // textPasword
+            // 
+            resources.ApplyResources(this.textPasword, "textPasword");
+            this.textPasword.Name = "textPasword";
             // 
             // DatosDelVotante
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textPasword);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.comboxCiudad);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -122,7 +136,6 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DatosDelVotante";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,8 +151,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboxCiudad;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textPasword;
     }
 }
