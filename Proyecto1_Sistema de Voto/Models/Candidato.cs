@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto1_Sistema_de_Voto.Models
 {
+    [Serializable]
     public class Candidato
     {
         public string _sCedula { get; set; }

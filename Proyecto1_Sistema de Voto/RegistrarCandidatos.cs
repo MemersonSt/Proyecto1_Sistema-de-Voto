@@ -92,7 +92,6 @@ namespace Proyecto1_Sistema_de_Voto
                     ArchivosCandidatos.CreateFile(candidato);
                 }
             }
-
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)

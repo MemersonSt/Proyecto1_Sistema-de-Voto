@@ -15,6 +15,7 @@ namespace Proyecto1_Sistema_de_Voto.Models {
 
         public Usuario () { }
 
+        public Usuario (string _sCedula, string _sNombres, string _sApellidos, string _sContraseña, string _sProvincia) {
             this._sCedula = _sCedula;
             this._sNombres = _sNombres;
             this._sApellidos = _sApellidos;
