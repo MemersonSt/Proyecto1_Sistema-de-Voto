@@ -104,5 +104,28 @@ namespace Proyecto1_Sistema_de_Voto.clases
             }
         }
         #endregion
+
+        #region ReadList
+        public static List<Candidato> ReadList () {
+            List<Candidato> listaCandidatos = new List<Candidato>();
+
+            try {
+                string [] filePaths = Directory.GetFiles(directoryPath);
+
+                foreach (string filePath in filePaths) {
+                    using (FileStream fs = new FileStream(filePath, FileMode.Open)) {
+                        IFormatter formatter = new BinaryFormatter();
+                        listaCandidatos.Add((Candidato)formatter.Deserialize(fs));
+                    }
+                }
+            } catch (IOException e) {
+                Console.WriteLine($"Error al leer el archivo: {e.Message}");
+            } catch (SerializationException e) {
+                Console.WriteLine($"Error de serialización: {e.Message}");
+            }
+
+            return listaCandidatos;
+        }
+        #endregion
     }
 }

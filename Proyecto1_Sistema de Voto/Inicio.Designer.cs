@@ -33,7 +33,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(231)))));
             this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.btnVotosTotal);
             this.panelContenedor.Controls.Add(this.btnSalir);

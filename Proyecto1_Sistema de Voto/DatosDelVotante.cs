@@ -1,5 +1,6 @@
 ﻿using Proyecto1_Sistema_de_Voto.Clases;
 using Proyecto1_Sistema_de_Voto.Models;
+using Proyecto1_Sistema_de_Voto.VotosUsuarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -94,8 +95,8 @@ namespace Proyecto1_Sistema_de_Voto
                     ArchivosUsuarios.CreateFile(user);
                     MessageBox.Show("Inscripción exitosa");
                     this.Hide();
-                    Login log = new Login();
-                    log.ShowDialog();
+                    RegistrarVotos abrir = new RegistrarVotos();
+                    abrir.ShowDialog();
                     this.Close();
                 }
             }

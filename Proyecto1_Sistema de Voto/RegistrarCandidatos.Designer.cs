@@ -83,7 +83,7 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
-            this.btnGuardar.Location = new System.Drawing.Point(835, 277);
+            this.btnGuardar.Location = new System.Drawing.Point(812, 278);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(216, 39);
             this.btnGuardar.TabIndex = 8;
@@ -94,7 +94,7 @@
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
-            this.btnActualizar.Location = new System.Drawing.Point(835, 338);
+            this.btnActualizar.Location = new System.Drawing.Point(812, 339);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(216, 39);
             this.btnActualizar.TabIndex = 9;
@@ -105,7 +105,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
-            this.btnEliminar.Location = new System.Drawing.Point(835, 396);
+            this.btnEliminar.Location = new System.Drawing.Point(812, 397);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(216, 39);
             this.btnEliminar.TabIndex = 10;
@@ -172,7 +172,7 @@
             // 
             // panelNotificación
             // 
-            this.panelNotificación.Location = new System.Drawing.Point(781, 105);
+            this.panelNotificación.Location = new System.Drawing.Point(758, 106);
             this.panelNotificación.Name = "panelNotificación";
             this.panelNotificación.Size = new System.Drawing.Size(270, 80);
             this.panelNotificación.TabIndex = 17;

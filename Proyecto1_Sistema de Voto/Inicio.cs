@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto1_Sistema_de_Voto.VotosUsuarios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,8 @@ namespace Proyecto1_Sistema_de_Voto
         {
             this.Hide();
             Login inicio = new Login();
+            //Candidatos inicio = new Candidatos();
+            //RegistrarVotos inicio = new RegistrarVotos();
             inicio.ShowDialog();
             this.Close();
         }
