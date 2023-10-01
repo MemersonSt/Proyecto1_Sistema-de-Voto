@@ -12,6 +12,8 @@ namespace Proyecto1_Sistema_de_Voto.Clases
 {
     public static class ArchivosUsuarios 
     {
+        public static Usuario datosUsuarioLogin { get; set; }
+
         private static readonly string directoryPath = "ArchivosUsuarios";
 
         #region Create

@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using Proyecto1_Sistema_de_Voto.Clases;
 
 namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
     public partial class RegistrarVotos : Form {
@@ -61,6 +62,8 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             votar.Click += (sender, e) =>
             {
                 // Lógica para registrar el voto aquí
+                var sesionUsuario = ArchivosUsuarios.datosUsuarioLogin;
+                MessageBox.Show($"El usuario {sesionUsuario._sNombres} ha iniciado sesion desde la provincia {sesionUsuario._sProvincia}");
                 MessageBox.Show($"Has votado por {candidato._sNombre}");
             };
 
