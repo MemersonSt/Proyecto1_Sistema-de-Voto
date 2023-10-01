@@ -63,8 +63,10 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             {
                 // Lógica para registrar el voto aquí
                 var sesionUsuario = ArchivosUsuarios.datosUsuarioLogin;
-                MessageBox.Show($"El usuario {sesionUsuario._sNombres} ha iniciado sesion desde la provincia {sesionUsuario._sProvincia}");
-                MessageBox.Show($"Has votado por {candidato._sNombre}");
+                MessageBox.Show($"El usuario {sesionUsuario._sNombres} ha vota desde la provincia {sesionUsuario._sProvincia} a {candidato._sNombre}");
+
+                Votos votarCandidato = new Votos(candidato._sNombre, sesionUsuario._sCedula, sesionUsuario._sProvincia);
+                CandidatoEligido.CreateFile(votarCandidato);
             };
 
             panelCandidato.Controls.AddRange(new Control [] { nombreCandidato, lista, listaCandidato, votar });

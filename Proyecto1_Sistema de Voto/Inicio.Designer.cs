@@ -47,10 +47,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(257, 228);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(707, 54);
+            this.label1.Size = new System.Drawing.Size(701, 55);
             this.label1.TabIndex = 11;
             this.label1.Text = "Bienvenido al proceso Electoral";
             // 
@@ -84,7 +84,7 @@
             // 
             this.btnIniciarVoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(114)))), ((int)(((byte)(175)))));
             this.btnIniciarVoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarVoto.Font = new System.Drawing.Font("Palatino Linotype", 30F);
+            this.btnIniciarVoto.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarVoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
             this.btnIniciarVoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnIniciarVoto.Location = new System.Drawing.Point(384, 346);

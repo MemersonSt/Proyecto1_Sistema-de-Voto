@@ -26,11 +26,11 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbNombre1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbNombre1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,34 +69,14 @@
             this.panel1.Size = new System.Drawing.Size(137, 171);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(351, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(373, 43);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Papeleta de Votación";
-            // 
-            // lbNombre1
-            // 
-            this.lbNombre1.AutoSize = true;
-            this.lbNombre1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombre1.Location = new System.Drawing.Point(6, 7);
-            this.lbNombre1.Name = "lbNombre1";
-            this.lbNombre1.Size = new System.Drawing.Size(70, 25);
-            this.lbNombre1.TabIndex = 0;
-            this.lbNombre1.Text = "label2";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(9, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 35);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(58, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 15);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "label3";
             // 
             // label2
             // 
@@ -108,14 +88,34 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Lista: ";
             // 
-            // label3
+            // button1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 76);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
+            this.button1.Location = new System.Drawing.Point(9, 125);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 35);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lbNombre1
+            // 
+            this.lbNombre1.AutoSize = true;
+            this.lbNombre1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre1.Location = new System.Drawing.Point(6, 7);
+            this.lbNombre1.Name = "lbNombre1";
+            this.lbNombre1.Size = new System.Drawing.Size(70, 25);
+            this.lbNombre1.TabIndex = 0;
+            this.lbNombre1.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(351, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(373, 43);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Papeleta de Votación";
             // 
             // RegistrarVotos
             // 
