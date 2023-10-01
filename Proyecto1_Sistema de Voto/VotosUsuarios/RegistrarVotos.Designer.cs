@@ -51,10 +51,10 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(211)))), ((int)(((byte)(226)))));
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 5);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(77, 5);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(952, 543);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(861, 530);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // panel1
@@ -126,6 +126,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelContenedor);
             this.Name = "RegistrarVotos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarVotos";
             this.Load += new System.EventHandler(this.RegistrarVotos_Load);
             this.panelContenedor.ResumeLayout(false);

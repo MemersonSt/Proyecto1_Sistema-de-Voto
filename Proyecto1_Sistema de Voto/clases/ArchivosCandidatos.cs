@@ -25,7 +25,7 @@ namespace Proyecto1_Sistema_de_Voto.clases
                     Directory.CreateDirectory(directoryPath);
                 }
 
-                string filePath = Path.Combine(directoryPath, candidato._sCedula + ".bin");
+                string filePath = Path.Combine(directoryPath, candidato._sCedula + ".bin");//Aqui se crea el archivo con el nombre de la cedula del candidato
 
                 using (FileStream fs = new FileStream(filePath, FileMode.Create))
                 {
