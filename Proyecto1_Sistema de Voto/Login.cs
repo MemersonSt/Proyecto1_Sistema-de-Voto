@@ -50,9 +50,11 @@ namespace Proyecto1_Sistema_de_Voto {
             var user = ArchivosUsuarios.ReadFile(txtCedula.Text);
             if (user != null) {
                 if (user._sCedula == txtCedula.Text && user._sContraseña == textPasword.Text) {
-                    MessageBox.Show("Formulario PAPELETA DE VOTACIÓN");
+                    ArchivosUsuarios.datosUsuarioLogin = user;
+                    this.Hide();
                     RegistrarVotos abrir = new RegistrarVotos();
                     abrir.ShowDialog();
+                    this.Close();
                 } else {
                     MessageBox.Show("Datos incorrectos.");
                 }

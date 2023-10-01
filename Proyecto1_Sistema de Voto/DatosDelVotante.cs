@@ -95,7 +95,7 @@ namespace Proyecto1_Sistema_de_Voto
                     ArchivosUsuarios.CreateFile(user);
                     MessageBox.Show("Inscripción exitosa");
                     this.Hide();
-                    RegistrarVotos abrir = new RegistrarVotos();
+                    Login abrir = new Login();
                     abrir.ShowDialog();
                     this.Close();
                 }
