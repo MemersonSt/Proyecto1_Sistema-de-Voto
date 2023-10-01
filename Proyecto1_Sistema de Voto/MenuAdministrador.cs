@@ -38,5 +38,11 @@ namespace Proyecto1_Sistema_de_Voto
             ListaCandidatos verLista = new ListaCandidatos();
             verLista.ShowDialog();
         }
+
+        private void btnListaUsuarios_Click (object sender, EventArgs e) {
+            this.Hide();
+            UsuarioRegistrados verLista = new UsuarioRegistrados();
+            verLista.ShowDialog();
+        }
     }
 }

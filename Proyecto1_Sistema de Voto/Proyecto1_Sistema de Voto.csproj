@@ -50,9 +50,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CertificadoVotacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificadoVotacion.Designer.cs">
+      <DependentUpon>CertificadoVotacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="clases\ArchivosCandidatos.cs" />
     <Compile Include="clases\ArchivosUsuarios.cs" />
-    <Compile Include="clases\CandidatoEligido.cs" />
+    <Compile Include="clases\ArchivosVotos.cs" />
     <Compile Include="DatosDelVotante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +92,7 @@
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Candidato.cs" />
     <Compile Include="Models\Usuario.cs" />
-    <Compile Include="Models\Votos.cs" />
+    <Compile Include="Models\Voto.cs" />
     <Compile Include="Notificacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,19 +107,12 @@
     <Compile Include="RegistrarCandidatos.Designer.cs">
       <DependentUpon>RegistrarCandidatos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ver votos\VerVotos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ver votos\VerVotos.Designer.cs">
-      <DependentUpon>VerVotos.cs</DependentUpon>
-    </Compile>
     <Compile Include="VotosUsuarios\RegistrarVotos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VotosUsuarios\RegistrarVotos.Designer.cs">
       <DependentUpon>RegistrarVotos.cs</DependentUpon>
     </Compile>
-    <Compile Include="VotosUsuarios\Votacion.cs" />
     <EmbeddedResource Include="DatosDelVotante.resx">
       <DependentUpon>DatosDelVotante.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,9 +143,6 @@
     </Compile>
     <EmbeddedResource Include="RegistrarCandidatos.resx">
       <DependentUpon>RegistrarCandidatos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ver votos\VerVotos.resx">
-      <DependentUpon>VerVotos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VotosUsuarios\RegistrarVotos.resx">
       <DependentUpon>RegistrarVotos.cs</DependentUpon>
