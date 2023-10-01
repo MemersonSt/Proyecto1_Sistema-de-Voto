@@ -70,8 +70,8 @@ namespace Proyecto1_Sistema_de_Voto
         private void btnSalir_Click (object sender, EventArgs e) 
         {
             this.Hide();
-            Login log = new Login();
-            log.ShowDialog();
+            MenuAdministrador menu = new MenuAdministrador();
+            menu.ShowDialog();
             this.Close();
         }
 
