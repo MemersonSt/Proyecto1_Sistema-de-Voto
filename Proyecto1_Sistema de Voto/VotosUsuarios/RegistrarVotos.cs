@@ -65,8 +65,8 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                 var sesionUsuario = ArchivosUsuarios.datosUsuarioLogin;
                 if (sesionUsuario._sVoto == false)
                 {
-                    //sesionUsuario._sVoto = true;
-                    //ArchivosUsuarios.UpdateFile(sesionUsuario);
+                    sesionUsuario._sVoto = true;
+                    ArchivosUsuarios.UpdateFile(sesionUsuario);
 
                     //Instancia objeto voto 
                     Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre);
@@ -79,8 +79,9 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     foreach (var item in votos)
                     {
                         MessageBox.Show($"El voto es para: { item._sCandidato} desde: {item._sProvincia}");
+
                     }
-                    MessageBox.Show($"Has votado por {candidato._sNombre}");
+                    
                 }
             };
 

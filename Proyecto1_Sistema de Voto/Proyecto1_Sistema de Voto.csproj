@@ -50,6 +50,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CertificadoVotacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificadoVotacion.Designer.cs">
+      <DependentUpon>CertificadoVotacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="clases\ArchivosCandidatos.cs" />
     <Compile Include="clases\ArchivosUsuarios.cs" />
     <Compile Include="clases\ArchivosVotos.cs" />
@@ -101,12 +107,21 @@
     <Compile Include="RegistrarCandidatos.Designer.cs">
       <DependentUpon>RegistrarCandidatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsuarioRegistrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuarioRegistrados.Designer.cs">
+      <DependentUpon>UsuarioRegistrados.cs</DependentUpon>
+    </Compile>
     <Compile Include="VotosUsuarios\RegistrarVotos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VotosUsuarios\RegistrarVotos.Designer.cs">
       <DependentUpon>RegistrarVotos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CertificadoVotacion.resx">
+      <DependentUpon>CertificadoVotacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatosDelVotante.resx">
       <DependentUpon>DatosDelVotante.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +152,9 @@
     </Compile>
     <EmbeddedResource Include="RegistrarCandidatos.resx">
       <DependentUpon>RegistrarCandidatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioRegistrados.resx">
+      <DependentUpon>UsuarioRegistrados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VotosUsuarios\RegistrarVotos.resx">
       <DependentUpon>RegistrarVotos.cs</DependentUpon>

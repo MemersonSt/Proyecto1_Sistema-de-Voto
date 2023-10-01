@@ -28,6 +28,7 @@ namespace Proyecto1_Sistema_de_Voto
             Login inicio = new Login();
             //Candidatos inicio = new Candidatos();
             //RegistrarVotos inicio = new RegistrarVotos();
+            //UsuarioRegistrados inicio = new UsuarioRegistrados();
             inicio.ShowDialog();
             this.Close();
         }

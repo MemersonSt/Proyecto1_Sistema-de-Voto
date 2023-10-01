@@ -26,7 +26,7 @@
             this.btnRegistrarCandidatos = new System.Windows.Forms.Button();
             this.btnListaCandidatos = new System.Windows.Forms.Button();
             this.btnVotos = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.btnHabilitar = new System.Windows.Forms.Button();
             this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -86,18 +86,19 @@
             this.btnVotos.Text = "Ver los Votos";
             this.btnVotos.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnListaUsuarios
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.button4.Location = new System.Drawing.Point(33, 272);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 45);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnListaUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
+            this.btnListaUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnListaUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.btnListaUsuarios.Location = new System.Drawing.Point(33, 272);
+            this.btnListaUsuarios.Name = "btnListaUsuarios";
+            this.btnListaUsuarios.Size = new System.Drawing.Size(165, 45);
+            this.btnListaUsuarios.TabIndex = 5;
+            this.btnListaUsuarios.Text = "button4";
+            this.btnListaUsuarios.UseVisualStyleBackColor = false;
+            this.btnListaUsuarios.Click += new System.EventHandler(this.btnListaUsuarios_Click);
             // 
             // btnHabilitar
             // 
@@ -199,7 +200,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(206)))));
             this.panel8.Controls.Add(this.panel4);
-            this.panel8.Controls.Add(this.button4);
+            this.panel8.Controls.Add(this.btnListaUsuarios);
             this.panel8.Location = new System.Drawing.Point(853, 136);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(225, 360);
@@ -263,7 +264,7 @@
         private System.Windows.Forms.Button btnRegistrarCandidatos;
         private System.Windows.Forms.Button btnListaCandidatos;
         private System.Windows.Forms.Button btnVotos;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnListaUsuarios;
         private System.Windows.Forms.Button btnHabilitar;
         private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Button btnSalir;
