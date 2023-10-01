@@ -61,10 +61,27 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
 
             votar.Click += (sender, e) =>
             {
-                // Lógica para registrar el voto aquí
+                // Lógica para registrar el voto 
                 var sesionUsuario = ArchivosUsuarios.datosUsuarioLogin;
-                MessageBox.Show($"El usuario {sesionUsuario._sNombres} ha iniciado sesion desde la provincia {sesionUsuario._sProvincia}");
-                MessageBox.Show($"Has votado por {candidato._sNombre}");
+                if (sesionUsuario._sVoto == false)
+                {
+                    //sesionUsuario._sVoto = true;
+                    //ArchivosUsuarios.UpdateFile(sesionUsuario);
+
+                    //Instancia objeto voto 
+                    Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre);
+                    //Guarda el voto en el directorio ArchivosVotos
+                    ArchivosVotos.CreateFile(voto);
+                    //Obtiene todos los votos sin filtrar TODOS
+                    List<Voto> votos = ArchivosVotos.GetVotos();
+
+                    //Prueba para ver si funciona xd
+                    foreach (var item in votos)
+                    {
+                        MessageBox.Show($"El voto es para: { item._sCandidato} desde: {item._sProvincia}");
+                    }
+                    MessageBox.Show($"Has votado por {candidato._sNombre}");
+                }
             };
 
             panelCandidato.Controls.AddRange(new Control [] { nombreCandidato, lista, listaCandidato, votar });
