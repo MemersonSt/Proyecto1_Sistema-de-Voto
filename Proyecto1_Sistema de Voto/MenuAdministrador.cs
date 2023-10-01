@@ -32,5 +32,11 @@ namespace Proyecto1_Sistema_de_Voto
             candidatos.ShowDialog();
             this.Close();
         }
+
+        private void btnListaCandidatos_Click (object sender, EventArgs e) {
+            this.Hide();
+            ListaCandidatos verLista = new ListaCandidatos();
+            verLista.ShowDialog();
+        }
     }
 }

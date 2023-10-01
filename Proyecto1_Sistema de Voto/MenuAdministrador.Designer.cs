@@ -71,6 +71,7 @@
             this.btnListaCandidatos.TabIndex = 3;
             this.btnListaCandidatos.Text = "Ver Candidatos";
             this.btnListaCandidatos.UseVisualStyleBackColor = false;
+            this.btnListaCandidatos.Click += new System.EventHandler(this.btnListaCandidatos_Click);
             // 
             // btnVotos
             // 
