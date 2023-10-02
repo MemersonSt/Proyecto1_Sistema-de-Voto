@@ -26,7 +26,7 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             InitializeComponent();
         }
 
-        Contador prueba1 = new Contador(ArchivoContador._iContador);
+        
 
         private void RegistrarVotos_Load (object sender, EventArgs e) {
             List<Candidato> listaCandidatos = ArchivosCandidatos.ReadList();
@@ -75,19 +75,40 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     sesionUsuario._sVoto = true;
                     ArchivosUsuarios.UpdateFile(sesionUsuario);
 
-                    //El contador puede que no se aumente porque cada vez que de clic a votar el contador se seteará a 0
-                    ArchivoContador.CreateFile(prueba1);
+                    if (!Directory.Exists(@"ArchivoContador"))
+                    {
+                        Contador prueba1 = new Contador(ArchivoContador._iContador);
+                        ArchivoContador.CreateFile(prueba1);
 
-                    var prueba = ArchivoContador.ReadFile();
+                        var prueba = ArchivoContador.ReadFile();
 
-                    //Instancia objeto voto 
-                    Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre, prueba._iContador++);
+                        //Instancia objeto voto 
+                        Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre, prueba._iContador++);
 
-                    //prueba._iContador = voto._iId;
+                        //prueba._iContador = voto._iId;
 
-                    ArchivoContador.CreateFile(prueba);
-                    //Guarda el voto en el directorio ArchivosVotos
-                    ArchivosVotos.CreateFile(voto);
+                        ArchivoContador.CreateFile(prueba);
+                        //Guarda el voto en el directorio ArchivosVotos
+                        ArchivosVotos.CreateFile(voto);
+                    }
+                    else
+                    {
+                        //El contador puede que no se aumente porque cada vez que de clic a votar el contador se seteará a 0
+
+
+                        var prueba = ArchivoContador.ReadFile();
+
+                        //Instancia objeto voto 
+                        Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre, prueba._iContador++);
+
+                        //prueba._iContador = voto._iId;
+
+                        ArchivoContador.CreateFile(prueba);
+                        //Guarda el voto en el directorio ArchivosVotos
+                        ArchivosVotos.CreateFile(voto);
+                    }
+
+                    
 
 
                     //Obtiene todos los votos sin filtrar TODOS
@@ -97,14 +118,10 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     foreach (var item in votos)
                     {
                         MessageBox.Show($"El voto es para: { item._sCandidato} desde: {item._sProvincia}");
-<<<<<<< HEAD
 
                     }*/
                     
-=======
                     }
->>>>>>> 7abd8559ea2b3f3f458880aeffe8d6fe6a2219c7
-                }
             };
 
             panelCandidato.Controls.AddRange(new Control [] { nombreCandidato, lista, listaCandidato, votar });
