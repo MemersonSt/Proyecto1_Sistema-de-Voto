@@ -90,6 +90,16 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     ArchivosVotos.CreateFile(voto);
 
 
+                        //prueba._iContador = voto._iId;
+
+                        ArchivoContador.CreateFile(prueba);
+                        //Guarda el voto en el directorio ArchivosVotos
+                        ArchivosVotos.CreateFile(voto);
+                    }
+
+                    
+
+
                     //Obtiene todos los votos sin filtrar TODOS
                     /*List<Voto> votos = ArchivosVotos.GetVotos();
 
@@ -97,14 +107,10 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     foreach (var item in votos)
                     {
                         MessageBox.Show($"El voto es para: { item._sCandidato} desde: {item._sProvincia}");
-<<<<<<< HEAD
 
                     }*/
                     
-=======
                     }
->>>>>>> 7abd8559ea2b3f3f458880aeffe8d6fe6a2219c7
-                }
             };
 
             panelCandidato.Controls.AddRange(new Control [] { nombreCandidato, lista, listaCandidato, votar });
