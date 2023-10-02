@@ -50,6 +50,7 @@
             this.btnRegistrarCandidatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
             this.btnRegistrarCandidatos.FlatAppearance.BorderSize = 0;
             this.btnRegistrarCandidatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarCandidatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarCandidatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnRegistrarCandidatos.Location = new System.Drawing.Point(32, 272);
             this.btnRegistrarCandidatos.Name = "btnRegistrarCandidatos";
@@ -64,6 +65,7 @@
             this.btnListaCandidatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
             this.btnListaCandidatos.FlatAppearance.BorderSize = 0;
             this.btnListaCandidatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaCandidatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListaCandidatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnListaCandidatos.Location = new System.Drawing.Point(29, 272);
             this.btnListaCandidatos.Name = "btnListaCandidatos";
@@ -78,6 +80,7 @@
             this.btnVotos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
             this.btnVotos.FlatAppearance.BorderSize = 0;
             this.btnVotos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVotos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnVotos.Location = new System.Drawing.Point(31, 272);
             this.btnVotos.Name = "btnVotos";
@@ -85,18 +88,20 @@
             this.btnVotos.TabIndex = 4;
             this.btnVotos.Text = "Ver los Votos";
             this.btnVotos.UseVisualStyleBackColor = false;
+            this.btnVotos.Click += new System.EventHandler(this.btnVotos_Click);
             // 
             // btnListaUsuarios
             // 
             this.btnListaUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
             this.btnListaUsuarios.FlatAppearance.BorderSize = 0;
             this.btnListaUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListaUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.btnListaUsuarios.Location = new System.Drawing.Point(33, 272);
             this.btnListaUsuarios.Name = "btnListaUsuarios";
             this.btnListaUsuarios.Size = new System.Drawing.Size(165, 45);
             this.btnListaUsuarios.TabIndex = 5;
-            this.btnListaUsuarios.Text = "button4";
+            this.btnListaUsuarios.Text = "Ver Usuarios";
             this.btnListaUsuarios.UseVisualStyleBackColor = false;
             this.btnListaUsuarios.Click += new System.EventHandler(this.btnListaUsuarios_Click);
             // 

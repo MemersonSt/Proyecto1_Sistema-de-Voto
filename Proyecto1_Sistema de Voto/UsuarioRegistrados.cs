@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.TextFormatting;
 
 namespace Proyecto1_Sistema_de_Voto {
     public partial class UsuarioRegistrados : Form {
@@ -71,6 +72,13 @@ namespace Proyecto1_Sistema_de_Voto {
             formaPanel.CloseAllFigures();
 
             panel.Region = new Region(formaPanel);
+        }
+
+        private void btnRegresar_Click (object sender, EventArgs e) {
+            this.Hide();
+            MenuAdministrador regresar = new MenuAdministrador();
+            regresar.ShowDialog();
+            this.Close();
         }
     }
 }

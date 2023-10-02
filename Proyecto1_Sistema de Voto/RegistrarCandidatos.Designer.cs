@@ -227,6 +227,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label1);
             this.Name = "RegistrarCandidatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarCandidatos";
             ((System.ComponentModel.ISupportInitialize)(this.pctFoto)).EndInit();
             this.ResumeLayout(false);
