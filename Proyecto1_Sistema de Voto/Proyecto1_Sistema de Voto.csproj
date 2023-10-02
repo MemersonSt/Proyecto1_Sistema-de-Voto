@@ -128,6 +128,9 @@
     <Compile Include="VotosUsuarios\RegistrarVotos.Designer.cs">
       <DependentUpon>RegistrarVotos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CertificadoVotacion.resx">
+      <DependentUpon>CertificadoVotacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatosDelVotante.resx">
       <DependentUpon>DatosDelVotante.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +201,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-1156840965-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Escudo del Ecuador.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\800px-CNE_Ecuador.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Escudo_de_la_Republica_del_Ecuador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Escudo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

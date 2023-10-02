@@ -101,6 +101,7 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         }
         #endregion
 
+        #region ReadList
         public static List<Usuario> ReadList () {
             List<Usuario> listaUsuarios = new List<Usuario>();
             try {
@@ -120,5 +121,6 @@ namespace Proyecto1_Sistema_de_Voto.Clases
 
             return listaUsuarios;
         }
+        #endregion
     }
 }

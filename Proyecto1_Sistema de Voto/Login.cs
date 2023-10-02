@@ -51,6 +51,7 @@ namespace Proyecto1_Sistema_de_Voto {
             if (user != null) {
                 if (user._sCedula == txtCedula.Text && user._sContraseña == textPasword.Text) {
                     ArchivosUsuarios.datosUsuarioLogin = user;
+                    
                     this.Hide();
                     RegistrarVotos abrir = new RegistrarVotos();
                     abrir.ShowDialog();
