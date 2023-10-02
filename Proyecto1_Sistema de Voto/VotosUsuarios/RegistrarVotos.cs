@@ -17,6 +17,10 @@ using Proyecto1_Sistema_de_Voto.Clases;
 
 namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
     public partial class RegistrarVotos : Form {
+        string nombreUsuario = ArchivosUsuarios.datosUsuarioLogin._sNombres;
+        string apellidoUsuario = ArchivosUsuarios.datosUsuarioLogin._sApellidos;
+        string cedulaUsuario = ArchivosUsuarios.datosUsuarioLogin._sCedula;
+        string provinciaUsuario = ArchivosUsuarios.datosUsuarioLogin._sProvincia;
         
         public RegistrarVotos () {
             InitializeComponent();
@@ -93,9 +97,13 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     foreach (var item in votos)
                     {
                         MessageBox.Show($"El voto es para: { item._sCandidato} desde: {item._sProvincia}");
+<<<<<<< HEAD
 
                     }*/
                     
+=======
+                    }
+>>>>>>> 7abd8559ea2b3f3f458880aeffe8d6fe6a2219c7
                 }
             };
 
@@ -124,6 +132,20 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             formaPanel.CloseAllFigures(); 
 
             panel.Region = new Region(formaPanel);
+        }
+
+        private void btnGeneralCertificado_Click (object sender, EventArgs e) {
+            this.Hide();
+            CertificadoVotacion certificadoVotacion = new CertificadoVotacion();
+            certificadoVotacion.ShowDialog();
+            this.Close();
+        }
+
+        private void btnSalir_Click (object sender, EventArgs e) {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+            this.Close();
         }
     }
 }
