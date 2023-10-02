@@ -22,6 +22,8 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             InitializeComponent();
         }
 
+        Contador prueba1 = new Contador(ArchivoContador._iContador);
+
         private void RegistrarVotos_Load (object sender, EventArgs e) {
             List<Candidato> listaCandidatos = ArchivosCandidatos.ReadList();
 
@@ -63,24 +65,36 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             {
                 // Lógica para registrar el voto 
                 var sesionUsuario = ArchivosUsuarios.datosUsuarioLogin;
+                sesionUsuario._sVoto = false;
                 if (sesionUsuario._sVoto == false)
                 {
                     sesionUsuario._sVoto = true;
                     ArchivosUsuarios.UpdateFile(sesionUsuario);
 
+                    //El contador puede que no se aumente porque cada vez que de clic a votar el contador se seteará a 0
+                    ArchivoContador.CreateFile(prueba1);
+
+                    var prueba = ArchivoContador.ReadFile();
+
                     //Instancia objeto voto 
-                    Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre);
+                    Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre, prueba._iContador++);
+
+                    //prueba._iContador = voto._iId;
+
+                    ArchivoContador.CreateFile(prueba);
                     //Guarda el voto en el directorio ArchivosVotos
                     ArchivosVotos.CreateFile(voto);
+
+
                     //Obtiene todos los votos sin filtrar TODOS
-                    List<Voto> votos = ArchivosVotos.GetVotos();
+                    /*List<Voto> votos = ArchivosVotos.GetVotos();
 
                     //Prueba para ver si funciona xd
                     foreach (var item in votos)
                     {
                         MessageBox.Show($"El voto es para: { item._sCandidato} desde: {item._sProvincia}");
 
-                    }
+                    }*/
                     
                 }
             };

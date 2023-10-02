@@ -12,7 +12,7 @@ namespace Proyecto1_Sistema_de_Voto.Models {
         public string _sApellidos { get; set; }
         public string _sContraseña { get; set; }
         public string _sProvincia { get; set; }
-        public bool _sVoto = false;
+        public bool _sVoto {get; set; }
 
         public Usuario () { }
 

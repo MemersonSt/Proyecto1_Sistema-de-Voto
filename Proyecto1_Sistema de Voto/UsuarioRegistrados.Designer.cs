@@ -43,11 +43,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(96, 34);
+            this.label1.Location = new System.Drawing.Point(104, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(483, 37);
+            this.label1.Size = new System.Drawing.Size(451, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Lista de Usaruarios Registrados";
+            this.label1.Text = "Lista de Usuarios Registrados";
             // 
             // contenedorUsuarios
             // 
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 811);
+            this.ClientSize = new System.Drawing.Size(684, 749);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.contenedorUsuarios);
             this.Controls.Add(this.label1);

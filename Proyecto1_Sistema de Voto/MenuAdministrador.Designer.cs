@@ -101,7 +101,7 @@
             this.btnListaUsuarios.Name = "btnListaUsuarios";
             this.btnListaUsuarios.Size = new System.Drawing.Size(165, 45);
             this.btnListaUsuarios.TabIndex = 5;
-            this.btnListaUsuarios.Text = "Ver Usuarios";
+            this.btnListaUsuarios.Text = "Ver padrón electoral";
             this.btnListaUsuarios.UseVisualStyleBackColor = false;
             this.btnListaUsuarios.Click += new System.EventHandler(this.btnListaUsuarios_Click);
             // 
