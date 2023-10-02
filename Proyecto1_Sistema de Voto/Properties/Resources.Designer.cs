@@ -63,6 +63,16 @@ namespace Proyecto1_Sistema_de_Voto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _800px_CNE_Ecuador_svg {
+            get {
+                object obj = ResourceManager.GetObject("800px-CNE_Ecuador.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap admin {
             get {
                 object obj = ResourceManager.GetObject("admin", resourceCulture);
@@ -86,6 +96,36 @@ namespace Proyecto1_Sistema_de_Voto.Properties {
         internal static System.Drawing.Bitmap cerrar_sesion {
             get {
                 object obj = ResourceManager.GetObject("cerrar-sesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Escudo {
+            get {
+                object obj = ResourceManager.GetObject("Escudo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Escudo_de_la_Republica_del_Ecuador {
+            get {
+                object obj = ResourceManager.GetObject("Escudo_de_la_Republica_del_Ecuador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Escudo_del_Ecuador {
+            get {
+                object obj = ResourceManager.GetObject("Escudo del Ecuador", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
