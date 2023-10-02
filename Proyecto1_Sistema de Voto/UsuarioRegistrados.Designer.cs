@@ -27,12 +27,13 @@
             this.contenedorUsuarios = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.contenedorUsuarios.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // contenedorUsuarios
             // 
+            this.contenedorUsuarios.AutoScroll = true;
             this.contenedorUsuarios.Controls.Add(this.flowLayoutPanel1);
             this.contenedorUsuarios.Location = new System.Drawing.Point(12, 124);
             this.contenedorUsuarios.Name = "contenedorUsuarios";
@@ -58,6 +60,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 11);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -76,6 +79,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(566, 106);
             this.panel1.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(27, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 19);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Ciudad:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(353, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(179, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "No ha realizado el voto";
             // 
             // label4
             // 
@@ -117,34 +140,27 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre completo del Candidato";
             // 
-            // label6
+            // btnRegresar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(353, 65);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 19);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "No ha realizado el voto";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 19);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Ciudad:";
+            this.btnRegresar.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.Location = new System.Drawing.Point(415, 715);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(240, 46);
+            this.btnRegresar.TabIndex = 2;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // UsuarioRegistrados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 811);
+            this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.contenedorUsuarios);
             this.Controls.Add(this.label1);
             this.Name = "UsuarioRegistrados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UsuarioRegistrados";
             this.Load += new System.EventHandler(this.UsuarioRegistrados_Load);
             this.contenedorUsuarios.ResumeLayout(false);
@@ -168,5 +184,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnRegresar;
     }
 }

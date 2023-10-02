@@ -44,5 +44,11 @@ namespace Proyecto1_Sistema_de_Voto
             UsuarioRegistrados verLista = new UsuarioRegistrados();
             verLista.ShowDialog();
         }
+
+        private void btnVotos_Click (object sender, EventArgs e) {
+            Resultados verVotos = new Resultados();
+            verVotos.ShowDialog();
+
+        }
     }
 }

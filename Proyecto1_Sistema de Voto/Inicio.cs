@@ -24,7 +24,7 @@ namespace Proyecto1_Sistema_de_Voto
 
         private void btnIniciarVoto_Click (object sender, EventArgs e) 
         {
-            this.Hide();
+            //Votos inicio = new Votos();
             Login inicio = new Login();
             //Candidatos inicio = new Candidatos();
             //RegistrarVotos inicio = new RegistrarVotos();
