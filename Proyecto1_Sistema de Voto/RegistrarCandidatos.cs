@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,6 +19,8 @@ namespace Proyecto1_Sistema_de_Voto
         private string cedulaValidation = "[0-9]";
 
         private string mensaje = "Estimado/a {0} se ha realizado su registra a la candidatura";
+
+        private string mailValidation = @"^([^@]*@[^@]*)$";
 
         public RegistrarCandidatos () 
         {
@@ -40,6 +43,24 @@ namespace Proyecto1_Sistema_de_Voto
                 return false;
             }
 
+            if (txtCedula.Text.Length > 10 || txtCedula.Text.Length < 10)
+            {
+                MessageBox.Show("Ingrese un n° de cédula válido.");
+                txtCedula.Focus();
+                return false;
+            }
+
+            Regex rg = new Regex(cedulaValidation);
+
+            MatchCollection matches = rg.Matches(txtCedula.Text);
+
+            if (matches.Count == 0)
+            {
+                MessageBox.Show("Ingrese un n° de cédula válido.");
+                txtCedula.Focus();
+                return false;
+            }
+
             if (txtLista.Text.Length == 0)
             {
                 MessageBox.Show("Ingrese la lista del candidato.");
@@ -50,6 +71,16 @@ namespace Proyecto1_Sistema_de_Voto
             if (txtMail.Text.Length == 0)
             {
                 MessageBox.Show("Ingrese el correo electrónico del candidato.");
+                txtMail.Focus();
+                return false;
+            }
+
+            rg = new Regex(mailValidation);
+            matches = rg.Matches(txtMail.Text);
+
+            if (matches.Count == 0)
+            {
+                MessageBox.Show("Ingrese un correo electrónico válido.");
                 txtMail.Focus();
                 return false;
             }
