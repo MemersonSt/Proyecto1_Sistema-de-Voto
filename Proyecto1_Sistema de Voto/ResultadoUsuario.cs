@@ -1,5 +1,4 @@
 ﻿using Proyecto1_Sistema_de_Voto.clases;
-using Proyecto1_Sistema_de_Voto.Clases;
 using Proyecto1_Sistema_de_Voto.Models;
 using System;
 using System.Collections.Generic;
@@ -13,27 +12,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto1_Sistema_de_Voto {
-    public partial class Resultados : Form {
-        public Resultados () {
+    public partial class ResultadoUsuario : Form {
+        public ResultadoUsuario () {
             InitializeComponent();
         }
 
-        private void Votos_Load (object sender, EventArgs e) {
+        private void ResultadoUsuario_Load (object sender, EventArgs e) {
             //List<Voto> cantVotos = ArchivosVotos.GetVotos();
 
             //int cantidadVotos = cantVotos.Count;
-            
-            
+
+
             int total = ArchivosVotos.GetVotos().Count;
-            
-            foreach (var item in ArchivosCandidatos.ReadList())
-            {
+
+            foreach (var item in ArchivosCandidatos.ReadList()) {
                 List<Voto> listVoto = new List<Voto>();
 
-                foreach (var item1 in ArchivosVotos.GetVotos())
-                {
-                    if (item._sNombre.Equals(item1._sCandidato))
-                    {
+                foreach (var item1 in ArchivosVotos.GetVotos()) {
+                    if (item._sNombre.Equals(item1._sCandidato)) {
                         listVoto.Add(item1);
                     }
                 }
@@ -75,7 +71,7 @@ namespace Proyecto1_Sistema_de_Voto {
 
             Label nombreCandidato = CrearLabel(candidato, new Size(230, 25), new Point(6, 7), 16, FontStyle.Bold, Color.White);
             Label lista = CrearLabel("Votos:", new Size(48, 17), new Point(8, 42), 10, FontStyle.Bold, Color.White);
-            Label listaCandidato = CrearLabel(ArchivosVotos.CalcularPorcentaje(votos,total), new Size(41, 15), new Point(62, 44), 10, FontStyle.Regular, Color.White);
+            Label listaCandidato = CrearLabel(ArchivosVotos.CalcularPorcentaje(votos, total), new Size(41, 15), new Point(62, 44), 10, FontStyle.Regular, Color.White);
 
             ProgressBar progressBar = crearProgress(new Size(225, 23), new Point(11, 98));
             progressBar.Value = votos; // Puedes ajustar el valor de la ProgressBar según la cantidad de votos
@@ -120,7 +116,7 @@ namespace Proyecto1_Sistema_de_Voto {
 
         private void btnRegresar_Click (object sender, EventArgs e) {
             this.Hide();
-            MenuAdministrador regresar = new MenuAdministrador();
+            formInicio regresar = new formInicio();
             regresar.ShowDialog();
             this.Close();
         }

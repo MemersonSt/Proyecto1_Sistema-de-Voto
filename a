@@ -1,0 +1,216 @@
+[33mcommit 7abd8559ea2b3f3f458880aeffe8d6fe6a2219c7[m[33m ([m[1;36mHEAD -> [m[1;32mJonaBranch[m[33m, [m[1;31morigin/JonaBranch[m[33m)[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Mon Oct 2 00:13:32 2023 -0500
+
+    nada
+
+[33mcommit 92e6621c6ecd407319ad8b64b179bfa7979ddf8b[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Mon Oct 2 00:13:20 2023 -0500
+
+    Certificado terminado y algunas correcciones
+
+[33mcommit 2f75fa09aa8b6f9a66428ba8cd45d90f0766260b[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: f136470 d05f468
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sun Oct 1 21:44:47 2023 -0500
+
+    Semiterminado los resultados
+
+[33mcommit d05f46813fc632feeaa67dbc7a9b6b23dd1869ba[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sun Oct 1 21:42:21 2023 -0500
+
+    semitermindado los resultados
+
+[33mcommit f1364701808c4405a57c297d990021b2159f242c[m
+Merge: 581851c da5064e
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sun Oct 1 15:31:00 2023 -0500
+
+    Merge branch 'master' of https://github.com/MemersonSt/Proyecto1_Sistema-de-Voto
+
+[33mcommit 581851c0779157ffbd76f0c45a1b1f9bc207ecd0[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sun Oct 1 13:15:59 2023 -0500
+
+    creo que habra conflicto xd
+
+[33mcommit da5064e1f088852d47766ad19da8c20fa2be636c[m
+Merge: bec2b53 7a7d909
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sun Oct 1 15:16:22 2023 -0500
+
+    prueba
+
+[33mcommit 7a7d909c1652f0e908f15dc08a02b543b7154cce[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sun Oct 1 15:10:20 2023 -0500
+
+    nada
+
+[33mcommit 1e12292f184d79516bff0d9e427bdd02b1ff4b04[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sun Oct 1 15:10:04 2023 -0500
+
+    Lista de usuarios terminado1
+
+[33mcommit bec2b5375def7b179b13b2ddfdcd55722fb0a2b5[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sun Oct 1 13:15:59 2023 -0500
+
+    creo que habra conflicto xd
+
+[33mcommit ed434d754b1564d2ea619914f830883e04b57741[m
+Merge: fa01b8d 0b29074
+Author: Jona-S152 <solisjonathan152@gmail.com>
+Date:   Sun Oct 1 13:05:35 2023 -0500
+
+    Merge branch 'JonaBranch' of https://github.com/MemersonSt/Proyecto1_Sistema-de-Voto into JonaBranch
+
+[33mcommit fa01b8d35732632da4dd5ce10298bf177ca63503[m
+Author: Jona-S152 <solisjonathan152@gmail.com>
+Date:   Sun Oct 1 13:01:04 2023 -0500
+
+    Guardar voto agregado, falta Interfaz para mostrar votos
+
+[33mcommit 0b29074912c735fb2f9894333020ee866226511e[m
+Merge: 20a110f 700e047
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sat Sep 30 22:16:12 2023 -0500
+
+    Merge branch 'master' of https://github.com/MemersonSt/Proyecto1_Sistema-de-Voto
+
+[33mcommit 20a110fee9fb82d0b27b66abad3b683af520a9ec[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sat Sep 30 22:15:01 2023 -0500
+
+    Agregando la lista de candidatos
+
+[33mcommit 700e047a67cd91b0ce5023afd183dc37895f5357[m
+Author: Jona-S152 <solisjonathan152@gmail.com>
+Date:   Sat Sep 30 22:05:54 2023 -0500
+
+    Si falta guardar xd
+
+[33mcommit 73332058070582fd85a0b56863a4ccc52100a3a7[m
+Author: Jona-S152 <solisjonathan152@gmail.com>
+Date:   Sat Sep 30 21:59:30 2023 -0500
+
+    Sesion del usuario activo agregado
+
+[33mcommit 82cb784b6d0020dbf2fe6e1a1364c83f7da64888[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sat Sep 30 21:03:04 2023 -0500
+
+    falta guardar(creo) xd
+
+[33mcommit d16eb717d169aeaeb75b28188d6bfd268dc2f885[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Sat Sep 30 17:46:18 2023 -0500
+
+    Terminado 1era Parte de la Papeleta
+
+[33mcommit e3432b01314aece09177fa456e0580941556abc1[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 19:20:41 2023 -0500
+
+    Corrijiendo
+
+[33mcommit 7b715d63d020a4ae856296610a6785246fabddf6[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 18:42:12 2023 -0500
+
+    Prueba
+
+[33mcommit 70b6fe5cac6a52ff5a77d0c8e251a71a37f24fc5[m
+Merge: c4eb33b 72e6c2a
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 18:40:47 2023 -0500
+
+    Merge branch 'master' into JonaBranch
+
+[33mcommit c4eb33b7f6767d8e5156ebb1c4263f77a4fee804[m
+Merge: 679cc33 e66c095
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 18:38:00 2023 -0500
+
+    Conflictos solucionados
+
+[33mcommit e66c09543af47a576cdaca7b8cbda3f12ca232b0[m
+Author: Jona-S152 <solisjonathan152@gmail.com>
+Date:   Thu Sep 28 18:26:32 2023 -0500
+
+    Lista de candidatos eliminada
+
+[33mcommit 72e6c2a32bc3b476b11fb1a30b977235723a1663[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 18:26:28 2023 -0500
+
+    Emer
+
+[33mcommit dba1974170ac747d314dcd1ae75b9aa46cb5d9e4[m
+Author: Jona-S152 <solisjonathan152@gmail.com>
+Date:   Thu Sep 28 18:20:06 2023 -0500
+
+    CRUD de candidatos
+
+[33mcommit e343d5ef46e5fd17bb3b90f92b29bc528cc209cc[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 16:03:11 2023 -0500
+
+    Terminado el problema de las variables
+
+[33mcommit f3b5d95808f2c9f74132a18af62337078354aa3d[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 15:54:12 2023 -0500
+
+    Arreglando nombres de variables
+
+[33mcommit 1cf4e2c1eda9629b0fb585a094b895032b5edbbb[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 15:48:35 2023 -0500
+
+    Añadiendo las funcionalidad admin
+
+[33mcommit ad6bf8a40a876a6374a5b56ef34e7eba5c90a3a8[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 14:15:24 2023 -0500
+
+    Diseño base terminado
+
+[33mcommit 679cc3351b33b76fb83e85593747620af524ef51[m
+Author: Jona-S152 <solisjonathan152@gmail.com>
+Date:   Thu Sep 28 13:56:18 2023 -0500
+
+    Login, inscripción y validaciones agregadas
+
+[33mcommit 108612fe069459aabafe7d2160cc5e403c780ce3[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 11:38:46 2023 -0500
+
+    Sin terminar
+
+[33mcommit bb7dc6ba8f71055315296dbe5f30c8f80999e5bc[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Thu Sep 28 10:08:40 2023 -0500
+
+    Formularios
+
+[33mcommit 3fd3c707c53043069b2a8f9bc19c874ac4245450[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Tue Sep 26 15:11:04 2023 -0500
+
+    "Primer Interfaz"
+
+[33mcommit 5be9de3faaa3fa8ba30f4f425488fc006f060479[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Tue Sep 26 08:57:31 2023 -0500
+
+    Agregar archivos de proyecto.
+
+[33mcommit 8865c0ec96d47b9c61a209bb9c891eb6f1fd4339[m
+Author: steve <steve@DESKTOP-T6Q5TVR>
+Date:   Tue Sep 26 08:57:23 2023 -0500
+
+    Agregar .gitattributes y .gitignore.

@@ -43,7 +43,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 34);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.label1.Location = new System.Drawing.Point(101, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(451, 37);
             this.label1.TabIndex = 0;
@@ -52,10 +53,11 @@
             // contenedorUsuarios
             // 
             this.contenedorUsuarios.AutoScroll = true;
+            this.contenedorUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(211)))));
             this.contenedorUsuarios.Controls.Add(this.flowLayoutPanel1);
-            this.contenedorUsuarios.Location = new System.Drawing.Point(12, 124);
+            this.contenedorUsuarios.Location = new System.Drawing.Point(9, 85);
             this.contenedorUsuarios.Name = "contenedorUsuarios";
-            this.contenedorUsuarios.Size = new System.Drawing.Size(644, 551);
+            this.contenedorUsuarios.Size = new System.Drawing.Size(644, 563);
             this.contenedorUsuarios.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -142,23 +144,30 @@
             // 
             // btnRegresar
             // 
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
+            this.btnRegresar.FlatAppearance.BorderSize = 0;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(415, 715);
+            this.btnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.btnRegresar.Location = new System.Drawing.Point(207, 684);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(240, 46);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // UsuarioRegistrados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 749);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
+            this.ClientSize = new System.Drawing.Size(662, 759);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.contenedorUsuarios);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "UsuarioRegistrados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UsuarioRegistrados";

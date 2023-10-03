@@ -26,13 +26,6 @@ namespace Proyecto1_Sistema_de_Voto
         {
             this.Hide();
             Login inicio = new Login();
-<<<<<<< HEAD
-=======
-            //Candidatos inicio = new Candidatos();
-            //RegistrarVotos inicio = new RegistrarVotos();
-            //UsuarioRegistrados inicio = new UsuarioRegistrados();
-            //CertificadoVotacion inicio = new CertificadoVotacion();
->>>>>>> 7abd8559ea2b3f3f458880aeffe8d6fe6a2219c7
             inicio.ShowDialog();
             this.Close();
         }
@@ -40,6 +33,13 @@ namespace Proyecto1_Sistema_de_Voto
         private void btnSalir_Click (object sender, EventArgs e) 
         {
             this.Dispose();
+        }
+
+        private void btnVotosTotal_Click (object sender, EventArgs e) {
+            this.Hide();
+            ResultadoUsuario resultados = new ResultadoUsuario();
+            resultados.ShowDialog();
+            this.Close();
         }
     }
 }

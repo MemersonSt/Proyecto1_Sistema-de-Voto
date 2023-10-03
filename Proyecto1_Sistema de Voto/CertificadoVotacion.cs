@@ -21,6 +21,7 @@ namespace Proyecto1_Sistema_de_Voto {
             lbApellido.Text = ArchivosUsuarios.datosUsuarioLogin._sApellidos;
             lbCedula.Text = ArchivosUsuarios.datosUsuarioLogin._sCedula;
             lbProvincia.Text = ArchivosUsuarios.datosUsuarioLogin._sProvincia;
+            lblSexo.Text = ArchivosUsuarios.datosUsuarioLogin._sSexo;
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Proyecto1_Sistema_de_Voto {
         private Panel CrearPanelCandidato (Usuario usuario) {
             Panel panelUsuarios = new Panel {
                 Size = new Size(566, 106),
-                BackColor = Color.FromArgb(20, 108, 148),
+                BackColor = Color.FromArgb(18, 110, 130),
             };
 
             Label nombreUsuario = CrearLabel(usuario._sNombres, new Size(248, 19), new Point(27, 13), 12, FontStyle.Bold, Color.White);
@@ -41,7 +41,7 @@ namespace Proyecto1_Sistema_de_Voto {
             Label provincia = CrearLabel(usuario._sProvincia, new Size(99, 19), new Point(99, 65), 12, FontStyle.Regular, Color.White);
             Label votacion; // Declaración fuera del bloque if/else
 
-            if (usuario._sVoto == true) {
+            if (usuario._bEstado == true) {
                 votacion = CrearLabel("Voto Realizado", new Size(179, 19), new Point(353, 65), 12, FontStyle.Regular, Color.White);
             } else {
                 votacion = CrearLabel("Voto No Realizado", new Size(179, 19), new Point(353, 65), 12, FontStyle.Regular, Color.White);

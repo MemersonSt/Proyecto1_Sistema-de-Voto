@@ -33,7 +33,7 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(231)))));
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
             this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.btnVotosTotal);
             this.panelContenedor.Controls.Add(this.btnSalir);
@@ -47,10 +47,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 35.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(257, 228);
+            this.label1.Font = new System.Drawing.Font("Cambria", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(196, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(701, 55);
+            this.label1.Size = new System.Drawing.Size(809, 63);
             this.label1.TabIndex = 11;
             this.label1.Text = "Bienvenido al proceso Electoral";
             // 
@@ -65,6 +65,7 @@
             this.btnVotosTotal.Size = new System.Drawing.Size(37, 35);
             this.btnVotosTotal.TabIndex = 10;
             this.btnVotosTotal.UseVisualStyleBackColor = true;
+            this.btnVotosTotal.Click += new System.EventHandler(this.btnVotosTotal_Click);
             // 
             // btnSalir
             // 
@@ -82,12 +83,12 @@
             // 
             // btnIniciarVoto
             // 
-            this.btnIniciarVoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(114)))), ((int)(((byte)(175)))));
+            this.btnIniciarVoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
             this.btnIniciarVoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarVoto.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarVoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(226)))), ((int)(((byte)(239)))));
+            this.btnIniciarVoto.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarVoto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
             this.btnIniciarVoto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnIniciarVoto.Location = new System.Drawing.Point(384, 346);
+            this.btnIniciarVoto.Location = new System.Drawing.Point(383, 346);
             this.btnIniciarVoto.Name = "btnIniciarVoto";
             this.btnIniciarVoto.Size = new System.Drawing.Size(413, 70);
             this.btnIniciarVoto.TabIndex = 7;
@@ -101,6 +102,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.panelContenedor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "formInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Voto";

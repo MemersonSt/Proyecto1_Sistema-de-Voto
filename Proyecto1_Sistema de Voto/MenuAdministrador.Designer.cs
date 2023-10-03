@@ -27,17 +27,15 @@
             this.btnListaCandidatos = new System.Windows.Forms.Button();
             this.btnVotos = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
-            this.btnHabilitar = new System.Windows.Forms.Button();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -47,11 +45,11 @@
             // 
             // btnRegistrarCandidatos
             // 
-            this.btnRegistrarCandidatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
+            this.btnRegistrarCandidatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
             this.btnRegistrarCandidatos.FlatAppearance.BorderSize = 0;
             this.btnRegistrarCandidatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrarCandidatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarCandidatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.btnRegistrarCandidatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnRegistrarCandidatos.Location = new System.Drawing.Point(32, 272);
             this.btnRegistrarCandidatos.Name = "btnRegistrarCandidatos";
             this.btnRegistrarCandidatos.Size = new System.Drawing.Size(165, 45);
@@ -62,11 +60,11 @@
             // 
             // btnListaCandidatos
             // 
-            this.btnListaCandidatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
+            this.btnListaCandidatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
             this.btnListaCandidatos.FlatAppearance.BorderSize = 0;
             this.btnListaCandidatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListaCandidatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaCandidatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.btnListaCandidatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnListaCandidatos.Location = new System.Drawing.Point(29, 272);
             this.btnListaCandidatos.Name = "btnListaCandidatos";
             this.btnListaCandidatos.Size = new System.Drawing.Size(165, 45);
@@ -77,11 +75,11 @@
             // 
             // btnVotos
             // 
-            this.btnVotos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
+            this.btnVotos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
             this.btnVotos.FlatAppearance.BorderSize = 0;
             this.btnVotos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVotos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVotos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.btnVotos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnVotos.Location = new System.Drawing.Point(31, 272);
             this.btnVotos.Name = "btnVotos";
             this.btnVotos.Size = new System.Drawing.Size(165, 45);
@@ -92,11 +90,11 @@
             // 
             // btnListaUsuarios
             // 
-            this.btnListaUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(127)))), ((int)(((byte)(206)))));
+            this.btnListaUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
             this.btnListaUsuarios.FlatAppearance.BorderSize = 0;
             this.btnListaUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.btnListaUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.btnListaUsuarios.Location = new System.Drawing.Point(33, 272);
             this.btnListaUsuarios.Name = "btnListaUsuarios";
             this.btnListaUsuarios.Size = new System.Drawing.Size(165, 45);
@@ -105,36 +103,11 @@
             this.btnListaUsuarios.UseVisualStyleBackColor = false;
             this.btnListaUsuarios.Click += new System.EventHandler(this.btnListaUsuarios_Click);
             // 
-            // btnHabilitar
-            // 
-            this.btnHabilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
-            this.btnHabilitar.FlatAppearance.BorderSize = 0;
-            this.btnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHabilitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.btnHabilitar.Location = new System.Drawing.Point(45, 579);
-            this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(193, 50);
-            this.btnHabilitar.TabIndex = 6;
-            this.btnHabilitar.Text = "Habilitar";
-            this.btnHabilitar.UseVisualStyleBackColor = false;
-            // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
-            this.btnDeshabilitar.FlatAppearance.BorderSize = 0;
-            this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeshabilitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.btnDeshabilitar.Location = new System.Drawing.Point(267, 579);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(194, 50);
-            this.btnDeshabilitar.TabIndex = 7;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.label1.Location = new System.Drawing.Point(37, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(291, 47);
@@ -143,7 +116,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(206)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(211)))));
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Controls.Add(this.btnRegistrarCandidatos);
             this.panel5.Location = new System.Drawing.Point(107, 136);
@@ -151,19 +124,9 @@
             this.panel5.Size = new System.Drawing.Size(225, 360);
             this.panel5.TabIndex = 10;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.admin;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(32, 66);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 151);
-            this.panel1.TabIndex = 0;
-            // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(206)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(211)))));
             this.panel6.Controls.Add(this.panel2);
             this.panel6.Controls.Add(this.btnListaCandidatos);
             this.panel6.Location = new System.Drawing.Point(355, 136);
@@ -171,19 +134,9 @@
             this.panel6.Size = new System.Drawing.Size(225, 360);
             this.panel6.TabIndex = 11;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.admin;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(29, 66);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 151);
-            this.panel2.TabIndex = 1;
-            // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(206)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(211)))));
             this.panel7.Controls.Add(this.panel3);
             this.panel7.Controls.Add(this.btnVotos);
             this.panel7.Location = new System.Drawing.Point(605, 136);
@@ -191,19 +144,9 @@
             this.panel7.Size = new System.Drawing.Size(225, 360);
             this.panel7.TabIndex = 12;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.admin;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(31, 66);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(165, 151);
-            this.panel3.TabIndex = 1;
-            // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(167)))), ((int)(((byte)(206)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(211)))));
             this.panel8.Controls.Add(this.panel4);
             this.panel8.Controls.Add(this.btnListaUsuarios);
             this.panel8.Location = new System.Drawing.Point(853, 136);
@@ -213,13 +156,43 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.admin;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.servicio_al_cliente;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel4.Location = new System.Drawing.Point(33, 66);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(165, 151);
             this.panel4.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.elecciones;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(31, 66);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(165, 151);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.portapapeles;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(29, 66);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(165, 151);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.sitio_web;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(32, 66);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(165, 151);
+            this.panel1.TabIndex = 0;
             // 
             // btnSalir
             // 
@@ -238,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(1184, 661);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -246,8 +219,8 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnDeshabilitar);
-            this.Controls.Add(this.btnHabilitar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MenuAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdministrador";
@@ -270,8 +243,6 @@
         private System.Windows.Forms.Button btnListaCandidatos;
         private System.Windows.Forms.Button btnVotos;
         private System.Windows.Forms.Button btnListaUsuarios;
-        private System.Windows.Forms.Button btnHabilitar;
-        private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;

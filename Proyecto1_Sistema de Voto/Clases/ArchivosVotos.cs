@@ -123,9 +123,11 @@ namespace Proyecto1_Sistema_de_Voto.clases
 
         public static string CalcularPorcentaje(int numeroConvertir, int total)
         {
-            int porcentaje = (numeroConvertir/total) * 100;
+            double porcentaje = ((double)numeroConvertir / (double)total) * 100;
 
-            return $"{porcentaje}%";
+            int por = (int)Math.Round(porcentaje);
+
+            return $" {por}%";
         }
     }
 }
