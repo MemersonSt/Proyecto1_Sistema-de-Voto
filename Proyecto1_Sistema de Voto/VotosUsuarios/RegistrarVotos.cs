@@ -69,10 +69,10 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             {
                 // Lógica para registrar el voto 
                 var sesionUsuario = ArchivosUsuarios.datosUsuarioLogin;
-                sesionUsuario._sVoto = false;
-                if (sesionUsuario._sVoto == false)
+                //sesionUsuario._sVoto = false;
+                if (sesionUsuario._bEstado == false)
                 {
-                    sesionUsuario._sVoto = true;
+                    sesionUsuario._bEstado = true;
                     ArchivosUsuarios.UpdateFile(sesionUsuario);
 
                     if (!Directory.Exists(@"ArchivoContador"))
@@ -90,12 +90,16 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                         ArchivoContador.CreateFile(prueba);
                         //Guarda el voto en el directorio ArchivosVotos
                         ArchivosVotos.CreateFile(voto);
+
+                        votar.Enabled = false;
+
+                        this.Hide();
+                        CertificadoVotacion certificado = new CertificadoVotacion();
+                        certificado.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
-                        //El contador puede que no se aumente porque cada vez que de clic a votar el contador se seteará a 0
-
-
                         var prueba = ArchivoContador.ReadFile();
 
                         //Instancia objeto voto 
@@ -106,22 +110,25 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                         ArchivoContador.CreateFile(prueba);
                         //Guarda el voto en el directorio ArchivosVotos
                         ArchivosVotos.CreateFile(voto);
+
+                        votar.Enabled = false;
+
+                        this.Hide();
+                        CertificadoVotacion certificado = new CertificadoVotacion();
+                        certificado.ShowDialog();
+                        this.Close();
                     }
 
-                    
+                }
+                else
+                {
+                    MessageBox.Show($"Estimado/a {sesionUsuario._sNombres} solo puede votar una vez");
 
-
-                    //Obtiene todos los votos sin filtrar TODOS
-                    /*List<Voto> votos = ArchivosVotos.GetVotos();
-
-                    //Prueba para ver si funciona xd
-                    foreach (var item in votos)
-                    {
-                        MessageBox.Show($"El voto es para: { item._sCandidato} desde: {item._sProvincia}");
-
-                    }*/
-                    
-                    }
+                    this.Hide();
+                    Login log = new Login();
+                    log.ShowDialog();
+                    this.Close();
+                }
             };
 
             panelCandidato.Controls.AddRange(new Control [] { nombreCandidato, lista, listaCandidato, votar });

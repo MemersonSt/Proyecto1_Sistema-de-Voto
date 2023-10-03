@@ -12,16 +12,19 @@ namespace Proyecto1_Sistema_de_Voto.Models {
         public string _sApellidos { get; set; }
         public string _sContraseña { get; set; }
         public string _sProvincia { get; set; }
-        public bool _sVoto {get; set; }
+        public bool _bEstado {get; set; }
+        public string _sSexo { get; set; }
 
         public Usuario () { }
 
-        public Usuario (string _sCedula, string _sNombres, string _sApellidos, string _sContraseña, string _sProvincia) {
+        public Usuario (string _sCedula, string _sNombres, string _sApellidos, string _sContraseña, string _sProvincia, bool _bEstado, string _sSexo) {
             this._sCedula = _sCedula;
             this._sNombres = _sNombres;
             this._sApellidos = _sApellidos;
             this._sContraseña = _sContraseña;
             this._sProvincia = _sProvincia;
+            this._bEstado = _bEstado;
+            this._sSexo = _sSexo;
         }
     }
 }

@@ -78,6 +78,8 @@ namespace Proyecto1_Sistema_de_Voto {
 
             ProgressBar progressBar = crearProgress(new Size(225, 23), new Point(11, 98));
             progressBar.Value = votos; // Puedes ajustar el valor de la ProgressBar según la cantidad de votos
+            progressBar.Maximum = total;
+            progressBar.Minimum = 0;
 
             panelCandidato.Controls.AddRange(new Control [] { nombreCandidato, lista, listaCandidato, progressBar });
             RedondearPanel(panelCandidato, 10);

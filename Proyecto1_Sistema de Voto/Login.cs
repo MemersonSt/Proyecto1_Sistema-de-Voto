@@ -1,4 +1,5 @@
-﻿using Proyecto1_Sistema_de_Voto.Clases;
+﻿using Proyecto1_Sistema_de_Voto.clases;
+using Proyecto1_Sistema_de_Voto.Clases;
 using Proyecto1_Sistema_de_Voto.Models;
 using Proyecto1_Sistema_de_Voto.VotosUsuarios;
 using System;
@@ -13,8 +14,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Proyecto1_Sistema_de_Voto {
-    public partial class Login : Form {
-        public Login () {
+    public partial class Login : Form 
+    {
+
+        public Login () 
+        {
             InitializeComponent();
         }
 
@@ -45,13 +49,13 @@ namespace Proyecto1_Sistema_de_Voto {
         }
 
         private void btnIngresar_Click (object sender, EventArgs e) {
-            //RegistrarVotos abrir = new RegistrarVotos();
-            //abrir.ShowDialog();
+            
+
             var user = ArchivosUsuarios.ReadFile(txtCedula.Text);
             if (user != null) {
                 if (user._sCedula == txtCedula.Text && user._sContraseña == textPasword.Text) {
                     ArchivosUsuarios.datosUsuarioLogin = user;
-                    
+
                     this.Hide();
                     RegistrarVotos abrir = new RegistrarVotos();
                     abrir.ShowDialog();

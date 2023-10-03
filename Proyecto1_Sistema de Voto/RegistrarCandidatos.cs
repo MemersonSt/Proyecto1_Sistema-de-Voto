@@ -1,4 +1,5 @@
 ﻿using Proyecto1_Sistema_de_Voto.clases;
+using Proyecto1_Sistema_de_Voto.Mail;
 using Proyecto1_Sistema_de_Voto.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace Proyecto1_Sistema_de_Voto
     public partial class RegistrarCandidatos : Form 
     {
         private string cedulaValidation = "[0-9]";
+
+        private string mensaje = "Estimado/a {0} se ha realizado su registra a la candidatura";
 
         public RegistrarCandidatos () 
         {
@@ -90,6 +93,8 @@ namespace Proyecto1_Sistema_de_Voto
                 {
                     Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text);
                     ArchivosCandidatos.CreateFile(candidato);
+
+                    Mail.Mail.SendMail(candidato._sMail, "Registro Candidatura", $"Estimado/a {candidato._sNombre} se ha realizado su registro exitosamente\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las elecciones");
                 }
             }
         }
@@ -102,6 +107,8 @@ namespace Proyecto1_Sistema_de_Voto
                 {
                     Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text);
                     ArchivosCandidatos.UpdateFile(candidato);
+
+                    Mail.Mail.SendMail(candidato._sMail, "Actualización Candidatura", $"Estimado/a {candidato._sNombre} se han actualizado sus datos exitosamente\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las elecciones");
                 }
                 else
                 {
@@ -116,7 +123,9 @@ namespace Proyecto1_Sistema_de_Voto
             {
                 if (ArchivosCandidatos.ReadFile(txtCedula.Text) != null)
                 {
+                    Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text);
                     ArchivosCandidatos.DeleteFile(txtCedula.Text);
+                    Mail.Mail.SendMail(candidato._sMail, "Eliminación Candidatura", $"Estimado/a {candidato._sNombre} se han eliminado sus datos\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las próximas elecciones");
                 }
                 else
                 {

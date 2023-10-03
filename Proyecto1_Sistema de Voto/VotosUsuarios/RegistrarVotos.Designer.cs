@@ -148,11 +148,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1084, 811);
+            this.ClientSize = new System.Drawing.Size(1084, 749);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGeneralCertificado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelContenedor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "RegistrarVotos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrarVotos";

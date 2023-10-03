@@ -27,10 +27,10 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbNombre1 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -73,6 +73,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(256, 147);
             this.panel1.TabIndex = 1;
+            this.panel1.Visible = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(11, 98);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(225, 23);
+            this.progressBar1.TabIndex = 4;
             // 
             // label3
             // 
@@ -104,13 +112,6 @@
             this.lbNombre1.TabIndex = 0;
             this.lbNombre1.Text = "Emerson Cajapecajape";
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(11, 98);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(225, 23);
-            this.progressBar1.TabIndex = 4;
-            // 
             // btnRegresar
             // 
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,7 +123,7 @@
             this.btnRegresar.UseVisualStyleBackColor = true;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // Votos
+            // Resultados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,7 +131,9 @@
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.label1);
-            this.Name = "Votos";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Resultados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Votos";
             this.Load += new System.EventHandler(this.Votos_Load);

@@ -76,6 +76,13 @@ namespace Proyecto1_Sistema_de_Voto
                 return false;
             }
 
+            if (cbSexo.Text.Length == 0)
+            {
+                MessageBox.Show("Ingrese una de las opcíones disponibles.");
+                cbSexo.Focus();
+                return false;
+            }
+
             return true;
         }
 
@@ -91,7 +98,7 @@ namespace Proyecto1_Sistema_de_Voto
                 } 
                 else 
                 {
-                    Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text);
+                    Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text);
                     ArchivosUsuarios.CreateFile(user);
                     MessageBox.Show("Inscripción exitosa");
                     this.Hide();

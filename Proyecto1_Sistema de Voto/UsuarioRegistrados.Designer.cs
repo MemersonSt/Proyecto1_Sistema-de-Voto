@@ -143,7 +143,7 @@
             // btnRegresar
             // 
             this.btnRegresar.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(415, 715);
+            this.btnRegresar.Location = new System.Drawing.Point(673, 629);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(240, 46);
             this.btnRegresar.TabIndex = 2;
@@ -155,10 +155,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 749);
+            this.ClientSize = new System.Drawing.Size(930, 691);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.contenedorUsuarios);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "UsuarioRegistrados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UsuarioRegistrados";

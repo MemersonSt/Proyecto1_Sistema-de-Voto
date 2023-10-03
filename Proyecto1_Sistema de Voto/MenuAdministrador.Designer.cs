@@ -27,8 +27,6 @@
             this.btnListaCandidatos = new System.Windows.Forms.Button();
             this.btnVotos = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
-            this.btnHabilitar = new System.Windows.Forms.Button();
-            this.btnDeshabilitar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -104,32 +102,6 @@
             this.btnListaUsuarios.Text = "Ver padrón electoral";
             this.btnListaUsuarios.UseVisualStyleBackColor = false;
             this.btnListaUsuarios.Click += new System.EventHandler(this.btnListaUsuarios_Click);
-            // 
-            // btnHabilitar
-            // 
-            this.btnHabilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
-            this.btnHabilitar.FlatAppearance.BorderSize = 0;
-            this.btnHabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHabilitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.btnHabilitar.Location = new System.Drawing.Point(45, 579);
-            this.btnHabilitar.Name = "btnHabilitar";
-            this.btnHabilitar.Size = new System.Drawing.Size(193, 50);
-            this.btnHabilitar.TabIndex = 6;
-            this.btnHabilitar.Text = "Habilitar";
-            this.btnHabilitar.UseVisualStyleBackColor = false;
-            // 
-            // btnDeshabilitar
-            // 
-            this.btnDeshabilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
-            this.btnDeshabilitar.FlatAppearance.BorderSize = 0;
-            this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeshabilitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.btnDeshabilitar.Location = new System.Drawing.Point(267, 579);
-            this.btnDeshabilitar.Name = "btnDeshabilitar";
-            this.btnDeshabilitar.Size = new System.Drawing.Size(194, 50);
-            this.btnDeshabilitar.TabIndex = 7;
-            this.btnDeshabilitar.Text = "Deshabilitar";
-            this.btnDeshabilitar.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -246,8 +218,8 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnDeshabilitar);
-            this.Controls.Add(this.btnHabilitar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MenuAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdministrador";
@@ -270,8 +242,6 @@
         private System.Windows.Forms.Button btnListaCandidatos;
         private System.Windows.Forms.Button btnVotos;
         private System.Windows.Forms.Button btnListaUsuarios;
-        private System.Windows.Forms.Button btnHabilitar;
-        private System.Windows.Forms.Button btnDeshabilitar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;

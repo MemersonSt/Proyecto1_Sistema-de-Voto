@@ -41,7 +41,7 @@ namespace Proyecto1_Sistema_de_Voto {
             Label provincia = CrearLabel(usuario._sProvincia, new Size(99, 19), new Point(99, 65), 12, FontStyle.Regular, Color.White);
             Label votacion; // Declaración fuera del bloque if/else
 
-            if (usuario._sVoto == true) {
+            if (usuario._bEstado == true) {
                 votacion = CrearLabel("Voto Realizado", new Size(179, 19), new Point(353, 65), 12, FontStyle.Regular, Color.White);
             } else {
                 votacion = CrearLabel("Voto No Realizado", new Size(179, 19), new Point(353, 65), 12, FontStyle.Regular, Color.White);
