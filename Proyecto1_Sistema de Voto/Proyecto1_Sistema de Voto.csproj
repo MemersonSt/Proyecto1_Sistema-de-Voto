@@ -111,6 +111,12 @@
     <Compile Include="RegistrarCandidatos.Designer.cs">
       <DependentUpon>RegistrarCandidatos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultadoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultadoUsuario.Designer.cs">
+      <DependentUpon>ResultadoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuarioRegistrados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resultados.resx">
       <DependentUpon>Resultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultadoUsuario.resx">
+      <DependentUpon>ResultadoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UsuarioRegistrados.resx">
       <DependentUpon>UsuarioRegistrados.cs</DependentUpon>
@@ -229,6 +238,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\servicio-al-cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regresa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

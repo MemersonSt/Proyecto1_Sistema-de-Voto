@@ -1,5 +1,5 @@
 ﻿namespace Proyecto1_Sistema_de_Voto {
-    partial class Resultados {
+    partial class ResultadoUsuario {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,7 +23,6 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent () {
-            this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -31,31 +30,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbNombre1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.label1.Location = new System.Drawing.Point(384, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Votos Electorales";
-            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(211)))));
             this.panelContenedor.Controls.Add(this.flowLayoutPanel1);
-            this.panelContenedor.Location = new System.Drawing.Point(44, 114);
+            this.panelContenedor.Location = new System.Drawing.Point(38, 123);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1009, 412);
-            this.panelContenedor.TabIndex = 1;
+            this.panelContenedor.TabIndex = 4;
             // 
             // flowLayoutPanel1
             // 
@@ -114,36 +103,43 @@
             this.lbNombre1.TabIndex = 0;
             this.lbNombre1.Text = "Emerson Cajapecajape";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cambria", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.label1.Location = new System.Drawing.Point(378, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(293, 41);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Votos Electorales";
+            // 
             // btnRegresar
             // 
             this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
             this.btnRegresar.FlatAppearance.BorderSize = 0;
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegresar.Location = new System.Drawing.Point(847, 558);
+            this.btnRegresar.Location = new System.Drawing.Point(841, 579);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(206, 58);
-            this.btnRegresar.TabIndex = 2;
+            this.btnRegresar.TabIndex = 3;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
-            // Resultados
+            // ResultadoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "Resultados";
+            this.Name = "ResultadoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Votos";
-            this.Load += new System.EventHandler(this.Votos_Load);
-            this.Click += new System.EventHandler(this.btnRegresar_Click);
+            this.Text = "ResultadoUsuario";
+            this.Load += new System.EventHandler(this.ResultadoUsuario_Load);
             this.panelContenedor.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -154,15 +150,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbNombre1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRegresar;
     }
 }

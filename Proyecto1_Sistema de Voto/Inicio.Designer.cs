@@ -65,6 +65,7 @@
             this.btnVotosTotal.Size = new System.Drawing.Size(37, 35);
             this.btnVotosTotal.TabIndex = 10;
             this.btnVotosTotal.UseVisualStyleBackColor = true;
+            this.btnVotosTotal.Click += new System.EventHandler(this.btnVotosTotal_Click);
             // 
             // btnSalir
             // 

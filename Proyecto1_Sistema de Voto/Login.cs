@@ -70,5 +70,12 @@ namespace Proyecto1_Sistema_de_Voto {
                 this.Close();
             }
         }
+
+        private void btnRegresar_Click (object sender, EventArgs e) {
+            this.Hide();
+            formInicio regresar = new formInicio();
+            regresar.ShowDialog();
+            this.Close();
+        }
     }
 }

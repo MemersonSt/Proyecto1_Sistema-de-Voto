@@ -34,5 +34,12 @@ namespace Proyecto1_Sistema_de_Voto
         {
             this.Dispose();
         }
+
+        private void btnVotosTotal_Click (object sender, EventArgs e) {
+            this.Hide();
+            ResultadoUsuario resultados = new ResultadoUsuario();
+            resultados.ShowDialog();
+            this.Close();
+        }
     }
 }

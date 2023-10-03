@@ -193,6 +193,16 @@ namespace Proyecto1_Sistema_de_Voto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap regresa {
+            get {
+                object obj = ResourceManager.GetObject("regresa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap servicio_al_cliente {
             get {
                 object obj = ResourceManager.GetObject("servicio-al-cliente", resourceCulture);
