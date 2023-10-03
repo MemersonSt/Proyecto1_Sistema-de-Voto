@@ -15,6 +15,8 @@ namespace Proyecto1_Sistema_de_Voto.clases
     {
         private static readonly string directoryPath = "ArchivosVotos";
 
+        public static int _iContador;
+
         //public static List<Voto> votos = new List<Voto>();
 
         #region Create
@@ -29,7 +31,7 @@ namespace Proyecto1_Sistema_de_Voto.clases
                     Directory.CreateDirectory(directoryPath);
                 }
 
-                string filePath = Path.Combine(directoryPath, voto._sProvincia + ".bin");
+                string filePath = Path.Combine(directoryPath, voto._iId.ToString() + ".bin");
 
                 using (FileStream fs = new FileStream(filePath, FileMode.Create))
                 {
@@ -83,5 +85,49 @@ namespace Proyecto1_Sistema_de_Voto.clases
             return votos;
         }
         #endregion
+
+        #region Read Sobrecarga
+        public static List<Voto> GetVotos(string candidato)
+        {
+            List<Voto> votos = new List<Voto>();
+
+            try
+            {
+                foreach (var archivo in Directory.GetFiles(directoryPath, candidato + ".bin"))
+                {
+                    using (FileStream fs = new FileStream(archivo, FileMode.Open))
+                    {
+                        BinaryFormatter formatter = new BinaryFormatter();
+
+                        //Castea el formatter deserializado a un objeto voto
+                        Voto votoDeserializado = (Voto)formatter.Deserialize(fs);
+
+                        //Guarda el objeto en la lista
+                        votos.Add(votoDeserializado);
+                    }
+                }
+            }
+            catch (SerializationException ex)
+            {
+                MessageBox.Show($"Error al deserializar un archivo: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al procesar los archivos: {ex.Message}");
+            }
+
+            //Retorna la lista
+            return votos;
+        }
+        #endregion
+
+        public static string CalcularPorcentaje(int numeroConvertir, int total)
+        {
+            double porcentaje = ((double)numeroConvertir / (double)total) * 100;
+
+            int por = (int)Math.Round(porcentaje);
+
+            return $" {por}%";
+        }
     }
 }

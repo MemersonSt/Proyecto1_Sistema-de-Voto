@@ -57,6 +57,7 @@
     <Compile Include="CertificadoVotacion.Designer.cs">
       <DependentUpon>CertificadoVotacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="clases\ArchivoContador.cs" />
     <Compile Include="clases\ArchivosCandidatos.cs" />
     <Compile Include="clases\ArchivosUsuarios.cs" />
     <Compile Include="clases\ArchivosVotos.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mail\Mail.cs" />
     <Compile Include="MenuAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +94,7 @@
     </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Candidato.cs" />
+    <Compile Include="Models\Contador.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Voto.cs" />
     <Compile Include="Notificacion.cs">
@@ -160,6 +163,9 @@
     <EmbeddedResource Include="RegistrarCandidatos.resx">
       <DependentUpon>RegistrarCandidatos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resultados.resx">
+      <DependentUpon>Resultados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuarioRegistrados.resx">
       <DependentUpon>UsuarioRegistrados.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +217,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Escudo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sitio-web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portapapeles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elecciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicio-al-cliente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
