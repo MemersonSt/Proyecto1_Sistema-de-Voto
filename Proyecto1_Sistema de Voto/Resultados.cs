@@ -42,6 +42,7 @@ namespace Proyecto1_Sistema_de_Voto {
                 Panel panelCandidato = CrearPanelCandidato(item._sNombre, cant, total);
                 flowLayoutPanel1.Controls.Add(panelCandidato);
             }
+            RedondearPanel(panelContenedor, 12);
             /*
             foreach (var item in ArchivosCandidatos.ReadList())
             {
@@ -68,13 +69,13 @@ namespace Proyecto1_Sistema_de_Voto {
         private Panel CrearPanelCandidato (string candidato, int votos, int total) {
             Panel panelCandidato = new Panel {
                 Size = new Size(256, 147),
-                BackColor = Color.FromArgb(20, 108, 148),
+                BackColor = Color.FromArgb(18, 110, 130),
                 Margin = new Padding(10, 10, 10, 10)
             };
 
             Label nombreCandidato = CrearLabel(candidato, new Size(230, 25), new Point(6, 7), 16, FontStyle.Bold, Color.White);
-            Label lista = CrearLabel("Votos:", new Size(53, 17), new Point(8, 42), 10, FontStyle.Bold, Color.White);
-            Label listaCandidato = CrearLabel(ArchivosVotos.CalcularPorcentaje(votos,total), new Size(41, 15), new Point(51, 44), 10, FontStyle.Regular, Color.White);
+            Label lista = CrearLabel("Votos:", new Size(48, 17), new Point(8, 42), 10, FontStyle.Bold, Color.White);
+            Label listaCandidato = CrearLabel(ArchivosVotos.CalcularPorcentaje(votos,total), new Size(41, 15), new Point(62, 44), 10, FontStyle.Regular, Color.White);
 
             ProgressBar progressBar = crearProgress(new Size(225, 23), new Point(11, 98));
             progressBar.Value = votos; // Puedes ajustar el valor de la ProgressBar según la cantidad de votos

@@ -31,7 +31,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lbNombre1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGeneralCertificado = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -41,7 +40,7 @@
             // panelContenedor
             // 
             this.panelContenedor.AutoScroll = true;
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(211)))), ((int)(((byte)(226)))));
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(211)))));
             this.panelContenedor.Controls.Add(this.flowLayoutPanel1);
             this.panelContenedor.Location = new System.Drawing.Point(40, 118);
             this.panelContenedor.Name = "panelContenedor";
@@ -50,7 +49,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(211)))), ((int)(((byte)(226)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(77, 5);
@@ -119,24 +118,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Papeleta de Votación";
             // 
-            // btnGeneralCertificado
-            // 
-            this.btnGeneralCertificado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGeneralCertificado.Location = new System.Drawing.Point(434, 707);
-            this.btnGeneralCertificado.Name = "btnGeneralCertificado";
-            this.btnGeneralCertificado.Size = new System.Drawing.Size(236, 50);
-            this.btnGeneralCertificado.TabIndex = 2;
-            this.btnGeneralCertificado.Text = "General Certificado";
-            this.btnGeneralCertificado.UseVisualStyleBackColor = true;
-            this.btnGeneralCertificado.Click += new System.EventHandler(this.btnGeneralCertificado_Click);
-            // 
             // btnSalir
             // 
             this.btnSalir.BackgroundImage = global::Proyecto1_Sistema_de_Voto.Properties.Resources.cerrar_sesion;
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Location = new System.Drawing.Point(1010, 740);
+            this.btnSalir.Location = new System.Drawing.Point(1010, 690);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(62, 59);
             this.btnSalir.TabIndex = 9;
@@ -147,10 +135,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(1084, 749);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
+            this.ClientSize = new System.Drawing.Size(1084, 761);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnGeneralCertificado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -178,7 +165,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnGeneralCertificado;
         private System.Windows.Forms.Button btnSalir;
     }
 }

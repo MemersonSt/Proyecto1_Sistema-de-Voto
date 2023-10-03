@@ -48,7 +48,7 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
         private Panel CrearPanelCandidato (Candidato candidato) {
             Panel panelCandidato = new Panel {
                 Size = new Size(140, 180),
-                BackColor = Color.FromArgb(20, 108, 148),
+                BackColor = Color.FromArgb(18, 110, 130),
                 Margin = new Padding(10, 10, 20, 10)
             };
 
@@ -59,11 +59,15 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             Button votar = new Button {
                 Size = new Size(118, 35),
                 Location = new Point(9, 125),
-                BackColor = Color.FromArgb(25, 167, 206),
+                BackColor = Color.FromArgb(19, 44, 51),
+                ForeColor = Color.FromArgb(216, 227, 231),
                 FlatStyle = FlatStyle.Flat,
                 FlatAppearance = { BorderSize = 0 },
                 Text = "Votar"
             };
+
+            Font boldFont = new Font(votar.Font.FontFamily,10 , FontStyle.Bold);
+            votar.Font = boldFont;
 
             votar.Click += (sender, e) =>
             {

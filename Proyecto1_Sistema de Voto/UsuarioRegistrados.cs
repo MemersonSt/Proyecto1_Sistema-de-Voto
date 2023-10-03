@@ -31,7 +31,7 @@ namespace Proyecto1_Sistema_de_Voto {
         private Panel CrearPanelCandidato (Usuario usuario) {
             Panel panelUsuarios = new Panel {
                 Size = new Size(566, 106),
-                BackColor = Color.FromArgb(20, 108, 148),
+                BackColor = Color.FromArgb(18, 110, 130),
             };
 
             Label nombreUsuario = CrearLabel(usuario._sNombres, new Size(248, 19), new Point(27, 13), 12, FontStyle.Bold, Color.White);

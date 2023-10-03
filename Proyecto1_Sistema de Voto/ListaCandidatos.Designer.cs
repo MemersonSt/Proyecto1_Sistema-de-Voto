@@ -41,6 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.label1.Location = new System.Drawing.Point(128, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(350, 43);
@@ -50,10 +51,11 @@
             // panelContenedor
             // 
             this.panelContenedor.AutoScroll = true;
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(196)))), ((int)(((byte)(211)))));
             this.panelContenedor.Controls.Add(this.flowLayoutPanel1);
             this.panelContenedor.Location = new System.Drawing.Point(12, 86);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(571, 489);
+            this.panelContenedor.Size = new System.Drawing.Size(571, 511);
             this.panelContenedor.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -80,7 +82,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(139, 48);
+            this.label4.Location = new System.Drawing.Point(231, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(247, 19);
             this.label4.TabIndex = 5;
@@ -118,11 +120,11 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(108)))), ((int)(((byte)(148)))));
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(110)))), ((int)(((byte)(130)))));
             this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresar.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.btnRegresar.Location = new System.Drawing.Point(397, 617);
+            this.btnRegresar.Location = new System.Drawing.Point(397, 627);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(166, 57);
             this.btnRegresar.TabIndex = 2;
@@ -134,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
             this.ClientSize = new System.Drawing.Size(604, 711);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.panelContenedor);
