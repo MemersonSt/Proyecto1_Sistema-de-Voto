@@ -20,16 +20,16 @@ En la papeleta electoral, los votantes pueden seleccionar a su candidato preferi
 Tras votar, se genera un certificado de votación que indica que el proceso se ha completado con éxito.
 Funcionalidades del Administrador:
 
-El administrador puede iniciar sesión con una cuenta especial.
-El administrador tiene acceso a cuatro opciones principales:
-Registrar Candidato: Permite agregar información sobre candidatos, incluyendo su nombre, partido político y plataforma.
-Actualizar Candidato: Permite realizar cambios en la información de candidatos existentes.
-Eliminar Candidato: Permite eliminar a un candidato de la lista electoral.
-Buscar Votante por Cédula: Facilita la búsqueda de votantes por su número de cédula.
-Ver Candidatos Registrados: Proporciona una lista de todos los candidatos registrados en el sistema.
-Ver Porcentaje de Votos: Muestra el porcentaje de votos recibidos por cada candidato, sin permitir modificaciones.
-Ver Usuarios Registrados: Muestra una lista de todos los usuarios registrados en el sistema, incluyendo información sobre quiénes han votado y quiénes no.
-Resultados de las Elecciones:
+- El administrador puede iniciar sesión con una cuenta especial.
+- El administrador tiene acceso a cuatro opciones principales:
+- Registrar Candidato: Permite agregar información sobre candidatos, incluyendo su nombre, partido político y plataforma.
+- Actualizar Candidato: Permite realizar cambios en la información de candidatos existentes.
+- Eliminar Candidato: Permite eliminar a un candidato de la lista electoral.
+- Buscar Votante por Cédula: Facilita la búsqueda de votantes por su número de cédula.
+- Ver Candidatos Registrados: Proporciona una lista de todos los candidatos registrados en el sistema.
+- Ver Porcentaje de Votos: Muestra el porcentaje de votos recibidos por cada candidato, sin permitir modificaciones.
+- Ver Usuarios Registrados: Muestra una lista de todos los usuarios registrados en el sistema, incluyendo información sobre quiénes han votado y quiénes no.
+- Resultados de las Elecciones:
 
 Los resultados de las elecciones están disponibles para todos los votantes una vez que se cierra la votación.
 Los votantes pueden acceder a los resultados para conocer los candidatos ganadores y el porcentaje de votos que recibieron.
