@@ -1,6 +1,5 @@
 # Título del Proyecto: Sistema de Votación Electrónica en C# .NET Framework
 
-Introducción:
 El sistema de votación electrónica es una plataforma diseñada para facilitar y agilizar el proceso de votación en elecciones. Este sistema permitirá a los votantes registrarse, votar por sus candidatos 
 favoritos y verificar su certificado de votación. Además, proporcionará a los administradores las herramientas necesarias para gestionar candidatos, supervisar el proceso electoral y generar informes de resultados.
 
@@ -34,6 +33,6 @@ Funcionalidades del Administrador:
 Los resultados de las elecciones están disponibles para todos los votantes una vez que se cierra la votación.
 Los votantes pueden acceder a los resultados para conocer los candidatos ganadores y el porcentaje de votos que recibieron.
 
-Conclusión:
+Resumen:
 El sistema de votación electrónica desarrollado en C# .NET Framework facilita un proceso de votación más eficiente y transparente. Los votantes pueden registrarse, votar y verificar sus votos, mientras que los administradores 
 tienen acceso a herramientas de gestión y supervisión para garantizar la integridad del proceso electoral. Este sistema contribuye a un proceso electoral justo y democrático.
