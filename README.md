@@ -1,5 +1,8 @@
 # Título del Proyecto: Sistema de Votación Electrónica en C# .NET Framework
 
+![image](https://github.com/MemersonSt/Proyecto1_Sistema-de-Voto/assets/140354011/155b3c79-f3db-4deb-8ad4-c350e169315a)
+
+
 El sistema de votación electrónica es una plataforma diseñada para facilitar y agilizar el proceso de votación en elecciones. Este sistema permitirá a los votantes registrarse, votar por sus candidatos 
 favoritos y verificar su certificado de votación. Además, proporcionará a los administradores las herramientas necesarias para gestionar candidatos, supervisar el proceso electoral y generar informes de resultados.
 
