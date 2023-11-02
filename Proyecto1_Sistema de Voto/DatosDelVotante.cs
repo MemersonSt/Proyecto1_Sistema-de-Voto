@@ -90,7 +90,7 @@ namespace Proyecto1_Sistema_de_Voto
         {
             if (Validaciones()) 
             {
-                if (ArchivosUsuarios.ReadFile(textCedula.Text) != null) 
+                if (ArchivosUsuarios.ReadUserByCedula(textCedula.Text) != null) 
                 {
                     MessageBox.Show("El usuario ya existe.");
                     //Descomentar para eliminar usuario creado de prueba
@@ -98,7 +98,7 @@ namespace Proyecto1_Sistema_de_Voto
                 } 
                 else 
                 {
-                    Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text);
+                    Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, "A", cbSexo.Text, DateTime.Now);
                     ArchivosUsuarios.CreateFile(user);
                     MessageBox.Show("Inscripción exitosa");
                     this.Hide();

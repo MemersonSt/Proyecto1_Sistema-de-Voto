@@ -77,6 +77,7 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(318, 26);
             this.txtCedula.TabIndex = 10;
+            this.txtCedula.Validated += new System.EventHandler(this.txtCedula_Validated);
             // 
             // label2
             // 

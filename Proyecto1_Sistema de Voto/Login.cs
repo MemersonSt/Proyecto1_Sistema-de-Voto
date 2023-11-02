@@ -24,7 +24,10 @@ namespace Proyecto1_Sistema_de_Voto {
 
         private void InicioSesion_Load (object sender, EventArgs e) 
         {
-            //RedondearPanel(panel1, 10);
+            if (txtCedula.Text.Length == 0)
+            {
+                btnIngresar.Enabled = false;
+            }
         }
 
         private void RedondearPanel (Panel panel, int radio) 
@@ -48,27 +51,33 @@ namespace Proyecto1_Sistema_de_Voto {
             this.Close();
         }
 
-        private void btnIngresar_Click (object sender, EventArgs e) {
-            
-
-            var user = ArchivosUsuarios.ReadFile(txtCedula.Text);
-            if (user != null) {
-                if (user._sCedula == txtCedula.Text && user._sContraseña == textPasword.Text) {
+        private void btnIngresar_Click (object sender, EventArgs e) 
+        {
+            var user = ArchivosUsuarios.ReadUserByCedula(txtCedula.Text);
+            if (user != null) 
+            {
+                if (user._sCEDULA == txtCedula.Text && user._sCONTRASEÑA == textPasword.Text) 
+                {
                     ArchivosUsuarios.datosUsuarioLogin = user;
 
                     this.Hide();
                     RegistrarVotos abrir = new RegistrarVotos();
                     abrir.ShowDialog();
                     this.Close();
-                } else {
+                }
+                else if (txtCedula.Text == Admin._sUserName && textPasword.Text == Admin._sPassword)
+                {
+                    this.Hide();
+                    MenuAdministrador menu = new MenuAdministrador();
+                    menu.ShowDialog();
+                    this.Close();
+                }
+                else 
+                {
                     MessageBox.Show("Datos incorrectos.");
                 }
-            } else if (txtCedula.Text == Admin._sUserName && textPasword.Text == Admin._sPassword) {
-                this.Hide();
-                MenuAdministrador menu = new MenuAdministrador();
-                menu.ShowDialog();
-                this.Close();
-            }
+            } 
+            
         }
 
         private void btnRegresar_Click (object sender, EventArgs e) {
@@ -76,6 +85,14 @@ namespace Proyecto1_Sistema_de_Voto {
             formInicio regresar = new formInicio();
             regresar.ShowDialog();
             this.Close();
+        }
+
+        private void txtCedula_Validated(object sender, EventArgs e)
+        {
+            if (txtCedula.Text.Length > 0)
+            {
+                btnIngresar.Enabled = true;
+            }
         }
     }
 }

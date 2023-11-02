@@ -17,11 +17,11 @@ namespace Proyecto1_Sistema_de_Voto {
         }
 
         private void CertificadoVotacion_Load (object sender, EventArgs e) {
-            lbNombre.Text = ArchivosUsuarios.datosUsuarioLogin._sNombres;
-            lbApellido.Text = ArchivosUsuarios.datosUsuarioLogin._sApellidos;
-            lbCedula.Text = ArchivosUsuarios.datosUsuarioLogin._sCedula;
-            lbProvincia.Text = ArchivosUsuarios.datosUsuarioLogin._sProvincia;
-            lblSexo.Text = ArchivosUsuarios.datosUsuarioLogin._sSexo;
+            lbNombre.Text = ArchivosUsuarios.datosUsuarioLogin._sNOMBRES;
+            lbApellido.Text = ArchivosUsuarios.datosUsuarioLogin._sAPELLIDOS;
+            lbCedula.Text = ArchivosUsuarios.datosUsuarioLogin._sCEDULA;
+            lbProvincia.Text = ArchivosUsuarios.datosUsuarioLogin._sPROVINCIA;
+            lblSexo.Text = ArchivosUsuarios.datosUsuarioLogin._sSEXO;
         }
     }
 }

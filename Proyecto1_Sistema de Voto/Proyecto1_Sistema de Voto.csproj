@@ -61,6 +61,7 @@
     <Compile Include="clases\ArchivosCandidatos.cs" />
     <Compile Include="clases\ArchivosUsuarios.cs" />
     <Compile Include="clases\ArchivosVotos.cs" />
+    <Compile Include="clases\ConexionBD.cs" />
     <Compile Include="DatosDelVotante.cs">
       <SubType>Form</SubType>
     </Compile>

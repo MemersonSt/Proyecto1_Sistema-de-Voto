@@ -17,10 +17,10 @@ using Proyecto1_Sistema_de_Voto.Clases;
 
 namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
     public partial class RegistrarVotos : Form {
-        string nombreUsuario = ArchivosUsuarios.datosUsuarioLogin._sNombres;
-        string apellidoUsuario = ArchivosUsuarios.datosUsuarioLogin._sApellidos;
-        string cedulaUsuario = ArchivosUsuarios.datosUsuarioLogin._sCedula;
-        string provinciaUsuario = ArchivosUsuarios.datosUsuarioLogin._sProvincia;
+        //string nombreUsuario = ArchivosUsuarios.datosUsuarioLogin._sNombres;
+        //string apellidoUsuario = ArchivosUsuarios.datosUsuarioLogin._sApellidos;
+        //string cedulaUsuario = ArchivosUsuarios.datosUsuarioLogin._sCedula;
+        //string provinciaUsuario = ArchivosUsuarios.datosUsuarioLogin._sProvincia;
         
         public RegistrarVotos () {
             InitializeComponent();
@@ -74,9 +74,9 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                 // Lógica para registrar el voto 
                 var sesionUsuario = ArchivosUsuarios.datosUsuarioLogin;
                 //sesionUsuario._sVoto = false;
-                if (sesionUsuario._bEstado == false)
+                if (sesionUsuario._bESTADO_VOTO == false)
                 {
-                    sesionUsuario._bEstado = true;
+                    sesionUsuario._bESTADO_VOTO = true;
                     ArchivosUsuarios.UpdateFile(sesionUsuario);
 
                     if (!Directory.Exists(@"ArchivoContador"))
@@ -87,7 +87,7 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                         var prueba = ArchivoContador.ReadFile();
 
                         //Instancia objeto voto 
-                        Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre, prueba._iContador++);
+                        Voto voto = new Voto(sesionUsuario._sPROVINCIA, candidato._sNombre, prueba._iContador++);
 
                         //prueba._iContador = voto._iId;
 
@@ -107,7 +107,7 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                         var prueba = ArchivoContador.ReadFile();
 
                         //Instancia objeto voto 
-                        Voto voto = new Voto(sesionUsuario._sProvincia, candidato._sNombre, prueba._iContador++);
+                        Voto voto = new Voto(sesionUsuario._sPROVINCIA, candidato._sNombre, prueba._iContador++);
 
                         //prueba._iContador = voto._iId;
 
@@ -126,7 +126,7 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                 }
                 else
                 {
-                    MessageBox.Show($"Estimado/a {sesionUsuario._sNombres} solo puede votar una vez");
+                    MessageBox.Show($"Estimado/a {sesionUsuario._sNOMBRES} solo puede votar una vez");
 
                     this.Hide();
                     Login log = new Login();
