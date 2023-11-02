@@ -53,30 +53,34 @@ namespace Proyecto1_Sistema_de_Voto {
 
         private void btnIngresar_Click (object sender, EventArgs e) 
         {
-            var user = ArchivosUsuarios.ReadUserByCedula(txtCedula.Text);
-            if (user != null) 
+            if (Validaciones())
             {
-                if (user._sCEDULA == txtCedula.Text && user._sCONTRASEÑA == textPasword.Text) 
+                var user = ArchivosUsuarios.ReadUserByCedula(txtCedula.Text);
+                if (user != null)
                 {
-                    ArchivosUsuarios.datosUsuarioLogin = user;
+                    if (user._sCEDULA == txtCedula.Text && user._sCONTRASEÑA == textPasword.Text)
+                    {
+                        ArchivosUsuarios.datosUsuarioLogin = user;
 
-                    this.Hide();
-                    RegistrarVotos abrir = new RegistrarVotos();
-                    abrir.ShowDialog();
-                    this.Close();
+                        this.Hide();
+                        RegistrarVotos abrir = new RegistrarVotos();
+                        abrir.ShowDialog();
+                        this.Close();
+                    }
+                    else if (txtCedula.Text == Admin._sUserName && textPasword.Text == Admin._sPassword)
+                    {
+                        this.Hide();
+                        MenuAdministrador menu = new MenuAdministrador();
+                        menu.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Datos incorrectos.");
+                    }
                 }
-                else if (txtCedula.Text == Admin._sUserName && textPasword.Text == Admin._sPassword)
-                {
-                    this.Hide();
-                    MenuAdministrador menu = new MenuAdministrador();
-                    menu.ShowDialog();
-                    this.Close();
-                }
-                else 
-                {
-                    MessageBox.Show("Datos incorrectos.");
-                }
-            } 
+            }
+            
             
         }
 
@@ -93,6 +97,29 @@ namespace Proyecto1_Sistema_de_Voto {
             {
                 btnIngresar.Enabled = true;
             }
+            else
+            {
+                btnIngresar.Enabled = false;
+            }
+        }
+
+        private bool Validaciones()
+        {
+            if (txtCedula.Text.Length == 0)
+            {
+                MessageBox.Show("Ingrese el N° de cedula.");
+                txtCedula.Focus();
+                return false;
+            }
+
+            if (textPasword.Text.Length == 0)
+            {
+                MessageBox.Show("Ingrese su contraseña.");
+                textPasword.Focus();
+                return false;
+            } 
+
+            return true;
         }
     }
 }
