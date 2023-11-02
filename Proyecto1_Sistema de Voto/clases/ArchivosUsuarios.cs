@@ -7,6 +7,11 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using Proyecto1_Sistema_de_Voto.Models;
+using Proyecto1_Sistema_de_Voto.clases;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using System.Security.Cryptography;
+using System.Data;
 
 namespace Proyecto1_Sistema_de_Voto.Clases 
 {
@@ -22,20 +27,20 @@ namespace Proyecto1_Sistema_de_Voto.Clases
             try 
             {
                 // Asegurarse de que el directorio exista
-                if (!Directory.Exists(directoryPath)) 
-                {
-                    Directory.CreateDirectory(directoryPath);
-                }
+                //if (!Directory.Exists(directoryPath)) 
+                //{
+                //    Directory.CreateDirectory(directoryPath);
+                //}
 
-                string filePath = Path.Combine(directoryPath, usuario._sCedula + ".bin");
+                //string filePath = Path.Combine(directoryPath, usuario._sCedula + ".bin");
 
-                using (FileStream fs = new FileStream(filePath, FileMode.Create)) 
-                {
-                    IFormatter formatter = new BinaryFormatter();
-                    formatter.Serialize(fs, usuario);
-                }
+                //using (FileStream fs = new FileStream(filePath, FileMode.Create)) 
+                //{
+                //    IFormatter formatter = new BinaryFormatter();
+                //    formatter.Serialize(fs, usuario);
+                //}
 
-                Console.WriteLine("Archivo creado con el Usuario.");
+                //Console.WriteLine("Archivo creado con el Usuario.");
             } catch (IOException e) 
             {
                 Console.WriteLine($"Error al crear el archivo: {e.Message}");
@@ -44,26 +49,44 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         #endregion
 
         #region Read
-        public static Usuario ReadFile (string cedula) 
+        public static Usuario ReadUserByCedula (string cedula) 
         {
-            Usuario usuario = null;
+            Usuario usuario = new Usuario();
 
             try 
             {
-                string filePath = Path.Combine(directoryPath, cedula + ".bin");
+                var conn = ConexionBD.GetConnection();
+                string sQuery = "SELECT * FROM USUARIO WHERE CEDULA = '" + cedula + "'";
+                SqlDataAdapter adapter = new SqlDataAdapter(sQuery, conn);
 
-                using (FileStream fs = new FileStream(filePath, FileMode.Open)) 
+                DataSet dataSet = new DataSet();
+                adapter.Fill(dataSet);
+                if (dataSet.Tables[0].Rows[0]["CEDULA"].ToString() == cedula)
                 {
-                    IFormatter formatter = new BinaryFormatter();
-                    usuario = (Usuario)formatter.Deserialize(fs);
+                    usuario._sCEDULA = dataSet.Tables[0].Rows[0]["CEDULA"].ToString();
+                    usuario._sNOMBRES = dataSet.Tables[0].Rows[0]["NOMBRES"].ToString();
+                    usuario._sAPELLIDOS = dataSet.Tables[0].Rows[0]["APELLIDOS"].ToString();
+                    usuario._sCONTRASEÑA = dataSet.Tables[0].Rows[0]["CONTRASEÑA"].ToString();
+                    usuario._sPROVINCIA = dataSet.Tables[0].Rows[0]["PROVINCIA"].ToString();
+                    usuario._bESTADO_VOTO = Convert.ToBoolean(dataSet.Tables[0].Rows[0]["ESTADO_VOTO"]);
+                    usuario._sSEXO = dataSet.Tables[0].Rows[0]["SEXO"].ToString();
+                    usuario._sESTADO = dataSet.Tables[0].Rows[0]["ESTADO"].ToString();
+                    usuario._dFECHA_CREACION = Convert.ToDateTime(dataSet.Tables[0].Rows[0]["FECHA_CREACION"]);
                 }
-            } catch (FileNotFoundException) 
+
+                ConexionBD.CloseConnection(conn);
+
+                return usuario;
+            } 
+            catch (SqlTypeException ex) 
             {
-                Console.WriteLine("El archivo no existe.");
-            } catch (IOException e) 
+                Console.WriteLine($"Error: {ex.Message}");
+            } 
+            catch (SqlException e) 
             {
-                Console.WriteLine($"Error al leer el archivo: {e.Message}");
-            } catch (SerializationException e) 
+                Console.WriteLine($"Error: {e.Message}");
+            } 
+            catch (Exception e) 
             {
                 Console.WriteLine($"Error de serialización: {e.Message}");
             }
@@ -102,20 +125,46 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         #endregion
 
         #region ReadList
-        public static List<Usuario> ReadList () {
+        public static List<Usuario> ReadUsersList () {
             List<Usuario> listaUsuarios = new List<Usuario>();
             try {
-                string [] filePaths = Directory.GetFiles(directoryPath);
+                var conn = ConexionBD.GetConnection();
+                string sQuery = "SELECT * FROM USUARIO";
+                SqlCommand command = new SqlCommand(sQuery, conn);
+                
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Usuario user = new Usuario();
+                    user._sCEDULA = reader.GetString(0);
+                    user._sNOMBRES = reader.GetString(1);
+                    user._sAPELLIDOS = reader.GetString(2);
+                    user._sCONTRASEÑA = reader.GetString(3);
+                    user._sPROVINCIA = reader.GetString(4);
+                    user._bESTADO_VOTO = reader.GetBoolean(5);
+                    user._sSEXO = reader.GetString(6);
+                    user._sESTADO = reader.GetString(7);
+                    user._dFECHA_CREACION = reader.GetDateTime(8);
 
-                foreach (string filePath in filePaths) {
-                    using (FileStream fs = new FileStream(filePath, FileMode.Open)) {
-                        IFormatter formatter = new BinaryFormatter();
-                        listaUsuarios.Add((Usuario)formatter.Deserialize(fs));
-                    }
+                    listaUsuarios.Add(user);
                 }
-            } catch (IOException e) {
-                Console.WriteLine($"Error al leer el archivo: {e.Message}");
-            } catch (SerializationException e) {
+
+                reader.Close();
+
+                ConexionBD.CloseConnection(conn);
+
+                return listaUsuarios;
+            }
+            catch (SqlTypeException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
+            catch (Exception e)
+            {
                 Console.WriteLine($"Error de serialización: {e.Message}");
             }
 
