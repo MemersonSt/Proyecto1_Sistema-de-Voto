@@ -42,6 +42,6 @@ namespace Proyecto1_Sistema_de_Voto.Mail
             }
         }
 
-        private static string sContrasenaSmtp = "PSV01234";
+        private static string sContrasenaSmtp = "SVCANDIDATURA0123";
     }
 }

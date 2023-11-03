@@ -18,52 +18,27 @@ namespace Proyecto1_Sistema_de_Voto {
             InitializeComponent();
         }
 
-        private void Votos_Load (object sender, EventArgs e) {
-            //List<Voto> cantVotos = ArchivosVotos.GetVotos();
-
-            //int cantidadVotos = cantVotos.Count;
+        private void Votos_Load (object sender, EventArgs e) 
+        {
+            int total = ArchivosVotos.GetVotesList().Count;
             
-            
-            int total = ArchivosVotos.GetVotos().Count;
-            
-            foreach (var item in ArchivosCandidatos.ReadList())
+            foreach (var item in ArchivosCandidatos.ReadCandidateList())
             {
                 List<Voto> listVoto = new List<Voto>();
 
-                foreach (var item1 in ArchivosVotos.GetVotos())
+                foreach (var item1 in ArchivosVotos.GetVotesList())
                 {
-                    if (item._sNombre.Equals(item1._sCandidato))
+                    if (item._sCEDULA.Equals(item1._sCANDIDATO))
                     {
                         listVoto.Add(item1);
                     }
                 }
 
                 int cant = listVoto.Count;
-                Panel panelCandidato = CrearPanelCandidato(item._sNombre, cant, total);
+                Panel panelCandidato = CrearPanelCandidato(item._sNOMBRE, cant, total);
                 flowLayoutPanel1.Controls.Add(panelCandidato);
             }
             RedondearPanel(panelContenedor, 12);
-            /*
-            foreach (var item in ArchivosCandidatos.ReadList())
-            {
-                int cant = listVoto.Count;
-                Panel panelCandidato = CrearPanelCandidato(item._sNombre, cant, total);
-                flowLayoutPanel1.Controls.Add(panelCandidato);
-            }*/
-
-            //Dictionary<string, int> votosPorCandidato = new Dictionary<string, int>();
-
-            /*foreach (var voto in listaVotos) {
-                Panel panelCandidato = CrearPanelCandidato(voto._sCandidato, cantVotos);
-                flowLayoutPanel1.Controls.Add(panelCandidato);
-            }*/
-
-            // Ahora tenemos un diccionario con los candidatos y la cantidad de votos recibidos
-
-            /*foreach (var kvp in votosPorCandidato) {
-                Panel panelCandidato = CrearPanelCandidato(kvp.Key, kvp.Value);
-                flowLayoutPanel1.Controls.Add(panelCandidato);
-            }*/
         }
 
         private Panel CrearPanelCandidato (string candidato, int votos, int total) {

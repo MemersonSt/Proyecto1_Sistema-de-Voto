@@ -1,6 +1,8 @@
 ﻿using Proyecto1_Sistema_de_Voto.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -31,7 +33,7 @@ namespace Proyecto1_Sistema_de_Voto.clases
                     Directory.CreateDirectory(directoryPath);
                 }
 
-                string filePath = Path.Combine(directoryPath, voto._iId.ToString() + ".bin");
+                string filePath = Path.Combine(directoryPath, voto._sID_VOTO.ToString() + ".bin");
 
                 using (FileStream fs = new FileStream(filePath, FileMode.Create))
                 {
@@ -49,36 +51,45 @@ namespace Proyecto1_Sistema_de_Voto.clases
         #endregion
 
         #region Read(GetVotos)
-        public static List<Voto> GetVotos()
+        public static List<Voto> GetVotesList()
         {
             List<Voto> votos = new List<Voto>();
 
             try
             {
-                //Logica parecia a ReadFile de usuarios y candidatos
-                //Pero esta vez recorre todo el directorio y obteniene cada archivo
+                var conn = ConexionBD.GetConnection();
+                string sQuery = "SELECT * FROM VOTO";
+                SqlCommand command = new SqlCommand(sQuery, conn);
 
-                foreach (var archivo in Directory.GetFiles(directoryPath, "*.bin"))
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    using (FileStream fs = new FileStream(archivo, FileMode.Open))
-                    {
-                        BinaryFormatter formatter = new BinaryFormatter();
+                    Voto vote = new Voto();
+                    vote._sID_VOTO = reader.GetInt32(0);
+                    vote._sCANDIDATO = reader.GetString(1);
+                    vote._sESTADO = reader.GetString(2);
+                    vote._dFECHA_CREACION = reader.GetDateTime(3);
 
-                        //Castea el formatter deserializado a un objeto voto
-                        Voto votoDeserializado = (Voto)formatter.Deserialize(fs);
-
-                        //Guarda el objeto en la lista
-                        votos.Add(votoDeserializado);
-                    }
+                    votos.Add(vote);
                 }
+
+                reader.Close();
+
+                ConexionBD.CloseConnection(conn);
+
+                return votos;
             }
-            catch (SerializationException ex)
+            catch (SqlTypeException ex)
             {
-                MessageBox.Show($"Error al deserializar un archivo: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
             }
-            catch (Exception ex)
+            catch (SqlException e)
             {
-                MessageBox.Show($"Error al procesar los archivos: {ex.Message}");
+                Console.WriteLine($"Error: {e.Message}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error de: {e.Message}");
             }
 
             //Retorna la lista
@@ -86,40 +97,40 @@ namespace Proyecto1_Sistema_de_Voto.clases
         }
         #endregion
 
-        #region Read Sobrecarga
-        public static List<Voto> GetVotos(string candidato)
-        {
-            List<Voto> votos = new List<Voto>();
+        //#region Read Sobrecarga
+        //public static List<Voto> GetVotos(string candidato)
+        //{
+        //    List<Voto> votos = new List<Voto>();
 
-            try
-            {
-                foreach (var archivo in Directory.GetFiles(directoryPath, candidato + ".bin"))
-                {
-                    using (FileStream fs = new FileStream(archivo, FileMode.Open))
-                    {
-                        BinaryFormatter formatter = new BinaryFormatter();
+        //    try
+        //    {
+        //        foreach (var archivo in Directory.GetFiles(directoryPath, candidato + ".bin"))
+        //        {
+        //            using (FileStream fs = new FileStream(archivo, FileMode.Open))
+        //            {
+        //                BinaryFormatter formatter = new BinaryFormatter();
 
-                        //Castea el formatter deserializado a un objeto voto
-                        Voto votoDeserializado = (Voto)formatter.Deserialize(fs);
+        //                //Castea el formatter deserializado a un objeto voto
+        //                Voto votoDeserializado = (Voto)formatter.Deserialize(fs);
 
-                        //Guarda el objeto en la lista
-                        votos.Add(votoDeserializado);
-                    }
-                }
-            }
-            catch (SerializationException ex)
-            {
-                MessageBox.Show($"Error al deserializar un archivo: {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al procesar los archivos: {ex.Message}");
-            }
+        //                //Guarda el objeto en la lista
+        //                votos.Add(votoDeserializado);
+        //            }
+        //        }
+        //    }
+        //    catch (SerializationException ex)
+        //    {
+        //        MessageBox.Show($"Error al deserializar un archivo: {ex.Message}");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error al procesar los archivos: {ex.Message}");
+        //    }
 
-            //Retorna la lista
-            return votos;
-        }
-        #endregion
+        //    //Retorna la lista
+        //    return votos;
+        //}
+        //#endregion
 
         public static string CalcularPorcentaje(int numeroConvertir, int total)
         {

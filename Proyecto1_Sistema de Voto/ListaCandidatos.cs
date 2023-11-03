@@ -18,7 +18,7 @@ namespace Proyecto1_Sistema_de_Voto {
         }
 
         private void ListaCandidatos_Load (object sender, EventArgs e) {
-            List<Candidato> listaCandidatos = ArchivosCandidatos.ReadList();
+            List<Candidato> listaCandidatos = ArchivosCandidatos.ReadCandidateList();
             foreach (Candidato candidato in listaCandidatos) {
                 Panel panelCandidato = CrearPanelCandidato(candidato);
                 flowLayoutPanel1.Controls.Add(panelCandidato);
@@ -33,10 +33,10 @@ namespace Proyecto1_Sistema_de_Voto {
                 BackColor = Color.FromArgb(18, 110, 130),
             };
 
-            Label nombreCandidato = CrearLabel(candidato._sNombre, new Size(120, 50), new Point(27, 13), 12, FontStyle.Bold, Color.White);
+            Label nombreCandidato = CrearLabel(candidato._sNOMBRE, new Size(120, 50), new Point(27, 13), 12, FontStyle.Bold, Color.White);
             Label lista = CrearLabel("Lista:", new Size(49, 19), new Point(374, 13), 12, FontStyle.Bold, Color.White);
-            Label listaCandidato = CrearLabel(candidato._sLista, new Size(49, 19), new Point(429, 13), 10, FontStyle.Regular, Color.White);
-            Label correoCandidato = CrearLabel(candidato._sMail, new Size(247, 19), new Point(231, 51), 12, FontStyle.Regular, Color.White);
+            Label listaCandidato = CrearLabel(candidato._sLISTA, new Size(49, 19), new Point(429, 13), 10, FontStyle.Regular, Color.White);
+            Label correoCandidato = CrearLabel(candidato._sMAIL, new Size(247, 19), new Point(231, 51), 12, FontStyle.Regular, Color.White);
 
             panelCandidato.Controls.AddRange(new Control [] { nombreCandidato, lista, listaCandidato, correoCandidato});
             RedondearPanel(panelCandidato, 10);

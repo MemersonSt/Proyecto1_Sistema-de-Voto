@@ -88,7 +88,7 @@ namespace Proyecto1_Sistema_de_Voto.Clases
             } 
             catch (Exception e) 
             {
-                Console.WriteLine($"Error de serialización: {e.Message}");
+                Console.WriteLine($"Error de: {e.Message}");
             }
 
             return usuario;

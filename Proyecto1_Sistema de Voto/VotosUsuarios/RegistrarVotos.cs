@@ -29,14 +29,16 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
         
 
         private void RegistrarVotos_Load (object sender, EventArgs e) {
-            List<Candidato> listaCandidatos = ArchivosCandidatos.ReadList();
+            List<Candidato> listaCandidatos = ArchivosCandidatos.ReadCandidateList();
 
-            if (listaCandidatos.Count == 0) {
+            if (listaCandidatos.Count == 0) 
+            {
                 MessageBox.Show("No se encontraron candidatos en la lista.");
                 return; // Salir si no hay candidatos
             }
 
-            foreach (Candidato candidato in listaCandidatos) {
+            foreach (Candidato candidato in listaCandidatos) 
+            {
                 Panel panelCandidato = CrearPanelCandidato(candidato);
                 flowLayoutPanel1.Controls.Add(panelCandidato);
             }
@@ -45,16 +47,18 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
             panel1.Visible = false;
         }
 
-        private Panel CrearPanelCandidato (Candidato candidato) {
-            Panel panelCandidato = new Panel {
+        private Panel CrearPanelCandidato (Candidato candidato) 
+        {
+            Panel panelCandidato = new Panel 
+            {
                 Size = new Size(140, 180),
                 BackColor = Color.FromArgb(18, 110, 130),
                 Margin = new Padding(10, 10, 20, 10)
             };
 
-            Label nombreCandidato = CrearLabel(candidato._sNombre, new Size(120, 50), new Point(6, 7), 16, FontStyle.Bold, Color.White);
+            Label nombreCandidato = CrearLabel(candidato._sNOMBRE, new Size(120, 50), new Point(6, 7), 16, FontStyle.Bold, Color.White);
             Label lista = CrearLabel("Lista:", new Size(53, 17), new Point(8, 74), 10, FontStyle.Bold, Color.White);
-            Label listaCandidato = CrearLabel(candidato._sLista, new Size(50, 15), new Point(58, 76), 10, FontStyle.Regular, Color.White);
+            Label listaCandidato = CrearLabel(candidato._sLISTA, new Size(50, 15), new Point(58, 76), 10, FontStyle.Regular, Color.White);
 
             Button votar = new Button {
                 Size = new Size(118, 35),
@@ -79,50 +83,18 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     sesionUsuario._bESTADO_VOTO = true;
                     ArchivosUsuarios.UpdateFile(sesionUsuario);
 
-                    if (!Directory.Exists(@"ArchivoContador"))
-                    {
-                        Contador prueba1 = new Contador(ArchivoContador._iContador);
-                        ArchivoContador.CreateFile(prueba1);
+                    //Instancia objeto voto 
+                    Voto voto = new Voto(candidato._sNOMBRE, "A", DateTime.Now);
 
-                        var prueba = ArchivoContador.ReadFile();
+                    //Guarda el voto en el directorio ArchivosVotos
+                    ArchivosVotos.CreateFile(voto);
 
-                        //Instancia objeto voto 
-                        Voto voto = new Voto(sesionUsuario._sPROVINCIA, candidato._sNombre, prueba._iContador++);
+                    votar.Enabled = false;
 
-                        //prueba._iContador = voto._iId;
-
-                        ArchivoContador.CreateFile(prueba);
-                        //Guarda el voto en el directorio ArchivosVotos
-                        ArchivosVotos.CreateFile(voto);
-
-                        votar.Enabled = false;
-
-                        this.Hide();
-                        CertificadoVotacion certificado = new CertificadoVotacion();
-                        certificado.ShowDialog();
-                        this.Close();
-                    }
-                    else
-                    {
-                        var prueba = ArchivoContador.ReadFile();
-
-                        //Instancia objeto voto 
-                        Voto voto = new Voto(sesionUsuario._sPROVINCIA, candidato._sNombre, prueba._iContador++);
-
-                        //prueba._iContador = voto._iId;
-
-                        ArchivoContador.CreateFile(prueba);
-                        //Guarda el voto en el directorio ArchivosVotos
-                        ArchivosVotos.CreateFile(voto);
-
-                        votar.Enabled = false;
-
-                        this.Hide();
-                        CertificadoVotacion certificado = new CertificadoVotacion();
-                        certificado.ShowDialog();
-                        this.Close();
-                    }
-
+                    this.Hide();
+                    CertificadoVotacion certificado = new CertificadoVotacion();
+                    certificado.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
