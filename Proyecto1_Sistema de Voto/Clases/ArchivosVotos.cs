@@ -22,30 +22,25 @@ namespace Proyecto1_Sistema_de_Voto.clases
         //public static List<Voto> votos = new List<Voto>();
 
         #region Create
-        public static void CreateFile(Voto voto)
+        public static void CreateVote(Voto voto)
         {
             //Misma lógica que la de crear candidatos y usuarios
             try
             {
-                // Asegurarse de que el directorio exista
-                if (!Directory.Exists(directoryPath))
-                {
-                    Directory.CreateDirectory(directoryPath);
-                }
+                string sSentenciaSql = "INSERT INTO VOTO (CANDIDATO, ESTADO)";
+                sSentenciaSql = sSentenciaSql + "VALUES (@CANDIDATO, @ESTADO)";
+                SqlConnection conexion = ConexionBD.GetConnection();
+                SqlCommand comando = new SqlCommand(sSentenciaSql, conexion);
 
-                string filePath = Path.Combine(directoryPath, voto._sID_VOTO.ToString() + ".bin");
+                comando.Parameters.AddWithValue("@CANDIDATO", voto._sCANDIDATO);
+                comando.Parameters.AddWithValue("@ESTADO", voto._sESTADO);
 
-                using (FileStream fs = new FileStream(filePath, FileMode.Create))
-                {
-                    IFormatter formatter = new BinaryFormatter();
-                    formatter.Serialize(fs, voto);
-                }
-
-                Console.WriteLine("Archivo creado con el Usuario.");
+                comando.ExecuteNonQuery();
+                ConexionBD.CloseConnection(conexion);
             }
             catch (IOException e)
             {
-                Console.WriteLine($"Error al crear el archivo: {e.Message}");
+                Console.WriteLine($"Error al guardar el voto: {e.Message}");
             }
         }
         #endregion
@@ -96,41 +91,6 @@ namespace Proyecto1_Sistema_de_Voto.clases
             return votos;
         }
         #endregion
-
-        //#region Read Sobrecarga
-        //public static List<Voto> GetVotos(string candidato)
-        //{
-        //    List<Voto> votos = new List<Voto>();
-
-        //    try
-        //    {
-        //        foreach (var archivo in Directory.GetFiles(directoryPath, candidato + ".bin"))
-        //        {
-        //            using (FileStream fs = new FileStream(archivo, FileMode.Open))
-        //            {
-        //                BinaryFormatter formatter = new BinaryFormatter();
-
-        //                //Castea el formatter deserializado a un objeto voto
-        //                Voto votoDeserializado = (Voto)formatter.Deserialize(fs);
-
-        //                //Guarda el objeto en la lista
-        //                votos.Add(votoDeserializado);
-        //            }
-        //        }
-        //    }
-        //    catch (SerializationException ex)
-        //    {
-        //        MessageBox.Show($"Error al deserializar un archivo: {ex.Message}");
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error al procesar los archivos: {ex.Message}");
-        //    }
-
-        //    //Retorna la lista
-        //    return votos;
-        //}
-        //#endregion
 
         public static string CalcularPorcentaje(int numeroConvertir, int total)
         {

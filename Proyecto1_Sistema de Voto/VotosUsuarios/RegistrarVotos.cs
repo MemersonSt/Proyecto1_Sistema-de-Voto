@@ -84,10 +84,10 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     ArchivosUsuarios.UpdateFile(sesionUsuario);
 
                     //Instancia objeto voto 
-                    Voto voto = new Voto(candidato._sNOMBRE, "A", DateTime.Now);
+                    Voto voto = new Voto(candidato._sCEDULA, "A", DateTime.Now);
 
                     //Guarda el voto en el directorio ArchivosVotos
-                    ArchivosVotos.CreateFile(voto);
+                    ArchivosVotos.CreateVote(voto);
 
                     votar.Enabled = false;
 

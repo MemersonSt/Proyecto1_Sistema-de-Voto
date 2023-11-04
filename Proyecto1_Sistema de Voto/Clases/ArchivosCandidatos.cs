@@ -19,29 +19,27 @@ namespace Proyecto1_Sistema_de_Voto.clases
 
 
         #region Create
-        public static void CreateFile(Candidato candidato)
+        public static void CreateCandidate(Candidato candidato)
         {
             try
             {
-                // Asegurarse de que el directorio exista
-                if (!Directory.Exists(directoryPath))
-                {
-                    Directory.CreateDirectory(directoryPath);
-                }
+                string sSentenciaSql = "INSERT INTO CANDIDATO (CEDULA, NOMBRE, LISTA, MAIL, ESTADO)";
+                sSentenciaSql = sSentenciaSql + "VALUES (@CEDULA, @NOMBRE, @LISTA, @MAIL, @ESTADO)";
+                SqlConnection conexion = ConexionBD.GetConnection();
+                SqlCommand comando = new SqlCommand(sSentenciaSql, conexion);
 
-                string filePath = Path.Combine(directoryPath, candidato._sCEDULA + ".bin");//Aqui se crea el archivo con el nombre de la cedula del candidato
+                comando.Parameters.AddWithValue("@CEDULA", candidato._sCEDULA);
+                comando.Parameters.AddWithValue("@NOMBRE", candidato._sNOMBRE);
+                comando.Parameters.AddWithValue("@LISTA", candidato._sLISTA);
+                comando.Parameters.AddWithValue("@MAIL", candidato._sMAIL);
+                comando.Parameters.AddWithValue("@ESTADO", candidato._sESTADO);
 
-                using (FileStream fs = new FileStream(filePath, FileMode.Create))
-                {
-                    IFormatter formatter = new BinaryFormatter();
-                    formatter.Serialize(fs, candidato);
-                }
-
-                Console.WriteLine("Archivo creado con el Usuario.");
+                comando.ExecuteNonQuery();
+                ConexionBD.CloseConnection(conexion);
             }
             catch (IOException e)
             {
-                Console.WriteLine($"Error al crear el archivo: {e.Message}");
+                Console.WriteLine($"Error al crear el usuario: {e.Message}");
             }
         }
         #endregion
@@ -94,7 +92,7 @@ namespace Proyecto1_Sistema_de_Voto.clases
         #region Update
         public static void UpdateFile(Candidato candidato)
         {
-            CreateFile(candidato);
+            //CreateFile(candidato);
         }
         #endregion
 

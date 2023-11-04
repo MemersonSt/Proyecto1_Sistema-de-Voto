@@ -121,7 +121,7 @@ namespace Proyecto1_Sistema_de_Voto
                     else
                     {
                         Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text, "A", DateTime.Now);
-                        ArchivosCandidatos.CreateFile(candidato);
+                        ArchivosCandidatos.CreateCandidate(candidato);
 
                         Mail.Mail.SendMail(candidato._sMAIL, "Registro Candidatura", $"Estimado/a {candidato._sNOMBRE} se ha realizado su registro exitosamente\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las elecciones");
                     }
@@ -129,7 +129,7 @@ namespace Proyecto1_Sistema_de_Voto
                 else
                 {
                     Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text, "A", DateTime.Now);
-                    ArchivosCandidatos.CreateFile(candidato);
+                    ArchivosCandidatos.CreateCandidate(candidato);
 
                     Mail.Mail.SendMail(candidato._sMAIL, "Registro Candidatura", $"Estimado/a {candidato._sNOMBRE} se ha realizado su registro exitosamente\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las elecciones");
                 }

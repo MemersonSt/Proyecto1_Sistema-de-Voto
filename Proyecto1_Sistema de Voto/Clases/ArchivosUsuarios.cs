@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Security.Cryptography;
 using System.Data;
+using System.Windows;
 
 namespace Proyecto1_Sistema_de_Voto.Clases 
 {
@@ -22,28 +23,29 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         private static readonly string directoryPath = "ArchivosUsuarios";
 
         #region Create
-        public static void CreateFile (Usuario usuario) 
+        public static void CreateUser (Usuario usuario) 
         {
             try 
             {
-                // Asegurarse de que el directorio exista
-                //if (!Directory.Exists(directoryPath)) 
-                //{
-                //    Directory.CreateDirectory(directoryPath);
-                //}
+                string sSentenciaSql = "INSERT INTO USUARIO (CEDULA, NOMBRES, APELLIDOS, CONTRASEÑA, PROVINCIA, ESTADO_VOTO, SEXO, ESTADO)";
+                sSentenciaSql = sSentenciaSql + "VALUES (@CEDULA, @NOMBRES, @APELLIDOS, @CONTRASEÑA, @PROVINCIA, @ESTADO_VOTO, @SEXO, @ESTADO)";
+                SqlConnection conexion = ConexionBD.GetConnection();
+                SqlCommand comando = new SqlCommand(sSentenciaSql, conexion);
 
-                //string filePath = Path.Combine(directoryPath, usuario._sCedula + ".bin");
+                comando.Parameters.AddWithValue("@CEDULA", usuario._sCEDULA);
+                comando.Parameters.AddWithValue("@NOMBRES", usuario._sNOMBRES);
+                comando.Parameters.AddWithValue("@APELLIDOS", usuario._sAPELLIDOS);
+                comando.Parameters.AddWithValue("@CONTRASEÑA", usuario._sCONTRASEÑA);
+                comando.Parameters.AddWithValue("@PROVINCIA", usuario._sPROVINCIA);
+                comando.Parameters.AddWithValue("@ESTADO_VOTO", usuario._bESTADO_VOTO);
+                comando.Parameters.AddWithValue("@SEXO", usuario._sSEXO);
+                comando.Parameters.AddWithValue("@ESTADO", usuario._sESTADO);
 
-                //using (FileStream fs = new FileStream(filePath, FileMode.Create)) 
-                //{
-                //    IFormatter formatter = new BinaryFormatter();
-                //    formatter.Serialize(fs, usuario);
-                //}
-
-                //Console.WriteLine("Archivo creado con el Usuario.");
+                comando.ExecuteNonQuery();
+                ConexionBD.CloseConnection(conexion);
             } catch (IOException e) 
             {
-                Console.WriteLine($"Error al crear el archivo: {e.Message}");
+                Console.WriteLine($"Error al crear el usuario: {e.Message}");
             }
         }
         #endregion
@@ -98,7 +100,8 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         #region Update
         public static void UpdateFile (Usuario usuario) 
         {
-            CreateFile(usuario);
+            //CreateUser(usuario);
+            //Cambiar por la query UPDATE
         }
         #endregion
 
