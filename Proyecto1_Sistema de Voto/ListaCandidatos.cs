@@ -11,24 +11,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto1_Sistema_de_Voto {
-    public partial class ListaCandidatos : Form {
-        public ListaCandidatos () {
+namespace Proyecto1_Sistema_de_Voto 
+{
+    public partial class ListaCandidatos : Form 
+    {
+        public ListaCandidatos () 
+        {
             InitializeComponent();
         }
 
-        private void ListaCandidatos_Load (object sender, EventArgs e) {
+        private void ListaCandidatos_Load (object sender, EventArgs e) 
+        {
             List<Candidato> listaCandidatos = ArchivosCandidatos.ReadCandidateList();
-            foreach (Candidato candidato in listaCandidatos) {
-                Panel panelCandidato = CrearPanelCandidato(candidato);
-                flowLayoutPanel1.Controls.Add(panelCandidato);
+            foreach (Candidato candidato in listaCandidatos) 
+            {
+                if (candidato._sESTADO == "A")
+                {
+                    Panel panelCandidato = CrearPanelCandidato(candidato);
+                    flowLayoutPanel1.Controls.Add(panelCandidato);
+                }
             }
             panel1.Visible = false;
             RedondearPanel(panelContenedor, 12);
         }
 
-        private Panel CrearPanelCandidato (Candidato candidato) {
-            Panel panelCandidato = new Panel {
+        private Panel CrearPanelCandidato (Candidato candidato) 
+        {
+            Panel panelCandidato = new Panel 
+            {
                 Size = new Size(512, 88),
                 BackColor = Color.FromArgb(18, 110, 130),
             };
