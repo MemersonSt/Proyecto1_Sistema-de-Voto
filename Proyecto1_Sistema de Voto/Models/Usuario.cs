@@ -7,24 +7,28 @@ using System.Threading.Tasks;
 namespace Proyecto1_Sistema_de_Voto.Models {
     [Serializable]
     public class Usuario {
-        public string _sCedula { get; set; }
-        public string _sNombres { get; set; }
-        public string _sApellidos { get; set; }
-        public string _sContraseña { get; set; }
-        public string _sProvincia { get; set; }
-        public bool _bEstado {get; set; }
-        public string _sSexo { get; set; }
+        public string _sCEDULA { get; set; }
+        public string _sNOMBRES { get; set; }
+        public string _sAPELLIDOS { get; set; }
+        public string _sCONTRASEÑA { get; set; }
+        public string _sPROVINCIA { get; set; }
+        public bool _bESTADO_VOTO {get; set; }
+        public string _sSEXO { get; set; }
+        public string _sESTADO {  get; set; }
+        public DateTime _dFECHA_CREACION { get; set; }
 
         public Usuario () { }
 
-        public Usuario (string _sCedula, string _sNombres, string _sApellidos, string _sContraseña, string _sProvincia, bool _bEstado, string _sSexo) {
-            this._sCedula = _sCedula;
-            this._sNombres = _sNombres;
-            this._sApellidos = _sApellidos;
-            this._sContraseña = _sContraseña;
-            this._sProvincia = _sProvincia;
-            this._bEstado = _bEstado;
-            this._sSexo = _sSexo;
+        public Usuario (string _sCEDULA, string _sNOMBRES, string _sAPELLIDOS, string _sCONTRASEÑA, string _sPROVINCIA, bool _bESTADO_VOTO, string _sSEXO, string _sESTADO, DateTime _dFECHA_CREACION) {
+            this._sCEDULA = _sCEDULA;
+            this._sNOMBRES = _sNOMBRES;
+            this._sAPELLIDOS = _sAPELLIDOS;
+            this._sCONTRASEÑA = _sCONTRASEÑA;
+            this._sPROVINCIA = _sPROVINCIA;
+            this._bESTADO_VOTO = _bESTADO_VOTO;
+            this._sSEXO = _sSEXO;
+            this._sESTADO = _sESTADO;
+            this._dFECHA_CREACION = _dFECHA_CREACION;
         }
     }
 }

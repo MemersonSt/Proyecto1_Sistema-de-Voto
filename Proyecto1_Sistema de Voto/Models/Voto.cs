@@ -9,17 +9,18 @@ namespace Proyecto1_Sistema_de_Voto.Models
     [Serializable]
     public class Voto
     {
-        public string _sProvincia {  get; set; }
-        public string _sCandidato { get; set; }
-        public int _iId { get; set; }
+        public int _sID_VOTO {  get; set; }
+        public string _sCANDIDATO { get; set; }
+        public string _sESTADO { get; set; }
+        public DateTime _dFECHA_CREACION { get; set; }
 
         public Voto() { }
 
-        public Voto(string _sProvincia, string _sCandidato, int _iId)
+        public Voto(string _sCANDIDATO, string _sESTADO, DateTime _dFECHA_CREACION)
         {
-            this._sProvincia = _sProvincia;
-            this._sCandidato = _sCandidato;
-            this._iId = _iId;
+            this._sCANDIDATO = _sCANDIDATO;
+            this._sESTADO = _sESTADO;
+            this._dFECHA_CREACION = _dFECHA_CREACION;
         }
     }
 }

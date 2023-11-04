@@ -90,22 +90,35 @@ namespace Proyecto1_Sistema_de_Voto
         {
             if (Validaciones()) 
             {
-                if (ArchivosUsuarios.ReadFile(textCedula.Text) != null) 
+                var usuario = ArchivosUsuarios.ReadUserByCedula(textCedula.Text);
+                if (usuario != null)
                 {
-                    MessageBox.Show("El usuario ya existe.");
-                    //Descomentar para eliminar usuario creado de prueba
-                    //ArchivosUsuarios.DeleteFile(txtCedula.Text);
-                } 
-                else 
+                    if (usuario._sCEDULA == textCedula.Text)
+                    {
+                        MessageBox.Show("El usuario ya existe.");
+                    }
+                    else
+                    {
+                        Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text, "A", DateTime.Now);
+                        ArchivosUsuarios.CreateUser(user);
+                        MessageBox.Show("Inscripción exitosa");
+                        this.Hide();
+                        Login abrir = new Login();
+                        abrir.ShowDialog();
+                        this.Close();
+                    }
+                }
+                else
                 {
-                    Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text);
-                    ArchivosUsuarios.CreateFile(user);
+                    Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text, "A", DateTime.Now);
+                    ArchivosUsuarios.CreateUser(user);
                     MessageBox.Show("Inscripción exitosa");
                     this.Hide();
                     Login abrir = new Login();
                     abrir.ShowDialog();
                     this.Close();
                 }
+
             }
         }
 

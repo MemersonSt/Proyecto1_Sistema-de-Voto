@@ -85,10 +85,10 @@
     <Compile Include="CertificadoVotacion.Designer.cs">
       <DependentUpon>CertificadoVotacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="clases\ArchivoContador.cs" />
     <Compile Include="clases\ArchivosCandidatos.cs" />
     <Compile Include="clases\ArchivosUsuarios.cs" />
     <Compile Include="clases\ArchivosVotos.cs" />
+    <Compile Include="clases\ConexionBD.cs" />
     <Compile Include="DatosDelVotante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,7 +122,6 @@
     </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Candidato.cs" />
-    <Compile Include="Models\Contador.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Voto.cs" />
     <Compile Include="Notificacion.cs">

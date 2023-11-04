@@ -19,7 +19,7 @@ namespace Proyecto1_Sistema_de_Voto {
         }
 
         private void UsuarioRegistrados_Load (object sender, EventArgs e) {
-            List<Usuario> listaUsuarios = ArchivosUsuarios.ReadList();
+            List<Usuario> listaUsuarios = ArchivosUsuarios.ReadUsersList();
             foreach (Usuario usuario in listaUsuarios) {
                 Panel panelUsuario = CrearPanelCandidato(usuario);
                 flowLayoutPanel1.Controls.Add(panelUsuario);
@@ -34,14 +34,14 @@ namespace Proyecto1_Sistema_de_Voto {
                 BackColor = Color.FromArgb(18, 110, 130),
             };
 
-            Label nombreUsuario = CrearLabel(usuario._sNombres, new Size(248, 19), new Point(27, 13), 12, FontStyle.Bold, Color.White);
+            Label nombreUsuario = CrearLabel(usuario._sNOMBRES, new Size(248, 19), new Point(27, 13), 12, FontStyle.Bold, Color.White);
             Label nrCedula = CrearLabel("Nr. Cedula:", new Size(88, 19), new Point(343, 13), 12, FontStyle.Bold, Color.White);
-            Label cedula = CrearLabel(usuario._sCedula, new Size(99, 19), new Point(433, 13), 10, FontStyle.Regular, Color.White);
+            Label cedula = CrearLabel(usuario._sCEDULA, new Size(99, 19), new Point(433, 13), 10, FontStyle.Regular, Color.White);
             Label ciudad = CrearLabel("Ciudad:", new Size(66, 19), new Point(27, 65), 12, FontStyle.Bold, Color.White);
-            Label provincia = CrearLabel(usuario._sProvincia, new Size(99, 19), new Point(99, 65), 12, FontStyle.Regular, Color.White);
+            Label provincia = CrearLabel(usuario._sPROVINCIA, new Size(99, 19), new Point(99, 65), 12, FontStyle.Regular, Color.White);
             Label votacion; // Declaración fuera del bloque if/else
 
-            if (usuario._bEstado == true) {
+            if (usuario._bESTADO_VOTO == true) {
                 votacion = CrearLabel("Voto Realizado", new Size(179, 19), new Point(353, 65), 12, FontStyle.Regular, Color.White);
             } else {
                 votacion = CrearLabel("Voto No Realizado", new Size(179, 19), new Point(353, 65), 12, FontStyle.Regular, Color.White);
