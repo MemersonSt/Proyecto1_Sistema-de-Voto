@@ -81,7 +81,7 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                 if (sesionUsuario._bESTADO_VOTO == false)
                 {
                     sesionUsuario._bESTADO_VOTO = true;
-                    ArchivosUsuarios.UpdateFile(sesionUsuario);
+                    ArchivosUsuarios.UpdateStateVoteUser(sesionUsuario);
 
                     //Instancia objeto voto 
                     Voto voto = new Voto(candidato._sCEDULA, "A", DateTime.Now);

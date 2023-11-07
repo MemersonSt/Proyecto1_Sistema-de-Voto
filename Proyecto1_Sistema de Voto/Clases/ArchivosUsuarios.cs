@@ -19,9 +19,6 @@ namespace Proyecto1_Sistema_de_Voto.Clases
     public static class ArchivosUsuarios 
     {
         public static Usuario datosUsuarioLogin { get; set; }
-
-        private static readonly string directoryPath = "ArchivosUsuarios";
-
         #region Create
         public static void CreateUser (Usuario usuario) 
         {
@@ -98,31 +95,30 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         #endregion
 
         #region Update
-        public static void UpdateFile (Usuario usuario) 
+        public static void UpdateStateVoteUser(Usuario usuario) 
         {
-            //CreateUser(usuario);
-            //Cambiar por la query UPDATE
-        }
-        #endregion
+            SqlConnection connection = ConexionBD.GetConnection();
+            string sql = "SELECT * FROM USUARIO WHERE CEDULA = '" + usuario._sCEDULA + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
 
-        #region Delete
-        public static void DeleteFile (string cedula) 
-        {
-            try 
-            {
-                string filePath = Path.Combine(directoryPath, cedula + ".bin");
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
 
-                if (File.Exists(filePath)) 
-                {
-                    File.Delete(filePath);
-                    Console.WriteLine("Archivo eliminado con éxito.");
-                } else 
-                {
-                    Console.WriteLine("El archivo no existe y no se puede eliminar.");
-                }
-            } catch (IOException e) 
+            if (dataSet.Tables[0].Rows[0]["CEDULA"].ToString() == usuario._sCEDULA)
             {
-                Console.WriteLine($"Error al eliminar el archivo: {e.Message}");
+
+
+                string sSentenciaSql = "UPDATE USUARIO ";
+                sSentenciaSql = sSentenciaSql + "SET ESTADO_VOTO = @ESTADO_VOTO ";
+                sSentenciaSql = sSentenciaSql + "WHERE CEDULA = @CEDULA";
+                SqlConnection conexion = ConexionBD.GetConnection();
+                SqlCommand comando = new SqlCommand(sSentenciaSql, conexion);
+
+                comando.Parameters.AddWithValue("@CEDULA", usuario._sCEDULA);
+                comando.Parameters.AddWithValue("@ESTADO_VOTO", usuario._bESTADO_VOTO);
+
+                comando.ExecuteNonQuery();
+                ConexionBD.CloseConnection(conexion);
             }
         }
         #endregion

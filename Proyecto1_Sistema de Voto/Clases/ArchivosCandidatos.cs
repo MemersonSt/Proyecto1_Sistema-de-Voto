@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Data;
+using System.Windows;
 
 namespace Proyecto1_Sistema_de_Voto.clases
 {
@@ -90,32 +91,65 @@ namespace Proyecto1_Sistema_de_Voto.clases
         #endregion
 
         #region Update
-        public static void UpdateFile(Candidato candidato)
+        public static void UpdateCandidate(Candidato candidato)
         {
-            //CreateFile(candidato);
+            SqlConnection connection = ConexionBD.GetConnection();
+            string sql = "SELECT * FROM CANDIDATO WHERE CEDULA = '" + candidato._sCEDULA + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+
+            if (dataSet.Tables[0].Rows[0]["CEDULA"].ToString() == candidato._sCEDULA)
+            {
+
+
+                string sSentenciaSql = "UPDATE CANDIDATO ";
+                sSentenciaSql = sSentenciaSql + "SET NOMBRE = @NOMBRE, ";
+                sSentenciaSql = sSentenciaSql + "LISTA = @LISTA, ";
+                sSentenciaSql = sSentenciaSql + "MAIL = @MAIL, ";
+                sSentenciaSql = sSentenciaSql + "ESTADO = @ESTADO ";
+                sSentenciaSql = sSentenciaSql + "WHERE CEDULA = @CEDULA";
+                SqlConnection conexion = ConexionBD.GetConnection();
+                SqlCommand comando = new SqlCommand(sSentenciaSql, conexion);
+
+                comando.Parameters.AddWithValue("@CEDULA", candidato._sCEDULA);
+                comando.Parameters.AddWithValue("@NOMBRE", candidato._sNOMBRE);
+                comando.Parameters.AddWithValue("@LISTA", candidato._sLISTA);
+                comando.Parameters.AddWithValue("@MAIL", candidato._sMAIL);
+                comando.Parameters.AddWithValue("@ESTADO", candidato._sESTADO);
+
+                comando.ExecuteNonQuery();
+                ConexionBD.CloseConnection(conexion);
+            }
         }
         #endregion
 
         #region Delete
-        public static void DeleteFile(string cedula)
+        public static void DeleteCandidate(Candidato candidato)
         {
-            try
-            {
-                string filePath = Path.Combine(directoryPath, cedula + ".bin");
+            SqlConnection connection = ConexionBD.GetConnection();
+            string sql = "SELECT * FROM CANDIDATO WHERE CEDULA = '" + candidato._sCEDULA + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
 
-                if (File.Exists(filePath))
-                {
-                    File.Delete(filePath);
-                    Console.WriteLine("Archivo eliminado con éxito.");
-                }
-                else
-                {
-                    Console.WriteLine("El archivo no existe y no se puede eliminar.");
-                }
-            }
-            catch (IOException e)
+            DataSet dataSet = new DataSet();
+            adapter.Fill(dataSet);
+
+            if (dataSet.Tables[0].Rows[0]["CEDULA"].ToString() == candidato._sCEDULA)
             {
-                Console.WriteLine($"Error al eliminar el archivo: {e.Message}");
+
+
+                string sSentenciaSql = "UPDATE CANDIDATO ";
+                sSentenciaSql = sSentenciaSql + "SET ESTADO = @ESTADO ";
+                sSentenciaSql = sSentenciaSql + "WHERE CEDULA = @CEDULA";
+                SqlConnection conexion = ConexionBD.GetConnection();
+                SqlCommand comando = new SqlCommand(sSentenciaSql, conexion);
+
+                comando.Parameters.AddWithValue("@CEDULA", candidato._sCEDULA);
+                comando.Parameters.AddWithValue("@ESTADO", candidato._sESTADO);
+
+                comando.ExecuteNonQuery();
+                ConexionBD.CloseConnection(conexion);
             }
         }
         #endregion

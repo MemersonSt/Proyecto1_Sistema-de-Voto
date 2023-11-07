@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace Proyecto1_Sistema_de_Voto 
 {
@@ -112,7 +113,7 @@ namespace Proyecto1_Sistema_de_Voto
             if (Validaciones())
             {
                 var cand = ArchivosCandidatos.ReadCandidateByCedula(txtCedula.Text);
-                if (cand != null)
+                if (cand != null && cand._sESTADO == "A")
                 {
                     if (cand._sCEDULA == txtCedula.Text)
                     {
@@ -124,7 +125,18 @@ namespace Proyecto1_Sistema_de_Voto
                         ArchivosCandidatos.CreateCandidate(candidato);
 
                         Mail.Mail.SendMail(candidato._sMAIL, "Registro Candidatura", $"Estimado/a {candidato._sNOMBRE} se ha realizado su registro exitosamente\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las elecciones");
+
+                        MessageBox.Show($"El candidato {txtNombre.Text} ha sido registrado.");
                     }
+                }
+                else if (cand != null && cand._sESTADO == "I")
+                {
+                    Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text, "A", DateTime.Now);
+                    ArchivosCandidatos.UpdateCandidate(candidato);
+
+                    Mail.Mail.SendMail(candidato._sMAIL, "Registro Candidatura", $"Estimado/a {candidato._sNOMBRE} se ha realizado su registro exitosamente\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las elecciones");
+
+                    MessageBox.Show($"El candidato {txtNombre.Text} ha sido registrado.");
                 }
                 else
                 {
@@ -132,6 +144,8 @@ namespace Proyecto1_Sistema_de_Voto
                     ArchivosCandidatos.CreateCandidate(candidato);
 
                     Mail.Mail.SendMail(candidato._sMAIL, "Registro Candidatura", $"Estimado/a {candidato._sNOMBRE} se ha realizado su registro exitosamente\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las elecciones");
+
+                    MessageBox.Show($"El candidato {txtNombre.Text} ha sido registrado.");
                 }
             }
         }
@@ -140,12 +154,19 @@ namespace Proyecto1_Sistema_de_Voto
         {
             if (Validaciones())
             {
-                if (ArchivosCandidatos.ReadCandidateByCedula(txtCedula.Text) != null)
+                var cand = ArchivosCandidatos.ReadCandidateByCedula(txtCedula.Text);
+                if (cand != null && cand._sESTADO == "A")
                 {
                     Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text, "A", DateTime.Now);
-                    ArchivosCandidatos.UpdateFile(candidato);
+                    ArchivosCandidatos.UpdateCandidate(candidato);
 
                     Mail.Mail.SendMail(candidato._sMAIL, "Actualización Candidatura", $"Estimado/a {candidato._sNOMBRE} se han actualizado sus datos exitosamente\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las elecciones");
+
+                    MessageBox.Show($"El candidato {txtNombre.Text} ha sido actualizado.");
+                }
+                else if (cand != null && cand._sESTADO == "I")
+                {
+                    MessageBox.Show("El candidato no existe.");
                 }
                 else
                 {
@@ -158,11 +179,24 @@ namespace Proyecto1_Sistema_de_Voto
         {
             if (Validaciones())
             {
-                if (ArchivosCandidatos.ReadCandidateByCedula(txtCedula.Text) != null)
+                var cand = ArchivosCandidatos.ReadCandidateByCedula(txtCedula.Text);
+                if (cand != null && cand._sESTADO == "A")
                 {
-                    Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text, "A", DateTime.Now);
-                    ArchivosCandidatos.DeleteFile(txtCedula.Text);
-                    Mail.Mail.SendMail(candidato._sMAIL, "Eliminación Candidatura", $"Estimado/a {candidato._sNOMBRE} se han eliminado sus datos\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las próximas elecciones");
+                    string message = $"Está seguro/a de eliminar el candidato {txtNombre.Text}?";
+                    string caption = "Eliminando";
+                    var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        Candidato candidato = new Candidato(txtCedula.Text, txtNombre.Text, txtLista.Text, txtMail.Text, "I", DateTime.Now);
+                        ArchivosCandidatos.DeleteCandidate(candidato);
+
+                        Mail.Mail.SendMail(candidato._sMAIL, "Eliminación Candidatura", $"Estimado/a {candidato._sNOMBRE} se han eliminado sus datos\nFecha: {DateTime.Now.ToLongDateString()}\nHora: {DateTime.Now.ToLongTimeString()}\nLe deseamos éxito en las próximas elecciones");
+
+                        MessageBox.Show($"El candidato {txtNombre.Text} ha sido eliminado.");
+                    }
                 }
                 else
                 {
