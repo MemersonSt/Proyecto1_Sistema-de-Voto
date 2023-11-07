@@ -39,8 +39,11 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
 
             foreach (Candidato candidato in listaCandidatos) 
             {
-                Panel panelCandidato = CrearPanelCandidato(candidato);
-                flowLayoutPanel1.Controls.Add(panelCandidato);
+                if (candidato._sESTADO == "A")
+                {
+                    Panel panelCandidato = CrearPanelCandidato(candidato);
+                    flowLayoutPanel1.Controls.Add(panelCandidato);
+                }
             }
 
             RedondearPanel(panelContenedor, 12);

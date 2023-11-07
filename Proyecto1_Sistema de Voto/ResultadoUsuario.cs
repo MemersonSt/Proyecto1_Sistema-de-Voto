@@ -23,21 +23,24 @@ namespace Proyecto1_Sistema_de_Voto {
         {
             int total = ArchivosVotos.GetVotesList().Count;
             // Recorre la lista de candidatos
-            foreach (var item in ArchivosCandidatos.ReadCandidateList()) 
+            foreach (var cand in ArchivosCandidatos.ReadCandidateList()) 
             {
                 List<Voto> listVoto = new List<Voto>(); //crear una lista de votos
 
-                foreach (var item1 in ArchivosVotos.GetVotesList()) // Recorre la lista de votos
+                foreach (var vote in ArchivosVotos.GetVotesList()) // Recorre la lista de votos
                 {
-                    if (item._sCEDULA.Equals(item1._sCANDIDATO)) // Si el candidato es igual al voto lo agrega a la lista
+                    if (cand._sCEDULA.Equals(vote._sCANDIDATO)) // Si el candidato es igual al voto lo agrega a la lista
                     {
-                        listVoto.Add(item1); // Agrega el voto a la lista
+                        listVoto.Add(vote); // Agrega el voto a la lista
                     }
                 }
 
                 int cant = listVoto.Count;
-                Panel panelCandidato = CrearPanelCandidato(item._sNOMBRE, cant, total);
-                flowLayoutPanel1.Controls.Add(panelCandidato);
+                if (cand._sESTADO == "A")
+                {
+                    Panel panelCandidato = CrearPanelCandidato(cand._sNOMBRE, cant, total);
+                    flowLayoutPanel1.Controls.Add(panelCandidato);
+                }
             }
             RedondearPanel(panelContenedor, 12);
         }

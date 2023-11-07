@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Proyecto1_Sistema_de_Voto {
     public partial class Resultados : Form {
@@ -22,21 +23,24 @@ namespace Proyecto1_Sistema_de_Voto {
         {
             int total = ArchivosVotos.GetVotesList().Count;
             
-            foreach (var item in ArchivosCandidatos.ReadCandidateList())
+            foreach (var cand in ArchivosCandidatos.ReadCandidateList())
             {
                 List<Voto> listVoto = new List<Voto>();
 
-                foreach (var item1 in ArchivosVotos.GetVotesList())
+                foreach (var vote in ArchivosVotos.GetVotesList())
                 {
-                    if (item._sCEDULA.Equals(item1._sCANDIDATO))
+                    if (cand._sCEDULA.Equals(vote._sCANDIDATO))
                     {
-                        listVoto.Add(item1);
+                        listVoto.Add(vote);
                     }
                 }
 
                 int cant = listVoto.Count;
-                Panel panelCandidato = CrearPanelCandidato(item._sNOMBRE, cant, total);
-                flowLayoutPanel1.Controls.Add(panelCandidato);
+                if (cand._sESTADO == "A")
+                {
+                    Panel panelCandidato = CrearPanelCandidato(cand._sNOMBRE, cant, total);
+                    flowLayoutPanel1.Controls.Add(panelCandidato);
+                }
             }
             RedondearPanel(panelContenedor, 12);
         }
