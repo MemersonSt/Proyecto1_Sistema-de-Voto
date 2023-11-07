@@ -98,10 +98,18 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         #endregion
 
         #region Update
-        public static void UpdateFile (Usuario usuario) 
-        {
+        public static void UpdateFile (Usuario usuario) {
             //CreateUser(usuario);
             //Cambiar por la query UPDATE
+            try {
+                var conn = ConexionBD.GetConnection();
+                string sQuery = "UPDATE USUARIO SET ESTADO_VOTO = 1 WHERE CEDULA = '" + usuario._sCEDULA + "'";
+                SqlCommand command = new SqlCommand(sQuery, conn);
+                command.ExecuteNonQuery();
+                ConexionBD.CloseConnection(conn);
+            } catch {
+                Console.WriteLine("hubo un error");
+            }
         }
         #endregion
 

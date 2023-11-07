@@ -52,11 +52,11 @@ namespace Proyecto1_Sistema_de_Voto.clases
 
             try
             {
-                var conn = ConexionBD.GetConnection();
+                var conn = ConexionBD.GetConnection(); //Obtiene la conexión
                 string sQuery = "SELECT * FROM VOTO";
-                SqlCommand command = new SqlCommand(sQuery, conn);
+                SqlCommand command = new SqlCommand(sQuery, conn); //Crea el comando SQL a ejecutar
 
-                SqlDataReader reader = command.ExecuteReader();
+                SqlDataReader reader = command.ExecuteReader(); //Ejecuta el comando y obtiene los datos
                 while (reader.Read())
                 {
                     Voto vote = new Voto();

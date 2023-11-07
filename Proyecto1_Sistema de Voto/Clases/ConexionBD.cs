@@ -11,7 +11,7 @@ namespace Proyecto1_Sistema_de_Voto.clases
     public static class ConexionBD
     {
         public static string sDbName = "SistemaVoto_DB";
-        public static string sServerName = "DESKTOP-7FRKFBE\\SQLEXPRESS";
+        public static string sServerName = "DESKTOP-T6Q5TVR\\SQLEXPRESS";
         public static string sUser = "sa";
         public static string sPassword = "Tecsu.2023";
 

@@ -80,7 +80,6 @@
             resources.ApplyResources(this.label4, "label4");
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.label4.Name = "label4";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnContinuar
             // 

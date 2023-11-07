@@ -129,9 +129,5 @@ namespace Proyecto1_Sistema_de_Voto
             login.ShowDialog();
             this.Close();
         }
-
-        private void label4_Click (object sender, EventArgs e) {
-
-        }
     }
 }

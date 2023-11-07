@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Data;
+using System.IO.Packaging;
+using System.Windows.Forms;
 
 namespace Proyecto1_Sistema_de_Voto.clases
 {
@@ -67,7 +69,6 @@ namespace Proyecto1_Sistema_de_Voto.clases
                     candidato._dFECHA_CREACION = Convert.ToDateTime(dataSet.Tables[0].Rows[0]["FECHA_CREACION"]);
                     
                 }
-
                 ConexionBD.CloseConnection(conn);
 
                 return candidato;
@@ -93,6 +94,17 @@ namespace Proyecto1_Sistema_de_Voto.clases
         public static void UpdateFile(Candidato candidato)
         {
             //CreateFile(candidato);
+            try {
+                var conn = ConexionBD.GetConnection();
+                string sQuery = "UPDATE CANDIDATO SET NOMBRE = '" + candidato._sNOMBRE + "', LISTA = '" + candidato._sLISTA + "', MAIL = '" + candidato._sMAIL + "', ESTADO = '" + candidato._sESTADO + "' WHERE CEDULA = '" + candidato._sCEDULA + "'";
+                SqlCommand command = new SqlCommand(sQuery, conn);
+                command.ExecuteNonQuery();
+
+                ConexionBD.CloseConnection(conn);
+                MessageBox.Show("Candidato actualizado correctamente");
+            } catch (Exception e) {
+                MessageBox.Show("Error al actualizar el candidato");
+            }
         }
         #endregion
 
@@ -101,21 +113,17 @@ namespace Proyecto1_Sistema_de_Voto.clases
         {
             try
             {
-                string filePath = Path.Combine(directoryPath, cedula + ".bin");
+                var conn = ConexionBD.GetConnection();
+                string updateSql = "UPDATE CANDIDATO SET ESTADO = 'B' WHERE CEDULA = '" + cedula + "'";
 
-                if (File.Exists(filePath))
-                {
-                    File.Delete(filePath);
-                    Console.WriteLine("Archivo eliminado con éxito.");
-                }
-                else
-                {
-                    Console.WriteLine("El archivo no existe y no se puede eliminar.");
-                }
+                SqlCommand comandoUpdate = new SqlCommand(updateSql, conn);
+                comandoUpdate.ExecuteNonQuery();
+                ConexionBD.CloseConnection(conn);
+                MessageBox.Show("Candidato eliminado correctamente");
             }
             catch (IOException e)
             {
-                Console.WriteLine($"Error al eliminar el archivo: {e.Message}");
+                Console.WriteLine($"No hay el ");
             }
         }
         #endregion

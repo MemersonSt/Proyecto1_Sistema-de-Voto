@@ -20,8 +20,10 @@ namespace Proyecto1_Sistema_de_Voto {
         private void ListaCandidatos_Load (object sender, EventArgs e) {
             List<Candidato> listaCandidatos = ArchivosCandidatos.ReadCandidateList();
             foreach (Candidato candidato in listaCandidatos) {
-                Panel panelCandidato = CrearPanelCandidato(candidato);
-                flowLayoutPanel1.Controls.Add(panelCandidato);
+                if(candidato._sESTADO == "A") {
+                    Panel panelCandidato = CrearPanelCandidato(candidato);
+                    flowLayoutPanel1.Controls.Add(panelCandidato);
+                }
             }
             panel1.Visible = false;
             RedondearPanel(panelContenedor, 12);
