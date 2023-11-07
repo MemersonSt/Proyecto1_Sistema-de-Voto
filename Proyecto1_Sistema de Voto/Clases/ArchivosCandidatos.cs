@@ -68,7 +68,6 @@ namespace Proyecto1_Sistema_de_Voto.clases
                     candidato._dFECHA_CREACION = Convert.ToDateTime(dataSet.Tables[0].Rows[0]["FECHA_CREACION"]);
                     
                 }
-
                 ConexionBD.CloseConnection(conn);
 
                 return candidato;

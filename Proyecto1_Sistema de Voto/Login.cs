@@ -80,8 +80,6 @@ namespace Proyecto1_Sistema_de_Voto {
                     }
                 }
             }
-            
-            
         }
 
         private void btnRegresar_Click (object sender, EventArgs e) {

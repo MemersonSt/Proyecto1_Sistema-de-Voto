@@ -22,16 +22,16 @@ namespace Proyecto1_Sistema_de_Voto {
         private void ResultadoUsuario_Load (object sender, EventArgs e) 
         {
             int total = ArchivosVotos.GetVotesList().Count;
-
+            // Recorre la lista de candidatos
             foreach (var item in ArchivosCandidatos.ReadCandidateList()) 
             {
-                List<Voto> listVoto = new List<Voto>();
+                List<Voto> listVoto = new List<Voto>(); //crear una lista de votos
 
-                foreach (var item1 in ArchivosVotos.GetVotesList()) 
+                foreach (var item1 in ArchivosVotos.GetVotesList()) // Recorre la lista de votos
                 {
-                    if (item._sCEDULA.Equals(item1._sCANDIDATO)) 
+                    if (item._sCEDULA.Equals(item1._sCANDIDATO)) // Si el candidato es igual al voto lo agrega a la lista
                     {
-                        listVoto.Add(item1);
+                        listVoto.Add(item1); // Agrega el voto a la lista
                     }
                 }
 
@@ -65,7 +65,7 @@ namespace Proyecto1_Sistema_de_Voto {
 
             return panelCandidato;
         }
-
+        // Renderiza el Label
         private Label CrearLabel (string text, Size size, Point location, int fontSize, FontStyle fontStyle, Color foreColor) {
             return new Label {
                 Size = size,
@@ -75,7 +75,7 @@ namespace Proyecto1_Sistema_de_Voto {
                 ForeColor = foreColor
             };
         }
-
+        // Renderiza la ProgressBar
         private ProgressBar crearProgress (Size size, Point location) {
             return new ProgressBar {
                 Size = size,
@@ -84,7 +84,7 @@ namespace Proyecto1_Sistema_de_Voto {
                 Value = 50,
             };
         }
-
+        // Renderiza el panel con las esquinas redondeadas
         private void RedondearPanel (Panel panel, int radio) {
             GraphicsPath formaPanel = new GraphicsPath();
             formaPanel.AddArc(0, 0, radio, radio, 180, 90);
