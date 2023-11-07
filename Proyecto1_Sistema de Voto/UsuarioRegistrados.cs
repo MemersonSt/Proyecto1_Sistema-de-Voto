@@ -12,17 +12,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.TextFormatting;
 
-namespace Proyecto1_Sistema_de_Voto {
-    public partial class UsuarioRegistrados : Form {
-        public UsuarioRegistrados () {
+namespace Proyecto1_Sistema_de_Voto 
+{
+    public partial class UsuarioRegistrados : Form 
+    {
+        public UsuarioRegistrados () 
+        {
             InitializeComponent();
         }
 
-        private void UsuarioRegistrados_Load (object sender, EventArgs e) {
+        private void UsuarioRegistrados_Load (object sender, EventArgs e) 
+        {
             List<Usuario> listaUsuarios = ArchivosUsuarios.ReadUsersList();
-            foreach (Usuario usuario in listaUsuarios) {
-                Panel panelUsuario = CrearPanelCandidato(usuario);
-                flowLayoutPanel1.Controls.Add(panelUsuario);
+            foreach (Usuario usuario in listaUsuarios) 
+            {
+                if (usuario._sESTADO == "A")
+                {
+                    Panel panelUsuario = CrearPanelCandidato(usuario);
+                    flowLayoutPanel1.Controls.Add(panelUsuario);
+                }
             }
             RedondearPanel(contenedorUsuarios, 12);
             panel1.Visible = false;
