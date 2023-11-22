@@ -42,6 +42,34 @@ namespace Proyecto1_Sistema_de_Voto.Mail
             }
         }
 
-        private static string sContrasenaSmtp = "SVCANDIDATURA0123";
+        public static void SendMailToUser(string sDestinatario, string sAsunto, string sCuerpo, string sPath)
+        {
+            MailMessage correo = new MailMessage(sRemitente, sDestinatario, sAsunto, sCuerpo);
+            //Adjunta un archivo. En este caso el pdf del certificado de votación
+            correo.Attachments.Add(new Attachment(sPath));//Se pueden adjuntar más archivos
+
+            //correo.IsBodyHtml = true;
+            SmtpClient clienteSmtp = new SmtpClient(sSmtpServer)
+            {
+                Port = iPuertoSmtp,
+                Credentials = new NetworkCredential(sUsuarioSmtp, sContrasenaSmtp),
+                EnableSsl = true,
+            };
+
+            try
+            {
+                clienteSmtp.Send(correo);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al enviar el correo electrónico: " + ex.Message);
+            }
+            finally
+            {
+                correo.Dispose();
+            }
+        }
+
+        private static string sContrasenaSmtp = "CANDIDATURASV123";
     }
 }

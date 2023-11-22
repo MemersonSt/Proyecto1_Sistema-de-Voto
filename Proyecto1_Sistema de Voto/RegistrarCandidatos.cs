@@ -88,7 +88,7 @@ namespace Proyecto1_Sistema_de_Voto
 
 
         //Usaré este método para mostrar la notificación de candidato registrado(Aun no se como hacerlo xd)
-        private void Formulario(object formulario)
+        private void CargarFormulario(object formulario)
         {
             if (this.panelNotificación.Controls.Count > 0)
                 this.panelNotificación.Controls.RemoveAt(0);

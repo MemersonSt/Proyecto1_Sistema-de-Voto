@@ -24,14 +24,15 @@ namespace Proyecto1_Sistema_de_Voto.Clases
         {
             try 
             {
-                string sSentenciaSql = "INSERT INTO USUARIO (CEDULA, NOMBRES, APELLIDOS, CONTRASEÑA, PROVINCIA, ESTADO_VOTO, SEXO, ESTADO)";
-                sSentenciaSql = sSentenciaSql + "VALUES (@CEDULA, @NOMBRES, @APELLIDOS, @CONTRASEÑA, @PROVINCIA, @ESTADO_VOTO, @SEXO, @ESTADO)";
+                string sSentenciaSql = "INSERT INTO USUARIO (CEDULA, NOMBRES, APELLIDOS, MAIL, CONTRASEÑA, PROVINCIA, ESTADO_VOTO, SEXO, ESTADO)";
+                sSentenciaSql = sSentenciaSql + "VALUES (@CEDULA, @NOMBRES, @APELLIDOS, @MAIL, @CONTRASEÑA, @PROVINCIA, @ESTADO_VOTO, @SEXO, @ESTADO)";
                 SqlConnection conexion = ConexionBD.GetConnection();
                 SqlCommand comando = new SqlCommand(sSentenciaSql, conexion);
 
                 comando.Parameters.AddWithValue("@CEDULA", usuario._sCEDULA);
                 comando.Parameters.AddWithValue("@NOMBRES", usuario._sNOMBRES);
                 comando.Parameters.AddWithValue("@APELLIDOS", usuario._sAPELLIDOS);
+                comando.Parameters.AddWithValue("@MAIL", usuario._sMail);
                 comando.Parameters.AddWithValue("@CONTRASEÑA", usuario._sCONTRASEÑA);
                 comando.Parameters.AddWithValue("@PROVINCIA", usuario._sPROVINCIA);
                 comando.Parameters.AddWithValue("@ESTADO_VOTO", usuario._bESTADO_VOTO);
@@ -65,6 +66,7 @@ namespace Proyecto1_Sistema_de_Voto.Clases
                     usuario._sCEDULA = dataSet.Tables[0].Rows[0]["CEDULA"].ToString();
                     usuario._sNOMBRES = dataSet.Tables[0].Rows[0]["NOMBRES"].ToString();
                     usuario._sAPELLIDOS = dataSet.Tables[0].Rows[0]["APELLIDOS"].ToString();
+                    usuario._sMail = dataSet.Tables[0].Rows[0]["MAIL"].ToString();
                     usuario._sCONTRASEÑA = dataSet.Tables[0].Rows[0]["CONTRASEÑA"].ToString();
                     usuario._sPROVINCIA = dataSet.Tables[0].Rows[0]["PROVINCIA"].ToString();
                     usuario._bESTADO_VOTO = Convert.ToBoolean(dataSet.Tables[0].Rows[0]["ESTADO_VOTO"]);
@@ -138,12 +140,13 @@ namespace Proyecto1_Sistema_de_Voto.Clases
                     user._sCEDULA = reader.GetString(0);
                     user._sNOMBRES = reader.GetString(1);
                     user._sAPELLIDOS = reader.GetString(2);
-                    user._sCONTRASEÑA = reader.GetString(3);
-                    user._sPROVINCIA = reader.GetString(4);
-                    user._bESTADO_VOTO = reader.GetBoolean(5);
-                    user._sSEXO = reader.GetString(6);
-                    user._sESTADO = reader.GetString(7);
-                    user._dFECHA_CREACION = reader.GetDateTime(8);
+                    user._sMail = reader.GetString(3);
+                    user._sCONTRASEÑA = reader.GetString(4);
+                    user._sPROVINCIA = reader.GetString(5);
+                    user._bESTADO_VOTO = reader.GetBoolean(6);
+                    user._sSEXO = reader.GetString(7);
+                    user._sESTADO = reader.GetString(8);
+                    user._dFECHA_CREACION = reader.GetDateTime(9);
 
                     listaUsuarios.Add(user);
                 }

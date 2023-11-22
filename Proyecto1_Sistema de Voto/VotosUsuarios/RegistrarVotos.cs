@@ -95,8 +95,8 @@ namespace Proyecto1_Sistema_de_Voto.VotosUsuarios {
                     votar.Enabled = false;
 
                     this.Hide();
-                    CertificadoVotacion certificado = new CertificadoVotacion();
-                    certificado.ShowDialog();
+                    FormularioCertificado formCertificado = new FormularioCertificado();
+                    formCertificado.ShowDialog();
                     this.Close();
                 }
                 else

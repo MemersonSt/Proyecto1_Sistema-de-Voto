@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -184,7 +184,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -217,7 +217,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="textCedula.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -241,7 +241,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textCedula.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="textNombre.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -265,7 +265,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textNombre.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="textApellido.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -289,7 +289,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textApellido.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -322,7 +322,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="btnContinuar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -355,7 +355,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnContinuar.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -388,19 +388,82 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="cboxProvincia.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="cboxProvincia.Items" xml:space="preserve">
-    <value>Esmeralda</value>
+    <value>Azuay</value>
   </data>
   <data name="cboxProvincia.Items1" xml:space="preserve">
-    <value>Pichincha</value>
+    <value>Bolívar</value>
   </data>
   <data name="cboxProvincia.Items2" xml:space="preserve">
-    <value>Manabi</value>
+    <value>Cañar</value>
+  </data>
+  <data name="cboxProvincia.Items3" xml:space="preserve">
+    <value>Carchi</value>
+  </data>
+  <data name="cboxProvincia.Items4" xml:space="preserve">
+    <value>Chimborazo</value>
+  </data>
+  <data name="cboxProvincia.Items5" xml:space="preserve">
+    <value>Cotopaxi</value>
+  </data>
+  <data name="cboxProvincia.Items6" xml:space="preserve">
+    <value>El Oro</value>
+  </data>
+  <data name="cboxProvincia.Items7" xml:space="preserve">
+    <value>Esmeraldas</value>
+  </data>
+  <data name="cboxProvincia.Items8" xml:space="preserve">
+    <value>Galápagos</value>
+  </data>
+  <data name="cboxProvincia.Items9" xml:space="preserve">
+    <value>Guayas</value>
+  </data>
+  <data name="cboxProvincia.Items10" xml:space="preserve">
+    <value>Imbabura</value>
+  </data>
+  <data name="cboxProvincia.Items11" xml:space="preserve">
+    <value>Loja</value>
+  </data>
+  <data name="cboxProvincia.Items12" xml:space="preserve">
+    <value>Los Ríos</value>
+  </data>
+  <data name="cboxProvincia.Items13" xml:space="preserve">
+    <value>Manabí</value>
+  </data>
+  <data name="cboxProvincia.Items14" xml:space="preserve">
+    <value>Morona-Santiago</value>
+  </data>
+  <data name="cboxProvincia.Items15" xml:space="preserve">
+    <value>Napo</value>
+  </data>
+  <data name="cboxProvincia.Items16" xml:space="preserve">
+    <value>Orellana</value>
+  </data>
+  <data name="cboxProvincia.Items17" xml:space="preserve">
+    <value>Pastaza</value>
+  </data>
+  <data name="cboxProvincia.Items18" xml:space="preserve">
+    <value>Pichincha</value>
+  </data>
+  <data name="cboxProvincia.Items19" xml:space="preserve">
+    <value>Santa Elena</value>
+  </data>
+  <data name="cboxProvincia.Items20" xml:space="preserve">
+    <value>Santo Domingo de los Tsáchilas</value>
+  </data>
+  <data name="cboxProvincia.Items21" xml:space="preserve">
+    <value>Sucumbíos</value>
+  </data>
+  <data name="cboxProvincia.Items22" xml:space="preserve">
+    <value>Tungurahua</value>
+  </data>
+  <data name="cboxProvincia.Items23" xml:space="preserve">
+    <value>Zamora-Chinchipe</value>
   </data>
   <data name="cboxProvincia.Location" type="System.Drawing.Point, System.Drawing">
     <value>505, 367</value>
@@ -421,7 +484,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cboxProvincia.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="btnVolver.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -451,7 +514,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnVolver.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -484,13 +547,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="textPassword.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="textPassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>504, 318</value>
+  </data>
+  <data name="textPassword.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>•</value>
   </data>
   <data name="textPassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 26</value>
@@ -508,7 +574,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textPassword.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="cbSexo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -541,7 +607,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbSexo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -574,6 +640,63 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtMail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="txtMail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>504, 125</value>
+  </data>
+  <data name="txtMail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 26</value>
+  </data>
+  <data name="txtMail.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txtMail.Name" xml:space="preserve">
+    <value>txtMail</value>
+  </data>
+  <data name="&gt;&gt;txtMail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtMail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtMail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>337, 128</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 20</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Correo electrónico:</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

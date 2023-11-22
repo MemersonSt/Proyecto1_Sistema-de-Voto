@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Proyecto1_Sistema_de_Voto.Models {
     [Serializable]
     public class Usuario {
+        public string _sMail {  get; set; }
         public string _sCEDULA { get; set; }
         public string _sNOMBRES { get; set; }
         public string _sAPELLIDOS { get; set; }
@@ -19,7 +20,8 @@ namespace Proyecto1_Sistema_de_Voto.Models {
 
         public Usuario () { }
 
-        public Usuario (string _sCEDULA, string _sNOMBRES, string _sAPELLIDOS, string _sCONTRASEÑA, string _sPROVINCIA, bool _bESTADO_VOTO, string _sSEXO, string _sESTADO, DateTime _dFECHA_CREACION) {
+        public Usuario (string _sMail, string _sCEDULA, string _sNOMBRES, string _sAPELLIDOS, string _sCONTRASEÑA, string _sPROVINCIA, bool _bESTADO_VOTO, string _sSEXO, string _sESTADO, DateTime _dFECHA_CREACION) {
+            this._sMail = _sMail;
             this._sCEDULA = _sCEDULA;
             this._sNOMBRES = _sNOMBRES;
             this._sAPELLIDOS = _sAPELLIDOS;

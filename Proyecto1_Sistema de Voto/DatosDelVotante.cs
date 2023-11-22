@@ -12,13 +12,13 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto1_Sistema_de_Voto 
+namespace Proyecto1_Sistema_de_Voto
 {
-    public partial class DatosDelVotante : Form 
+    public partial class DatosDelVotante : Form
     {
         private string cedulaValidation = "[0-9]";
 
-        public DatosDelVotante () 
+        public DatosDelVotante()
         {
             InitializeComponent();
         }
@@ -27,6 +27,13 @@ namespace Proyecto1_Sistema_de_Voto
         {
             Regex rx = new Regex(cedulaValidation);
             MatchCollection matches = rx.Matches(textCedula.Text);
+
+            if (txtMail.Text.Length == 0)
+            {
+                MessageBox.Show("Ingrese su correo electrónico.");
+                txtMail.Focus();
+                return false;
+            }
 
             if (textCedula.Text.Length == 0) 
             {
@@ -99,7 +106,7 @@ namespace Proyecto1_Sistema_de_Voto
                     }
                     else
                     {
-                        Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text, "A", DateTime.Now);
+                        Usuario user = new Usuario(txtMail.Text, textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text, "A", DateTime.Now);
                         ArchivosUsuarios.CreateUser(user);
                         MessageBox.Show("Inscripción exitosa");
                         this.Hide();
@@ -110,7 +117,7 @@ namespace Proyecto1_Sistema_de_Voto
                 }
                 else
                 {
-                    Usuario user = new Usuario(textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text, "A", DateTime.Now);
+                    Usuario user = new Usuario(txtMail.Text, textCedula.Text, textNombre.Text, textApellido.Text, textPassword.Text, cboxProvincia.Text, false, cbSexo.Text, "A", DateTime.Now);
                     ArchivosUsuarios.CreateUser(user);
                     MessageBox.Show("Inscripción exitosa");
                     this.Hide();

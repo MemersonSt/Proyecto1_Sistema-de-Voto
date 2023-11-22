@@ -39,6 +39,8 @@
             this.textPassword = new System.Windows.Forms.TextBox();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtMail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -103,7 +105,28 @@
             this.cboxProvincia.Items.AddRange(new object[] {
             resources.GetString("cboxProvincia.Items"),
             resources.GetString("cboxProvincia.Items1"),
-            resources.GetString("cboxProvincia.Items2")});
+            resources.GetString("cboxProvincia.Items2"),
+            resources.GetString("cboxProvincia.Items3"),
+            resources.GetString("cboxProvincia.Items4"),
+            resources.GetString("cboxProvincia.Items5"),
+            resources.GetString("cboxProvincia.Items6"),
+            resources.GetString("cboxProvincia.Items7"),
+            resources.GetString("cboxProvincia.Items8"),
+            resources.GetString("cboxProvincia.Items9"),
+            resources.GetString("cboxProvincia.Items10"),
+            resources.GetString("cboxProvincia.Items11"),
+            resources.GetString("cboxProvincia.Items12"),
+            resources.GetString("cboxProvincia.Items13"),
+            resources.GetString("cboxProvincia.Items14"),
+            resources.GetString("cboxProvincia.Items15"),
+            resources.GetString("cboxProvincia.Items16"),
+            resources.GetString("cboxProvincia.Items17"),
+            resources.GetString("cboxProvincia.Items18"),
+            resources.GetString("cboxProvincia.Items19"),
+            resources.GetString("cboxProvincia.Items20"),
+            resources.GetString("cboxProvincia.Items21"),
+            resources.GetString("cboxProvincia.Items22"),
+            resources.GetString("cboxProvincia.Items23")});
             this.cboxProvincia.Name = "cboxProvincia";
             // 
             // btnVolver
@@ -142,11 +165,25 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.label7.Name = "label7";
             // 
+            // txtMail
+            // 
+            resources.ApplyResources(this.txtMail, "txtMail");
+            this.txtMail.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtMail.Name = "txtMail";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.label8.Name = "label8";
+            // 
             // DatosDelVotante
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
+            this.Controls.Add(this.txtMail);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textPassword);
@@ -187,5 +224,7 @@
         private System.Windows.Forms.TextBox textPassword;
         private System.Windows.Forms.ComboBox cbSexo;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtMail;
+        private System.Windows.Forms.Label label8;
     }
 }
